@@ -1,5 +1,6 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -9,4 +10,37 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+}
+
+header {
+  border: solid green 2.5px;
+}
+
+.topNav {
+  display: flex;
+  flex-flow: row;
+  width: auto;
+  border: solid red 2px;
+  padding-inline-start: 0px;
+}
+
+li {
+  font-size: 6px;
+  list-style: none;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-decoration: none;
+}
+
+.headerLogo {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  z-index: -1;
+  margin-top: -1.5rem;
+  margin-left: 1rem;
+}
+
+a {
+  text-decoration: none;
 }
