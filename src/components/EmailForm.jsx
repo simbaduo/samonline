@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const Container = styled.div`
   padding-top: 10px;
@@ -60,17 +61,20 @@ const EmailForm = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
 
+  // BONUS: add a "submitting..." state to your button
   const onSubmit = (event) => {
     // prevents the page from refreshing
     event.preventDefault();
 
     /** do something like... */
-    // const API_URL = 'www.google.com';
-    // axios.post(API_URL, {
-    //   firstName,
-    //   lastName,
-    //   email,
-    // });
+    const API_URL = 'www.google.com'; // replace with your api... i.e. localhost:4000
+    const emailFormData = {
+      firstName,
+      lastName,
+      email,
+    };
+
+    axios.post(API_URL, emailFormData);
   };
 
   return (
