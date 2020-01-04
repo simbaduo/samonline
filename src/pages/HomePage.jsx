@@ -1,11 +1,12 @@
 import React from 'react';
 
+import EmailForm from '../components/EmailForm';
 import Page from '../components/Page';
 
 const HomePage = () => {
   return (
     <Page>
-      This is the Home Page
+      <EmailForm />
     </Page>
   )
 }
