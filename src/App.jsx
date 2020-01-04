@@ -1,22 +1,23 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import Page from './pages/Page'
-import Page2 from './pages/Page2'
-import HomePage from './pages/HomePage'
-import NotFound from './pages/NotFound'
+import styled from 'styled-components';
+
+import Router from './components/Router';
+
+const Canvas = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+`;
+
 
 const App = () => {
   return (
-    <Router>
-      <header></header>
-      <Switch>
-        <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/1" component={Page}></Route>
-        <Route exact path="/2" component={Page2}></Route>
-        <Route path="*" component={NotFound}></Route>
-      </Switch>
-    </Router>
-  )
+    <Canvas>
+      <Router />
+    </Canvas>
+  );
 }
 
 export default App
