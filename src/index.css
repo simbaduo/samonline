@@ -7,13 +7,25 @@ html,
 body {
   overflow-x: hidden;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-  background: #fff;
   font-family: 'Varela Round', sans-serif;
 }
 
-.topHeader {
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #666;
+  padding-top: 10px;
+}
+
+/* .topHeader {
   margin-top: 2rem;
   display: flex;
   width: 100%;
@@ -160,4 +172,4 @@ input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   box-sizing: border-box;
   transform: rotate(-135deg);
   margin-top: -9px;
-}
+} */
