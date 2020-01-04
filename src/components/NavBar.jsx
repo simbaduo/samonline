@@ -12,20 +12,18 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   background-color: ${colors.dark};
-`;
 
-/**
- * <div className="topHeader">
-        <img height="100px" width="100px" src="./images/samlogowhite.jpg" />
-      </div>
- */
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
 
 const NavBar = () => {
   return (
     <Container>
-      <NavLink to='/' exact={true}>Home</NavLink>
-      <NavLink to='/1'>Page 1</NavLink>
-      <NavLink to='/2'>Page 2</NavLink>
+      <NavLink to='/' className="nav-link" activeStyle={{ color: '#fff' }} exact={true}>Home</NavLink>
+      <NavLink to='/1' className="nav-link" activeStyle={{ color: '#fff' }}>Page 1</NavLink>
+      <NavLink to='/2' className="nav-link" activeStyle={{ color: '#fff' }}>Page 2</NavLink>
     </Container>
   );
 };

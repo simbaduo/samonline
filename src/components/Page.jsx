@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavBar from './NavBar';
+import HamburgerNav from './HamburgerNav';
 import { colors } from '../utils/theme';
 
 const Container = styled.div`
@@ -26,6 +27,7 @@ const Page = ({ children }) => {
   return (
     <Container>
       <NavBar />
+      <HamburgerNav />
       <InnerContainer>{children}</InnerContainer>
     </Container>
   );

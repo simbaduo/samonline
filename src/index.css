@@ -19,6 +19,12 @@ body {
   box-sizing: border-box;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: #666;
+  padding-top: 10px;
+}
+
 /* .topHeader {
   margin-top: 2rem;
   display: flex;
