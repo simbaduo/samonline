@@ -56,13 +56,17 @@ const FormActions = styled.div`
   }
 `;
 
-const EmailForm = () => {
+/** NOTE: this is currently just a copy of EmailForm! */
+// TODO: Add proper form fields for an appointment
+// Add Calendar datepicker
+// Hook up to proper api endpoint for submission...
+const AppointmentRequestForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
 
-  // BONUS: add a "submitting..." state to your button... listen to the completion of the post "promise"
-  const onSubmit = event => {
+  // BONUS: add a "submitting..." state to your button
+  const onSubmit = (event) => {
     // prevents the page from refreshing
     event.preventDefault();
 
@@ -74,7 +78,7 @@ const EmailForm = () => {
       email,
     };
 
-    // axios.post(API_URL, emailFormData);
+    axios.post(API_URL, emailFormData);
   };
 
   return (
@@ -118,4 +122,4 @@ const EmailForm = () => {
   );
 }
 
-export default EmailForm;
+export default AppointmentRequestForm;
