@@ -1,13 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import EmailForm from '../components/EmailForm';
-import Page from '../components/Page';
+import Page from '../components/Page'
 
 const HomePage = () => {
   return (
-    <Page>
-      <EmailForm />
-    </Page>
+    <>
+      <Page>
+        <a className="topLogo" href="/">
+          <img height="200rem" width="200rem" src="./images/samlogo.svg" />
+        </a>
+        <h2>352 - 527 - 0440</h2>
+      </Page>
+    </>
   )
 }
 
