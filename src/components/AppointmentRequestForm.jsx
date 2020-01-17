@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import axios from 'axios';
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import axios from 'axios'
 
 const Container = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
-`;
+`
 
 const Form = styled.form`
   padding: 1rem;
   max-width: 960px;
   margin: 0 auto;
-`;
+`
 
 const FormField = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ const FormField = styled.div`
     text-indent: 4px;
     cursor: pointer;
   }
-`;
+`
 
 const FormActions = styled.div`
   display: flex;
@@ -54,32 +54,36 @@ const FormActions = styled.div`
     padding: 0.5rem 1.5rem;
     cursor: pointer;
   }
-`;
+`
 
 /** NOTE: this is currently just a copy of EmailForm! */
 // TODO: Add proper form fields for an appointment
 // Add Calendar datepicker
 // Hook up to proper api endpoint for submission...
 const AppointmentRequestForm = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [make, setMake] = useState('')
+  const [model, setModel] = useState('')
+  const [year, setYear] = useState('')
 
   // BONUS: add a "submitting..." state to your button
-  const onSubmit = (event) => {
+  const onSubmit = event => {
     // prevents the page from refreshing
-    event.preventDefault();
+    event.preventDefault()
 
     /** do something like... */
-    const API_URL = 'www.google.com'; // replace with your api... i.e. localhost:4000
-    const emailFormData = {
+    const API_URL = 'https://localhost:5001/send/email'
+    const ApptReqData = {
       firstName,
       lastName,
       email,
-    };
-
-    axios.post(API_URL, emailFormData);
-  };
+    }
+    const sendAppointment = async () => {
+      await axios.post(API_URL, ApptReqData)
+    }
+  }
 
   return (
     <Container>
@@ -114,12 +118,47 @@ const AppointmentRequestForm = () => {
             value={email}
           />
         </FormField>
+        <FormField>
+          <label>Make</label>
+          <input
+            name="make"
+            id="make"
+            type="text"
+            onChange={setMake}
+            value={make}
+          />
+        </FormField>
+        <FormField>
+          <label>Model</label>
+          <input
+            name="model"
+            id="model"
+            type="text"
+            onChange={setModel}
+            value={model}
+          />
+        </FormField>
+        <FormField>
+          <label>Year</label>
+          <input
+            name="year"
+            id="year"
+            type="int"
+            onChange={setYear}
+            value={year}
+          />
+        </FormField>
         <FormActions>
+          {/* <button type="submit" onSubmit={sendAppointment}> */}
+          {/* Send Email */}
           <button type="submit">Send Email</button>
         </FormActions>
       </Form>
+      <section>
+        <p>Hi My name is nathan</p>
+      </section>
     </Container>
-  );
+  )
 }
 
-export default AppointmentRequestForm;
+export default AppointmentRequestForm

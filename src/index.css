@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 :root {
-  font: 16px / 1 sans-serif;
+  /* font: 700 1em/1.4 poppins, Verdana, sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  color: rgb(87, 88, 91);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
+  background-color: rgb(245, 245, 245);
 }
 
 body {
@@ -12,51 +19,282 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  margin-top: 3rem;
 }
 
 .nav-link {
   text-decoration: none;
   color: #666;
   padding-top: 10px;
+  margin-left: 2rem;
+}
+.nav-link:hover {
+  color: #f0324d;
 }
 
-.topLogo {
-  margin-top: -28rem;
+.navLogo {
+  border: solid red 2px;
+  position: absolute;
+  top: 1.1rem;
+  left: 2.5rem;
 }
-/* 
-            body {
-              font-family: 'Varela Round', sans-serif;
-            }
-            
-            *,
-            *::after,
-            *::before {
-              box-sizing: border-box;
-            }
+
 .topHeader {
   margin-top: 2rem;
+}
+
+.callUsText {
+  margin-top: 4rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+
+.redText {
+  color: rgb(240, 50, 77);
+}
+
+.redNumText {
+  font-size: 18px;
+  font-weight: 1000;
+  color: rgb(240, 50, 77);
+}
+
+.addressText {
+  margin-top: -0.75rem;
+  font-size: 10px;
+}
+
+.specialsTitle {
+  margin-top: 0.5rem;
+  font-weight: 900;
+  margin-bottom: -1.6rem;
+  text-align: right;
+}
+
+.freeText {
+  margin-top: -0.1rem;
+  font-size: 40px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 900;
+}
+
+.squiggleImg {
+  padding-top: 4rem;
+  /* background-image: url('./images/squiggle.png;'); */
+}
+
+.oilChangeTextBox {
+  margin-top: -1.5rem;
+  text-align: center;
+}
+
+.oilChangeText {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.smallText {
+  font-size: 12px;
+  padding-top: 6px;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+li {
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.veteranInputBox {
   display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  border: solid red 3px;
+}
+
+.inputField {
+  height: 30px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  border: none;
+  box-shadow: 0 0 25px 0 rgba(179, 179, 179, 1);
+  vertical-align: middle;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  margin-bottom: 0.5rem;
+  padding-left: 10px;
+}
+
+.subscribeButton {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  width: 140px;
+  font-size: 9px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subscribeButton:hover {
+  background-color: rgb(240, 50, 77);
+}
+
+.redeemBox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+  width: 100%;
+  padding-bottom: 5rem;
+  border: solid red 2px;
+}
+
+.redeemButton {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  width: 80%;
+  font-size: 9px;
+  font-weight: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.redeemButton:hover {
+  background-color: rgb(240, 50, 77);
+}
+
+.specialAd {
+  /* width: 50%; */
+}
+
+.smallLink {
+  font-size: 8px;
+}
+
+.nextBox {
+  border: solid red 2px;
+  background-image: url('/images/newcarcollage.jpg');
+  height: 10rem;
+  width: 100%;
+  background-size: cover;
+}
+
+.specialAd {
+  display: flex;
+  border: solid black 4px;
+}
+
+.specialsContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  align-items: right;
+  /* margin-left: auto; */
+  width: 80%;
+  border: solid green 3px;
+  margin-bottom: 3rem;
+  /* justify-content: right; */
+  /* text-align: right; */
+}
+
+.specialsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border: solid blue 3px;
+}
+
+.specialsText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border: solid blue 3px;
+  text-align: right;
+}
+
+.reviewBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid blue 2px; */
+}
+
+.reviewText {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 13px;
+}
+
+.bottomFooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+  padding-top: 2rem;
+  /* padding-left: 20rem; */
+  padding-bottom: 3rem;
+  /* border: solid red 3px; */
+  justify-content: center;
+}
+
+.footerLogo {
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 20%;
+  /* border: solid green 2px; */
 }
 
-.header {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-  box-shadow: none;
-  background-color: #fc466b;
-  position: fixed;
-  height: 60px !important;
-  overflow: hidden;
-  z-index: 10;
+.footerNav {
+  list-style: none;
 }
 
-.main {
-  margin: 0 auto;
-  display: block;
-  height: 100%;
-  margin-top: 60px;
+.bottomNavList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-size: 0.75rem;
+  /* border: solid white 3px; */
+  margin: 0;
+  padding: 0;
+}
+
+.footerList {
+  /* border: solid purple 2px; */
+}
+
+.footerLinks {
+  text-decoration: none;
+  color: grey;
+  margin-top: 5rem;
+  /* border: solid red 3px; */
+}
+
+.whiteBold {
+  color: white;
+  font-weight: 200;
+  font-size: 0.8rem;
+  padding-right: 0.7rem;
+}
+
+.whiteTitle {
+  color: white;
+  font-weight: 1000;
+  font-size: 1rem;
+}
+/* 
+.bottomBar {
+  display: flex;
+  flex-direction: row;
 } */

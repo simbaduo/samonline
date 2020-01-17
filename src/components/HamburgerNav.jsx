@@ -78,7 +78,11 @@ const HamburgerNav = () => {
           <NavLink to="/1" className="nav-link" activeStyle={{ color: '#fff' }}>
             Page 1
           </NavLink>
-          <NavLink to="/2" className="nav-link" activeStyle={{ color: '#fff' }}>
+          <NavLink
+            to="/AppointmentPage"
+            className="nav-link"
+            activeStyle={{ color: '#fff' }}
+          >
             Page 2
           </NavLink>
         </LinksContainer>
