@@ -1,18 +1,58 @@
-//TO DO - make squiggle its own component
-//TO DO - make certain text areas bold with google fonts
-//TO DO - the A's look weird
-//TO DO - why cant i bolden certain things?
-//TO DO - why do i have to add font family to all CSS
 //TO DO - make more components
+//TO DO - ADA compliance
+//TO DO - review how I got here
+
+//TO DO - CSS Issues
 //TO DO - fix nav bar top margin
+//TO DO - why do i have to add font family to all CSS
 //TO DO - put ongoing specials in triangle?
+//TO DO - why cant i bolden certain things?
+//TO DO - the A's look weird
+//TO DO - make squiggle its own component
 //TO DO - triangle position absolute?
-//TO DO - fix image location
+
+//TO DO - NAV
+//TO DO - Build out dropdown nav bars
+//TO DO - Build out bread crumbs
+
+//TO DO - SERVICES
+//TO DO - If you click services instead of submenu item, you land on services page with a list of links to all submenu items
+//TO DO - Add dropdown with 3 landing pages for now.
+//TO DO - Create admin page and access to enter new vehicle data
+
+//TO DO - CAR SALES
+//TO DO - Add 3 vehicles to a list and display
+//TO DO - Create admin page and access to enter new vehicle data
+
+//TO DO - SPECIALS
+//TO DO - Add Current Specials Table. !!! CHECK SCREENSHOTS IN WIREFRAME FOLDER FOR STYLING !!!
+//TO DO - Click Redeem Now. Links you to Appointments page with Special Offers filled out with selected special offer
+//TO DO - Print Coupon link of selected special
+
+//TO DO - APPOINTMENTS
+//TO DO - API endpoints for vehicle make model year created. Need to link to react app
+//TO DO - Specials Offers dropdown. Linked from SpecialsPage db?
+//TO DO - Calendar dropdown for First and Second Choice of appointment
+//TO DO - Finish Input Field Layout. !!! CHECK SCREENSHOTS IN WIREFRAME FOLDER FOR STYLING !!!
+//TO DO - Print Coupon link of selected special
+//TO DO - Store Appointment Input data into db to be accessed by admin
+
+//TO DO - ABOUT US
+//TO DO - About Us > Careers. store resumes into db for admin to view
+//TO DO - About Us > Contact Us Build out Contact Us form
+//TO DO - About us > Google+ link to new page
+
+//TO DO - REVIEWS
+//TO DO - google reviews? can i pull reviews from google API and store them into my own filtered db?
+
+//TO DO - DIRECTIONS
+//TO DO - Static Image of Map for now.
+//TO DO - Google API account is set up with key access to route to location. Low Priority
 
 import React from 'react'
 
 import Page from '../components/Page'
-// import Carousel from '../components/Carousel'
+import CarouselComponent from '../components/CarouselComponent'
 
 const HomePage = () => {
   return (
@@ -22,9 +62,10 @@ const HomePage = () => {
           {/* <a className="topLogo" href="/">
             <img height="200rem" width="200rem" src="./images/samlogo.svg" />
           </a> */}
-          {/* <Carousel /> */}
         </div>
-
+        <div className="carouselBox">
+          <CarouselComponent />
+        </div>
         <div className="reviewBox">
           <p className="locationText">Beverly Hills Auto Repair</p>
           <a
@@ -55,6 +96,7 @@ const HomePage = () => {
           <p className="smallText">Every Month.</p>
           <p className="smallText">*Must Have Valid Proof.</p>
         </div>
+
         <ul className="veteranInputBox">
           <li>
             <input type="text" className="inputField" placeholder="name" />
