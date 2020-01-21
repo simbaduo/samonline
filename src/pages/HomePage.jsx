@@ -53,6 +53,8 @@ import React from 'react'
 
 import Page from '../components/Page'
 import CarouselComponent from '../components/CarouselComponent'
+import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
+import { NavLink } from 'react-router-dom'
 
 const HomePage = () => {
   return (
@@ -64,6 +66,12 @@ const HomePage = () => {
           </a> */}
         </div>
         <div className="carouselBox">
+          <BreadcrumbsComponent
+            separator={<b> > </b>}
+            item={NavLink}
+            finalItem={'a'}
+            finalProps={{ style: { color: 'red' } }}
+          />
           <CarouselComponent />
         </div>
         <div className="reviewBox">

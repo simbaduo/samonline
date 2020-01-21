@@ -21,12 +21,12 @@ const Container = styled.div`
 const NavBar = () => {
   return (
     <Container>
-      <img
+      {/* <img
         className="navLogo"
         height="150px"
         width="150px"
         src="./images/samlogo.svg"
-      />
+      /> */}
       <NavLink
         to="/"
         className="nav-link"
