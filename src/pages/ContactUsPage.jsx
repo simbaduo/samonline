@@ -5,7 +5,7 @@ import Page from '../components/Page'
 const ContactUsPage = () => {
   return (
     <>
-      f<Page>{/* <CarouselComponent /> */}</Page>
+      <Page>whats the deal though ? contact usssss</Page>
     </>
   )
 }

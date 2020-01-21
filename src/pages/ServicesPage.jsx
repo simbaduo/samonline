@@ -1,12 +1,13 @@
 import React from 'react'
 
 import Page from '../components/Page'
+import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
+import { NavLink } from 'react-router-dom'
 
 const ServicesPage = () => {
   return (
     <Page>
-      <h4>This will be the services title</h4>
-      <p>services help??? hi my name is</p>
+      <BreadcrumbsComponent nextOne={'Services'} secondOne={'Electrical'} />
     </Page>
   )
 }

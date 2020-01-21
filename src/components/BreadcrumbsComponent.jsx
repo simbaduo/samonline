@@ -1,10 +1,17 @@
 import React from 'react'
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap'
+import { Breadcrumb } from 'react-bootstrap'
 
 const BreadcrumbsComponent = props => {
   return (
-    <div>
-      <Breadcrumb tag="nav" listTag="div">
+    <span className="flexThis">
+      <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+      {'>'}
+      <Breadcrumb.Item href={props.nextOneUrl}>{props.nextOne}</Breadcrumb.Item>
+      {'>'}
+      <Breadcrumb.Item href={props.secondOneUrl}>
+        {props.secondOne}
+      </Breadcrumb.Item>
+      {/* <Breadcrumb tag="nav" listTag="div">
         <BreadcrumbItem tag="a" href="/">
           HOME
         </BreadcrumbItem>
@@ -29,8 +36,8 @@ const BreadcrumbsComponent = props => {
         <BreadcrumbItem active tag="DirectionsPage">
           DIRECTIONS
         </BreadcrumbItem>
-      </Breadcrumb>
-    </div>
+      </Breadcrumb> */}
+    </span>
   )
 }
 

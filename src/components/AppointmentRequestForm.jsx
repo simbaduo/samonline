@@ -64,26 +64,34 @@ const AppointmentRequestForm = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
-  const [vehicle, getMake] = useState('')
   const [make, setMake] = useState('')
   const [model, setModel] = useState('')
   const [year, setYear] = useState('')
 
   // BONUS: add a "submitting..." state to your button
-  const onSubmit = event => {
+  const onSubmit = async event => {
     // prevents the page from refreshing
     event.preventDefault()
 
     /** do something like... */
-    const API_URL = 'https://localhost:5001/send/email'
-    const ApptReqData = {
-      firstName,
-      lastName,
-      email,
-    }
-    const sendAppointment = async () => {
-      await axios.post(API_URL, ApptReqData)
-    }
+    // const API_URL = 'https://localhost:5001/send/email'
+    // const ApptReqData = {
+    // firstName: firstName,
+    // lastName: lastName,
+    // email: email,
+    // make: make,
+    // model: model,
+    // year: year,
+    // }const sendAppointment = async () => {
+    const response = await axios.post('https://localhost:5001/api/email', {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      make: make,
+      model: model,
+      year: year,
+    })
+    console.log(response.data)
   }
 
   return (
@@ -95,7 +103,7 @@ const AppointmentRequestForm = () => {
             name="firstName"
             id="firstName"
             type="text"
-            onChange={setFirstName}
+            onChange={e => setFirstName(e.target.value)}
             value={firstName}
           />
         </FormField>
@@ -105,7 +113,7 @@ const AppointmentRequestForm = () => {
             name="lastName"
             id="lastName"
             type="text"
-            onChange={setLastName}
+            onChange={e => setLastName(e.target.value)}
             value={lastName}
           />
         </FormField>
@@ -115,7 +123,7 @@ const AppointmentRequestForm = () => {
             name="email"
             id="email"
             type="text"
-            onChange={setEmail}
+            onChange={e => setEmail(e.target.value)}
             value={email}
           />
         </FormField>
@@ -125,7 +133,7 @@ const AppointmentRequestForm = () => {
             name="make"
             id="make"
             type="text"
-            onChange={setMake}
+            onChange={e => setMake(e.target.value)}
             value={make}
           />
         </FormField>
@@ -135,7 +143,7 @@ const AppointmentRequestForm = () => {
             name="model"
             id="model"
             type="text"
-            onChange={setModel}
+            onChange={e => setModel(e.target.value)}
             value={model}
           />
         </FormField>
@@ -144,17 +152,19 @@ const AppointmentRequestForm = () => {
           <input
             name="year"
             id="year"
-            type="int"
-            onChange={setYear}
+            type="number"
+            onChange={e => setYear(e.target.value)}
             value={year}
           />
         </FormField>
         <FormActions>
-          {/* <button type="submit" onSubmit={sendAppointment}> */}
+          <button type="submit" onSubmit={onSubmit}>
+            Send
+          </button>
           {/* Send Email */}
-          <button type="submit">Send Email</button>
         </FormActions>
       </Form>
+      {/* <button onClick={() => onSubmit()}>Send Email</button> */}
       <section>
         <p>Hi My name is nathan</p>
       </section>

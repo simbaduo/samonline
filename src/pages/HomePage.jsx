@@ -12,12 +12,10 @@
 //TO DO - triangle position absolute?
 
 //TO DO - NAV
-//TO DO - Build out dropdown nav bars
-//TO DO - Build out bread crumbs
+//TO DO - Finish bread crumbs
 
 //TO DO - SERVICES
 //TO DO - If you click services instead of submenu item, you land on services page with a list of links to all submenu items
-//TO DO - Add dropdown with 3 landing pages for now.
 //TO DO - Create admin page and access to enter new vehicle data
 
 //TO DO - CAR SALES
@@ -54,7 +52,7 @@ import React from 'react'
 import Page from '../components/Page'
 import CarouselComponent from '../components/CarouselComponent'
 import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 const HomePage = () => {
   return (
@@ -66,12 +64,6 @@ const HomePage = () => {
           </a> */}
         </div>
         <div className="carouselBox">
-          <BreadcrumbsComponent
-            separator={<b> > </b>}
-            item={NavLink}
-            finalItem={'a'}
-            finalProps={{ style: { color: 'red' } }}
-          />
           <CarouselComponent />
         </div>
         <div className="reviewBox">

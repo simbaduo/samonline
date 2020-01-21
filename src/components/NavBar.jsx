@@ -41,13 +41,29 @@ const NavBar = () => {
       >
         HOME
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/ServicesPage"
         className="nav-link"
         activeStyle={{ color: '#F0324D' }}
-      >
-        SERVICES
-      </NavLink>
+      > */}
+      <div className="dropdownNav">
+        <a className="dropdownServicesButton" href="/ServicesPage">
+          SERVICES
+        </a>
+        <div className="dropdownNavContent">
+          <a href="/">HOME</a>
+          <a href="/ServicesPages/OilChangePage">OIL CHANGE</a>
+          <a href="/ServicesPages/ACPage">A/C SYSTEM</a>
+          <a href="/ServicesPages/AlignmentPage">ALIGNMENT</a>
+          <a href="/ServicesPages/BeltsHosesPage">BELTS / HOSES</a>
+          <a href="/ServicesPages/BrakesPage">BRAKES</a>
+          <a href="/ServicesPages/DiagnosticsPage">DIAGNOSTICS</a>
+          <a href="/ServicesPages/SteeringPage">STEERING</a>
+          <a href="/ServicesPages/TiresPage">TIRES</a>
+          <a href="/ServicesPages/AccessoriesPage">LIFT KITS / ACCESSORIES</a>
+        </div>
+      </div>
+      {/* </NavLink> */}
       <NavLink
         to="/CarSalesPage"
         className="nav-link"
@@ -70,13 +86,16 @@ const NavBar = () => {
       >
         APPOINTMENTS
       </NavLink>
-      <NavLink
-        to="/AboutUsPage"
-        className="nav-link"
-        activeStyle={{ color: '#F0324D' }}
-      >
-        ABOUT US
-      </NavLink>
+      <div className="dropdownNav">
+        <a className="dropdownServicesButton" href="/AboutUsPage">
+          ABOUT US
+        </a>
+        <div className="dropdownNavContent">
+          <a href="/ResumePage">CAREERS</a>
+          <a href="/ContactUsPage">CONTACT US</a>
+          <a href="/#DWHYDOESTHISWORK">GOOGLE +</a>
+        </div>
+      </div>
       <NavLink
         to="/ReviewsPage"
         className="nav-link"
