@@ -51,11 +51,10 @@ const NavBar = () => {
           SERVICES
         </a>
         <div className="dropdownNavContent">
-          <a href="/">HOME</a>
           <a href="/ServicesPages/OilChangePage">OIL CHANGE</a>
           <a href="/ServicesPages/ACPage">A/C SYSTEM</a>
           <a href="/ServicesPages/AlignmentPage">ALIGNMENT</a>
-          <a href="/ServicesPages/BeltsHosesPage">BELTS / HOSES</a>
+          <a href="/ServicesPages/HosesPage">HOSES / COOLING SYSTEM</a>
           <a href="/ServicesPages/BrakesPage">BRAKES</a>
           <a href="/ServicesPages/DiagnosticsPage">DIAGNOSTICS</a>
           <a href="/ServicesPages/SteeringPage">STEERING</a>

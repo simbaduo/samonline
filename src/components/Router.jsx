@@ -6,14 +6,17 @@ import ServicesPage from '../pages/ServicesPage'
 import OilChangePage from '../pages/ServicesPages/OilChangePage'
 import ACPage from '../pages/ServicesPages/ACPage'
 import BrakesPage from '../pages/ServicesPages/BrakesPage'
-import BeltsHosesPage from '../pages/ServicesPages/BeltsHosesPage'
+import HosesPage from '../pages/ServicesPages/HosesPage'
 import DiagnosticsPage from '../pages/ServicesPages/DiagnosticsPage'
 import AccessoriesPage from '../pages/ServicesPages/AccessoriesPage'
 import SteeringPage from '../pages/ServicesPages/SteeringPage'
 import TiresPage from '../pages/ServicesPages/TiresPage'
 import AlignmentPage from '../pages/ServicesPages/AlignmentPage'
+import BatteryPage from '../pages/ServicesPages/BatteryPage'
+import InspectionsPage from '../pages/ServicesPages/InspectionsPage'
+import MiscPage from '../pages/ServicesPages/MiscPage'
 import ResumePage from '../pages/ResumePage'
-
+import TuneUpPage from '../pages/ServicesPages/TuneUpPage'
 import CarSalesPage from '../pages/CarSalesPage'
 import SpecialsPage from '../pages/SpecialsPage'
 import AppointmentPage from '../pages/AppointmentPage'
@@ -22,6 +25,7 @@ import ReviewsPage from '../pages/ReviewsPage'
 import DirectionsPage from '../pages/DirectionsPage'
 import ContactUsPage from '../pages/ContactUsPage'
 import NotFoundPage from '../pages/NotFoundPage'
+import AdminPage from '../pages/AdminPage'
 
 const Router = () => {
   return (
@@ -42,13 +46,18 @@ const Router = () => {
         ></Route>
         <Route
           exact
+          path="/ServicesPages/BatteryPage"
+          component={BatteryPage}
+        ></Route>
+        <Route
+          exact
           path="/ServicesPages/BrakesPage"
           component={BrakesPage}
         ></Route>
         <Route
           exact
-          path="/ServicesPages/BeltsHosesPage"
-          component={BeltsHosesPage}
+          path="/ServicesPages/HosesPage"
+          component={HosesPage}
         ></Route>
         <Route
           exact
@@ -62,14 +71,30 @@ const Router = () => {
         ></Route>
         <Route
           exact
+          path="/ServicesPages/MiscPage"
+          component={MiscPage}
+        ></Route>
+        <Route
+          exact
           path="/ServicesPages/SteeringPage"
           component={SteeringPage}
+        ></Route>
+        <Route
+          exact
+          path="/ServicesPages/TuneUpPage"
+          component={TuneUpPage}
         ></Route>
         <Route
           exact
           path="/ServicesPages/TiresPage"
           component={TiresPage}
         ></Route>
+        <Route
+          exact
+          path="/ServicesPages/InspectionsPage"
+          component={InspectionsPage}
+        ></Route>
+        <Route exact path="/AdminPage" component={AdminPage}></Route>
         <Route exact path="/ServicesPages/ACPage" component={ACPage}></Route>
         <Route exact path="/CarSalesPage" component={CarSalesPage}></Route>
         <Route exact path="/SpecialsPage" component={SpecialsPage}></Route>

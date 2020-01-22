@@ -1,20 +1,19 @@
 import React from 'react'
-
 import Page from '../../components/Page'
 import BreadcrumbsComponentExtra from '../../components/BreadcrumbsComponentExtra'
 
-const DiagnosticsPage = () => {
+const MiscPage = () => {
   return (
     <Page>
       <BreadcrumbsComponentExtra
         nextOne={'Services'}
         nextOneUrl={'/ServicesPage'}
-        secondOne={'Diagnostics'}
-        secondOneUrl={'/ServicesPages/DiagnosticsPage'}
+        secondOne={'Misc. / Additional Services'}
+        secondOneUrl={'/ServicesPages/MiscPage'}
       />
-      Chk Engine Light
+      ANYTHING RANDOM ? ANYTHING ELSE ?
     </Page>
   )
 }
 
-export default DiagnosticsPage
+export default MiscPage

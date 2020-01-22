@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 
 import { colors } from '../utils/theme'
 
@@ -32,8 +32,8 @@ const styles = {
   },
   bmMenu: {
     background: colors.dark,
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em',
+    // padding: '2.5em 1.5em 0',
+    fontSize: '1em',
   },
   bmMorphShape: {
     fill: colors.dark,
@@ -59,10 +59,24 @@ const Container = styled.div`
 const LinksContainer = styled.div`
   display: flex !important;
   flex-direction: column;
+  align-items: left;
   padding-top: 30px;
+  padding-left: 0;
+  margin-left: 0;
+  color: white;
 `
 
 const HamburgerNav = () => {
+  const [dropDown, setDropDown] = useState(false)
+
+  const dropDownFunc = () => {
+    if (!dropDown) {
+      setDropDown(true)
+    } else {
+      setDropDown(false)
+    }
+  }
+
   return (
     <Container>
       <Menu width="65%" noOverlay styles={styles} right>
@@ -70,20 +84,69 @@ const HamburgerNav = () => {
           <NavLink
             to="/"
             className="nav-link"
-            activeStyle={{ color: 'green' }}
+            activeStyle={{ color: '#f0324d' }}
             exact={true}
           >
-            Home
+            HOME
           </NavLink>
-          <NavLink to="/1" className="nav-link" activeStyle={{ color: '#fff' }}>
-            Page 1
+
+          <div onClick={dropDownFunc}>
+            <span class="far fa-star"></span>
+            <p className="servicesHamburgerDropdown">
+              &nbsp;&nbsp;&nbsp;&nbsp;SERVICES
+            </p>
+          </div>
+          {dropDown && (
+            <div className="dropDown">
+              <a href="/ServicesPages/OilChangePage">Oil Change</a>
+              <a href="/ServicesPages/BrakesPage">Brakes</a>
+            </div>
+          )}
+          <NavLink
+            to="/CarSalesPage"
+            className="nav-link"
+            activeStyle={{ color: '#f0324d' }}
+          >
+            CAR SALES
+          </NavLink>
+          <NavLink
+            to="/SpecialsPage"
+            className="nav-link"
+            activeStyle={{ color: '#fff' }}
+          >
+            SPECIALS
           </NavLink>
           <NavLink
             to="/AppointmentPage"
             className="nav-link"
             activeStyle={{ color: '#fff' }}
           >
-            Page 2
+            APPOINTMENTS
+          </NavLink>
+          <div onClick={dropDownFunc}>
+            <span class="far fa-star"></span>
+            <p className="iconTextHamburger">ABOUT US</p>
+          </div>
+          {dropDown && (
+            <div className="dropDown">
+              <a href="/ResumePage">CAREERS</a>
+              <a href="/AboutUsPage">CONTACT US</a>
+              <a href="https://www.google.com">GOOGLE +</a>
+            </div>
+          )}
+          <NavLink
+            to="/ReviewsPage"
+            className="nav-link"
+            activeStyle={{ color: '#fff' }}
+          >
+            REVIEWS
+          </NavLink>
+          <NavLink
+            to="/DirectionsPage"
+            className="nav-link"
+            activeStyle={{ color: '#fff' }}
+          >
+            DIRECTIONS
           </NavLink>
         </LinksContainer>
       </Menu>

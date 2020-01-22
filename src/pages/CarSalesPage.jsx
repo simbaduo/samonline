@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Page from '../components/Page'
-import BreadcrumbsComponent2 from '../components/BreadcrumbsComponent2'
+import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
 
 const CarSalesPage = () => {
   return (
     <Page>
-      <BreadcrumbsComponent2
+      <BreadcrumbsComponent
         nextOne={'Car Sales'}
         nextOneUrl={'/CarSalesPage'}
       />

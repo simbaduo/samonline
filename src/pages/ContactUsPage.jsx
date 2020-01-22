@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Page from '../components/Page'
+import BreadcrumbsComponentExtra from '../components/BreadcrumbsComponentExtra'
 
 const ContactUsPage = () => {
   return (

@@ -7,38 +7,10 @@ const BreadcrumbsComponent = props => {
       <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
       {'>'}
       <Breadcrumb.Item href={props.nextOneUrl}>{props.nextOne}</Breadcrumb.Item>
-      {'>'}
-      <Breadcrumb.Item href={props.secondOneUrl}>
-        {props.secondOne}
-      </Breadcrumb.Item>
-      {/* <Breadcrumb tag="nav" listTag="div">
-        <BreadcrumbItem tag="a" href="/">
-          HOME
-        </BreadcrumbItem>
-        <BreadcrumbItem tag="a" href="ServicesPage">
-          SERVICES
-        </BreadcrumbItem>
-        <BreadcrumbItem className="carCrumb" tag="a" href="CarSalesPage">
-          CAR SALES
-        </BreadcrumbItem>
-        <BreadcrumbItem active tag="SpecialsPage">
-          SPECIALS
-        </BreadcrumbItem>
-        <BreadcrumbItem active tag="AppointmentsPage">
-          APPOINTMENTS
-        </BreadcrumbItem>
-        <BreadcrumbItem active tag="AboutUsPage">
-          ABOUT US
-        </BreadcrumbItem>
-        <BreadcrumbItem active tag="ReviewsPage">
-          REVIEWS
-        </BreadcrumbItem>
-        <BreadcrumbItem active tag="DirectionsPage">
-          DIRECTIONS
-        </BreadcrumbItem>
-      </Breadcrumb> */}
     </span>
   )
 }
+
+//could i combine both components??
 
 export default BreadcrumbsComponent

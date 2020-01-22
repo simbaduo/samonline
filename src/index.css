@@ -24,7 +24,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #666;
+  color: rgb(87, 88, 91);
   padding-top: 10px;
   margin-left: 2rem;
 }
@@ -310,16 +310,18 @@ li {
 
 .carouselButton {
   margin: 0;
-  padding: 0;
-  position: absolute;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  /* position: absolute;
   left: 693px;
-  top: 280px;
+  top: 280px; */
   background-color: white;
   border: none;
   border-radius: 7px;
   color: navy;
-  height: 40px;
-  width: 140px;
+  /* height: 40px;
+  width: 140px; */
   font-size: 11px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -332,8 +334,8 @@ li {
 .carouselButton:hover {
   color: white;
   background-color: #f0324d;
-  /* transition-delay: 1s; delays for 1 second
-  -webkit-transition-delay: 1s; for Safari & Chrome */
+  transition-delay: 1s;
+  -webkit-transition-delay: 1s;
 }
 
 .warrantyImg {
@@ -341,25 +343,26 @@ li {
 }
 
 .warrantyCarouselText {
-  position: absolute;
+  /* position: absolute;
   left: 270px;
-  top: 100px;
+  top: 100px; */
   color: white;
   /* font-size: 0.1em;
   transform: scale(1.5, 1.8); */
   font-family: 'Poppins', sans-serif;
   font-size: 400em/1.5em;
-  border: solid red 2px;
-  width: 40%;
-  text-align: right;
+  /* border: solid red 2px; */
+  /* width: 40%;
+  text-align: right; */
   font-weight: 100;
 }
 
 .napaBackgroundTitle {
+  margin: 0;
   color: white;
-  position: absolute;
-  left: 40rem;
-  top: 2rem;
+  /* position: absolute; */
+  /* left: 40rem;
+  top: 2rem; */
   font-style: normal;
   font-variant-ligatures: normal;
   font-variant-caps: normal;
@@ -367,8 +370,8 @@ li {
   font-variant-east-asian: normal;
   font-weight: 900;
   font-stretch: normal;
-  font-size: 2.9em;
-  line-height: 1.5em;
+  font-size: 2.2em;
+  /* line-height: 1.5em; */
   font-family: Intro, Verdana, sans-serif;
   text-transform: uppercase;
 }
@@ -382,9 +385,7 @@ li {
 } */
 
 .napaBackgroundLocation {
-  position: absolute;
-  left: 550px;
-  top: 175px;
+  margin: 0;
   font-style: normal;
   font-variant-ligatures: normal;
   font-variant-caps: normal;
@@ -392,23 +393,22 @@ li {
   font-variant-east-asian: normal;
   font-weight: 900;
   font-stretch: normal;
-  font-size: 1.1rem;
-  line-height: 1.5em;
+  font-size: 1rem;
+  /* line-height: 1.5em; */
   font-family: Intro, Verdana, sans-serif;
 }
 
 .warrantyCarouselTitle {
-  position: absolute;
+  /* position: absolute;
   left: 270px;
-  top: 20px;
+  top: 20px; */
   color: white;
   /* font-size: 0.1em;
   transform: scale(1.5, 1.8); */
   font-family: 'Poppins', sans-serif;
   font-size: 400em/1.5em;
-  border: solid red 2px;
-  width: 40%;
-  text-align: right;
+  /* width: 40%;
+  text-align: right; */
   font-weight: 100;
 }
 
@@ -473,4 +473,12 @@ li {
   font-size: 16px;
   border: none;
   text-decoration: none;
+}
+
+.burgerLink {
+  color: white;
+}
+
+.servicesHamburgerDropdown:active {
+  color: #f0324d;
 }
