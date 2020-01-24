@@ -26,8 +26,9 @@ const FooterNav = () => {
           <img height="150px" width="150px" src="./images/samfooterlogo.svg" />
         </div>
         <div className="footerNav">
+          <h6 className="whiteTitle">Useful Links</h6>
           <ul className="bottomNavList">
-            <li className="whiteTitle">Useful Links</li>
+            {/* <li className="whiteTitle">Useful Links</li> */}
             <li>
               <a className="footerLinks" href="../">
                 Home
@@ -91,7 +92,27 @@ const FooterNav = () => {
             </li>
           </ul>
         </div>
-        <hr className="bottomBar" />
+        <div className="socialMediaFooter">
+          <h2>Social Media</h2>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/swandersautomotive/"
+          >
+            <img height="30px" width="30px" src="./images/facebook-icon.png" />
+          </a>
+          <a target="_blank" href="https://www.google.com">
+            <img height="30px" width="30px" src="./images/googleplusicon.png" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.yelp.com/biz/swanders-auto-beverly-hills-2"
+          >
+            <img height="30px" width="30px" src="./images/yelpicon.png" />
+          </a>{' '}
+          <div className="creditsFooter">
+            <h2>5546 N. Lecanto Hwy. Beverly Hills, FL 34465 (352) 527-0440</h2>
+          </div>
+        </div>
       </footer>
     </Container>
   )

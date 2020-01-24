@@ -101,6 +101,15 @@ const CarouselComponent = () => {
           <CarouselContentContainer>
             <CarouselContentRowContainer>
               <CarouselContentRowLeftContainer>
+                <div className="napaSquiggleBox">
+                  <img
+                    className="squiggleImg"
+                    height="12px"
+                    width="60px"
+                    src="./images/squigglewhite.png"
+                  />
+                </div>
+
                 <p className="yellowText warrantyCarouselTitle">
                   The NAPA AutoCare Peace of Mind Warranty covers parts and
                   labor on qualifying repairs and services for 36 months/36,000
@@ -131,10 +140,37 @@ const CarouselComponent = () => {
           </CarouselImageContainer>
         </CarouselItemContainer>
 
+        {/* <CarouselItemContainer>
+          <img src="./images/americanflag.jpg" /> */}
+        {/* <CarouselContentContainer /> */}
+        {/* </CarouselItemContainer> */}
+
         <CarouselItemContainer>
-          <img src="./images/americanflag.jpg" />
-          {/* <p className="legend">Legend 3</p> */}
-          <CarouselContentContainer />
+          <CarouselContentContainer>
+            <CarouselTextContainer>
+              {/* <div className="vetContainer"> */}
+              <FullWidthContainer>
+                <h1 className="vetTopHeader">WE APPRECIATE</h1>
+              </FullWidthContainer>
+
+              <FullWidthContainer>
+                <h1 className="vetNextHeader">OUR VETERANS</h1>
+              </FullWidthContainer>
+              {/* </div> */}
+
+              <FullWidthContainer>
+                <p className="vetText">
+                  We offer a 10% discount to all Veterans with a valid ID.{' '}
+                </p>
+                <p className="vetSubText">
+                  Excludes tires, batteries, and oil changes{' '}
+                </p>
+              </FullWidthContainer>
+            </CarouselTextContainer>
+          </CarouselContentContainer>
+          <CarouselImageContainer>
+            <img src="./images/americanflag.jpg" />
+          </CarouselImageContainer>
         </CarouselItemContainer>
 
         <CarouselItemContainer>

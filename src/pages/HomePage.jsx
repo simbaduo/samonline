@@ -11,6 +11,8 @@
 //TO DO - the A's look weird
 //TO DO - make squiggle its own component
 //TO DO - triangle position absolute?
+//TO DO - Check CSS on a big screen white bottom for carimage
+//TO DO - bring in screen to make minor edits on large display?
 
 //TO DO - NAV
 //TO DO - Finish Hamburger Menu Submenu items and CSS
@@ -34,6 +36,9 @@
 //TO DO - Finish Input Field Layout. !!! CHECK SCREENSHOTS IN WIREFRAME FOLDER FOR STYLING !!!
 //TO DO - Print Coupon link of selected special
 // * TO DO - Store Appointment Input data into db to be accessed by admin
+//TO DO - Spit error message if not all fields are entered
+//TO DO - send message thanking you for submission after hitting enter
+//TO DO - Allow Enter for Submit
 
 //TO DO - ABOUT US
 //TO DO - About Us > Careers. store resumes into db for admin to view
@@ -53,6 +58,9 @@ import styled from 'styled-components'
 import Page from '../components/Page'
 import CarouselComponent from '../components/CarouselComponent'
 import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
+import AdviceServiceCouponComponent from '../components/AdviceServiceCouponComponent'
+import HomeSchedulerComponent from '../components/HomeSchedulerComponent'
+
 // import { NavLink } from 'react-router-dom'
 
 /** re-usable flex containers (TODO: move to separate folder) */
@@ -75,24 +83,62 @@ const TextPadding = styled.div`
 
 /** layout-specific containers */
 const ContentContainer = styled(FlexColumn)`
-  background-color: white;
-  min-height: 200px;
+  //background-color: rgb(255, 255, 255);
+  //min-height: 200px;
 `
 
-const RedContentContainer = styled(ContentContainer)`
-  background-color: red;
+const VetContentContainer = styled(ContentContainer)`
+  //background-color: red;
+  background-image: url('./images/veteranbg.jpg');
+  background-size: cover;
+  text-align: left;
+  border: solid purple 3px;
+  width: 100%;
+  display: flex;
+  padding-top: 30px;
+`
+const VetContentText = styled(ContentContainer)`
+  //background-color: red;
+  // background-image: url('./images/veteranbg.jpg');
+  background-size: cover;
+  text-align: left;
+  // border: solid gold 3px;
+  width: 80%;
+  display: flex;
+  justify-content: left;
+  background-color: transparent;
+`
+
+const VetContentSpacer = styled(ContentContainer)`
+  //background-color: red;
+  background-image: url('./images/veteranbg.jpg');
+  background-size: cover;
+  text-align: left;
+  border: solid gold 3px;
+  width: 20%;
+  display: flex;
+  justify-content: left;
 `
 
 const DiagonalColorContainer = styled(ContentContainer)`
-  background-color: white;
-  background: linear-gradient(to right bottom, red 50%, white 50%);
+  //background-color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to right bottom,
+    #c23225 50%,
+    rgb(255, 255, 255) 50%
+  );
   min-height: 200px;
 `
 
-const DiagonalColorContainerInverted = styled(ContentContainer)`
-  background-color: white;
-  background: linear-gradient(to right bottom, white 50%, red 50%);
-  min-height: 200px;
+const DiagonalImageContainer = styled(ContentContainer)`
+  //background-color: white;
+  //background: linear-gradient(to right bottom, white 50%, #c23225 50%);
+  background-image: url('./images/newcarcollage.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  width: 100%;
 `
 
 const HomePage = () => {
@@ -107,16 +153,59 @@ const HomePage = () => {
         <div className="carouselBox">
           <CarouselComponent />
         </div>
-        <RedContentContainer>
-          <p className="locationText">Beverly Hills Auto Repair</p>
-          <a
+        <VetContentContainer>
+          <VetContentText>
+            <div className="oilChangeTextBox">
+              <img
+                className="squiggleImg"
+                height="12px"
+                width="60px"
+                src="./images/squiggle.png"
+              />
+              <h1 className="redText freeText">FREE</h1>
+              <p className="oilChangeText">OIL CHANGE TO A VETERAN</p>
+              <p className="smallText">Every Month.</p>
+              <p className="smallText">*Must Have Valid Proof.</p>
+            </div>
+            <ContentContainer>
+              <div className="submitContainer">
+                <div className="submitBox">
+                  <input
+                    type="text"
+                    className="inputField"
+                    placeholder="name"
+                  />
+
+                  <input
+                    className="inputField"
+                    type="text"
+                    placeholder="e-mail"
+                  ></input>
+
+                  <input
+                    className="subscribeButton"
+                    type="submit"
+                    value="SUBSCRIBE"
+                  />
+
+                  <ul className="VeteranSubscribeBox"></ul>
+                </div>
+                <a className="smallLink" href="https://www.ebay.com">
+                  Click Here To Learn More
+                </a>
+              </div>
+            </ContentContainer>
+          </VetContentText>
+
+          {/* <p className="locationText">Beverly Hills Auto Repair</p> */}
+          {/* <a
             className="reviewBox"
             href="https://www.google.com/search?q=swanders+auto&oq=swanders+auto&aqs=chrome.0.0l5j69i60l3.2116j1j4&sourceid=chrome&ie=UTF-8#lrd=0x88e86e93df40cbf3:0x4a92447f07561798,1,,,"
           >
             <img height="18px" width="110px" src="./images/stars.png" />
           </a>
-          <p className="reviewText">5 Star Rating Based On 124 Reviews</p>
-        </RedContentContainer>
+          <p className="reviewText">5 Star Rating Based On 124 Reviews</p> */}
+        </VetContentContainer>
 
         <DiagonalColorContainer>
           <p className="callUsText">
@@ -132,48 +221,7 @@ const HomePage = () => {
           </TextPadding>
         </ContentContainer>
 
-        <DiagonalColorContainerInverted>
-          <img
-            className="squiggleImg"
-            height="12px"
-            width="60px"
-            src="./images/squiggle.png"
-          />
-          <h1 className="redText freeText">FREE</h1>
-          <div className="oilChangeTextBox">
-            <p className="oilChangeText">OIL CHANGE TO A</p>
-            <p className="oilChangeText">VETERAN</p>
-            <p className="smallText">Every Month.</p>
-            <p className="smallText">*Must Have Valid Proof.</p>
-          </div>
-        </DiagonalColorContainerInverted>
-
-        <ContentContainer>
-          <ul className="veteranInputBox">
-            <li>
-              <input type="text" className="inputField" placeholder="name" />
-            </li>
-            <li>
-              <input
-                className="inputField"
-                type="text"
-                placeholder="e-mail"
-              ></input>
-            </li>
-            <li>
-              <input
-                className="subscribeButton"
-                type="submit"
-                value="SUBSCRIBE"
-              />
-            </li>
-            <li>
-              <a className="smallLink" href="https://www.ebay.com">
-                Click Here To Learn More
-              </a>
-            </li>
-          </ul>
-        </ContentContainer>
+        <DiagonalImageContainer></DiagonalImageContainer>
 
         {/* <div className="specialAd">
           <img src="./images/triangle.jpg" />
@@ -200,6 +248,23 @@ const HomePage = () => {
                 />
               </div>
             </div>
+          </div>
+          <div className="logoDisplay">
+            <AdviceServiceCouponComponent />
+          </div>
+          <div className="affiliateLogos">
+            <img height="100px" src="./images/amsoil.jpeg" />
+            <img height="100px" src="./images/ASE.png" />
+            <img height="100px" src="./images/ATI.jpg" />
+            <img height="100px" src="./images/BG.png" />
+            <img height="100px" src="./images/Geico.png" />
+            <img height="100px" src="./images/Jasper.jpg" />
+            <img height="100px" src="./images/napaautocarelogo.png" />
+            <img height="100px" src="./images/RC.png" />
+            <img height="100px" src="./images/worldpac.jpeg" />
+          </div>
+          <div className="homeScheduler">
+            <HomeSchedulerComponent />
           </div>
         </ContentContainer>
         {/* <div className="nextBox"></div> */}
