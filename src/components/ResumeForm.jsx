@@ -145,9 +145,6 @@ const AppointmentRequestForm = () => {
         </FormActions>
       </Form>
       {/* <button onClick={() => onSubmit()}>Send Email</button> */}
-      <section>
-        <p>Hi My name is nathan</p>
-      </section>
     </Container>
   )
 }

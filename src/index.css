@@ -808,6 +808,14 @@ p {
   flex: 1;
 }
 
+.appointmentTitle {
+  display: flex;
+  width: 90%;
+  /* border: solid red 2px; */
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
 .topHalf {
   display: flex;
   flex-direction: row;
@@ -863,4 +871,179 @@ p {
   border: none;
   /* border-bottom: 1px solid rgb(240, 50, 77); */
   color: red;
+}
+
+.breadCrumbDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: auto;
+  flex: 1;
+  width: 78%;
+}
+
+.carTable {
+}
+
+.breadCrumbText {
+  color: red;
+  text-decoration: none;
+}
+
+.servicesTitle {
+  text-align: left;
+  /* border: solid red 2px; */
+  width: 70%;
+  /* color: red; */
+  text-decoration: underline;
+  margin-bottom: 0;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.servicesBodyText {
+  width: 70%;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.reviewTable {
+  /* border: solid red 2px; */
+  /* display: flex; */
+  width: 90%;
+  margin-top: 4.8rem;
+}
+
+.reviewBox {
+  border-top: solid rgb(180, 180, 180, 0.5) 1px;
+  border-bottom: solid rgb(180, 180, 180, 0.5) 1px;
+
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5px;
+}
+
+.reviewList {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.reviewInfo {
+  border-right: solid rgba(180, 180, 180, 0.5) 1px;
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.reviewInfo li {
+  margin-bottom: 2px;
+}
+
+.reviewText {
+  display: flex;
+  flex-direction: column;
+  /* border: solid purple 4px; */
+  justify-content: center;
+  align-items: flex-start;
+  flex: 3;
+  height: 5rem;
+  font-size: 1.8vh;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.greyText {
+  color: grey;
+}
+
+.reasonField {
+  height: 50px;
+}
+
+textarea,
+select,
+input,
+button {
+  outline: none;
+}
+
+input {
+  height: 5px;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+  height: 50px;
+}
+
+.scheduleCalendar {
+  width: 50%;
+}
+
+.scheduleInputDiv {
+  display: flex;
+}
+
+.scheduleTitles {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.warningBox {
+  border: solid black 1px;
+  border-radius: 4px;
+  margin-top: 0.75rem;
+  line-height: 0.75;
+  padding: 10px 14px 10px 10px;
+  font-size: 13px;
+  background-color: rgb(254, 255, 206);
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 46%;
+}
+
+.emailContainer input,
+.nameContainer input,
+.phoneContainer input {
+  border: solid 1px rgba(110, 110, 110, 0.438);
+  border-radius: 2px;
+}
+
+.phoneContainer {
+  display: flex;
+}
+
+.phoneEmptyDiv {
+  /* border: solid red 2px; */
+  flex: 0.5;
+}
+
+.phoneInput {
+  display: flex;
+  width: 100%;
+}
+
+.emailContainer {
+  display: flex;
+}
+
+label {
+  line-height: 0.4;
+}
+
+.appointmentSendButton:hover {
+  background-color: rgb(240, 50, 77);
 }

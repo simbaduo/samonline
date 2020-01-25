@@ -22,6 +22,7 @@ import SpecialsPage from '../pages/SpecialsPage'
 import AppointmentPage from '../pages/AppointmentPage'
 import AboutUsPage from '../pages/AboutUsPage'
 import ReviewsPage from '../pages/ReviewsPage'
+import ExperiencePage from '../pages/ExperiencePage'
 import DirectionsPage from '../pages/DirectionsPage'
 import ContactUsPage from '../pages/ContactUsPage'
 import NotFoundPage from '../pages/NotFoundPage'
@@ -105,6 +106,7 @@ const Router = () => {
         ></Route>
         <Route exact path="/AboutUsPage" component={AboutUsPage}></Route>
         <Route exact path="/ReviewsPage" component={ReviewsPage}></Route>
+        <Route exact path="/ExperiencePage" component={ExperiencePage}></Route>
         <Route exact path="/DirectionsPage" component={DirectionsPage}></Route>
         <Route exact path="/ResumePage" component={ResumePage}></Route>
 

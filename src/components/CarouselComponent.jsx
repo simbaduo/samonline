@@ -93,7 +93,10 @@ const CarouselComponent = () => {
             </CarouselTextContainer>
           </CarouselContentContainer>
           <CarouselImageContainer>
-            <img src="./images/carbackgroundnapa.jpg" />
+            <img
+              alt="Swander's Car Logo"
+              src="./images/carbackgroundnapa.jpg"
+            />
           </CarouselImageContainer>
         </CarouselItemContainer>
 
@@ -106,6 +109,7 @@ const CarouselComponent = () => {
                     className="squiggleImg"
                     height="12px"
                     width="60px"
+                    alt="Squiggle"
                     src="./images/squigglewhite.png"
                   />
                 </div>
@@ -136,14 +140,13 @@ const CarouselComponent = () => {
             </CarouselContentRowContainer>
           </CarouselContentContainer>
           <CarouselImageContainer>
-            <img className="warrantyImg" src="./images/warrantypic.jpg" />
+            <img
+              className="warrantyImg"
+              alt="Warranty Visual Display"
+              src="./images/warrantypic.jpg"
+            />
           </CarouselImageContainer>
         </CarouselItemContainer>
-
-        {/* <CarouselItemContainer>
-          <img src="./images/americanflag.jpg" /> */}
-        {/* <CarouselContentContainer /> */}
-        {/* </CarouselItemContainer> */}
 
         <CarouselItemContainer>
           <CarouselContentContainer>
@@ -169,14 +172,24 @@ const CarouselComponent = () => {
             </CarouselTextContainer>
           </CarouselContentContainer>
           <CarouselImageContainer>
-            <img src="./images/americanflag.jpg" />
+            <img
+              alt="American Flag / Veteran Benefits"
+              src="./images/FinancingAd.png"
+            />
           </CarouselImageContainer>
         </CarouselItemContainer>
 
         <CarouselItemContainer>
-          <img src="./images/roughcountry.jpg" />
+          <img
+            alt="Rough Country Description"
+            src="./images/roughcountry.jpg"
+          />
           {/* <p className="legend">Legend 4</p> */}
           <CarouselContentContainer />
+
+          {/* <CarouselItemContainer>
+            <img src="./images/FinancingAd.png" />
+          </CarouselItemContainer> */}
         </CarouselItemContainer>
       </Carousel>
     </>

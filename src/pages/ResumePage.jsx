@@ -7,7 +7,7 @@ import ResumeForm from '../components/ResumeForm'
 const ResumePage = () => {
   return (
     <Page>
-      <h1>WHAT</h1>
+      <h1>Join Our Team!</h1>
       <ResumeForm />
     </Page>
   )

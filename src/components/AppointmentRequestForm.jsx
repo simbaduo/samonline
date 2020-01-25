@@ -5,6 +5,7 @@ import axios from 'axios'
 const Container = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 100%;
 `
 
 const Form = styled.form`
@@ -64,36 +65,33 @@ const AppointmentRequestForm = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
   const [make, setMake] = useState('')
   const [model, setModel] = useState('')
   const [year, setYear] = useState('')
+  const [reason, setReason] = useState('')
   const [requestedAppointment, setRequestedAppointment] = useState([])
   const [makeData, setMakeData] = useState([])
   const [modelData, setModelData] = useState([])
+  const [yearData, setYearData] = useState([])
+  const [secondChoiceAppointment, setSecondChoiceAppointment] = useState([])
 
   // BONUS: add a "submitting..." state to your button
   const onSubmit = async event => {
     // prevents the page from refreshing
     event.preventDefault()
 
-    /** do something like... */
-    // const API_URL = 'https://localhost:5001/send/email'
-    // const ApptReqData = {
-    // firstName: firstName,
-    // lastName: lastName,
-    // email: email,
-    // make: make,
-    // model: model,
-    // year: year,
-    // }const sendAppointment = async () => {
     const response = await axios.post('https://localhost:5001/api/email', {
       firstName: firstName,
       lastName: lastName,
+      phoneNumber: phoneNumber,
       email: email,
       make: make,
       model: model,
       year: year,
-      RequestedAppointment: requestedAppointment,
+      reason: reason,
+      requestedAppointment: requestedAppointment,
+      secondChoiceAppointment: secondChoiceAppointment,
     })
 
     console.log(response.data)
@@ -101,7 +99,7 @@ const AppointmentRequestForm = () => {
 
   useEffect(() => {
     const makeApiCall = async () => {
-      const resp = await axios.get(`https://localhost:5001/make/${'&nbsp;'}`)
+      const resp = await axios.get(`https://localhost:5001/make`)
       if (resp.status === 200) {
         setMakeData(resp.data.terms)
         console.log(resp.data.terms)
@@ -111,9 +109,7 @@ const AppointmentRequestForm = () => {
   }, [])
 
   const modelApiCall = async () => {
-    const resp = await axios.get(
-      `https://localhost:5001/year/${make}/${'&nbsp;'}`
-    )
+    const resp = await axios.get(`https://localhost:5001/make/${make}/model`)
     if (resp.status === 200) {
       setModelData(resp.data.terms)
     }
@@ -124,40 +120,80 @@ const AppointmentRequestForm = () => {
     modelApiCall()
   }, [make])
 
+  const yearApiCall = async (make, model) => {
+    console.log(`${make} ${model}, in year api`)
+    console.log(`https://localhost:5001/make/${make}/model/${model}`)
+    const resp = await axios.get(
+      `https://localhost:5001/make/${make}/model/${model}`
+    )
+    if (resp.status === 200) {
+      setYearData(resp.data.terms)
+    }
+  }
+
+  useEffect(() => {
+    if (make && model) yearApiCall(make, model)
+  }, [make, model])
+
   return (
     <>
+      <div className="appointmentTitle">
+        <h1>Personal Information</h1>
+      </div>
       <Container>
         <Form onSubmit={onSubmit}>
-          <FormField>
-            <label>First Name</label>
-            <input
-              name="firstName"
-              id="firstName"
-              type="text"
-              onChange={e => setFirstName(e.target.value)}
-              value={firstName}
-            />
-          </FormField>
-          <FormField>
-            <label>Last Name</label>
-            <input
-              name="lastName"
-              id="lastName"
-              type="text"
-              onChange={e => setLastName(e.target.value)}
-              value={lastName}
-            />
-          </FormField>
-          <FormField>
-            <label>Email</label>
-            <input
-              name="email"
-              id="email"
-              type="text"
-              onChange={e => setEmail(e.target.value)}
-              value={email}
-            />
-          </FormField>
+          <div className="nameContainer">
+            <FormField>
+              <label>First Name</label>
+              <input
+                name="firstName"
+                id="firstName"
+                type="text"
+                onChange={e => setFirstName(e.target.value)}
+                value={firstName}
+              />
+            </FormField>
+            <FormField>
+              <label>Last Name</label>
+              <input
+                name="lastName"
+                id="lastName"
+                type="text"
+                onChange={e => setLastName(e.target.value)}
+                value={lastName}
+              />
+            </FormField>
+          </div>
+          <div className="emailContainer">
+            {' '}
+            <FormField>
+              <label>Email</label>
+              <input
+                name="email"
+                id="email"
+                type="text"
+                onChange={e => setEmail(e.target.value)}
+                value={email}
+              />
+            </FormField>
+            <div></div>
+          </div>
+          <div className="phoneContainer">
+            {' '}
+            <FormField>
+              <label>Phone</label>
+              <input
+                className="phoneInput"
+                name="phoneNumber"
+                id="phoneNumber"
+                type="text"
+                onChange={e => setPhoneNumber(e.target.value)}
+                value={phoneNumber}
+              />
+            </FormField>
+            <div className="phoneEmptyDiv"></div>
+          </div>
+
           <FormField>
             <label>Make</label>
             <select
@@ -183,45 +219,82 @@ const AppointmentRequestForm = () => {
                 return <option>{model}</option>
               })}
             </select>
-            {/* <input
-              name="model"
-              id="model"
-              type="text"
-              onChange={e => setModel(e.target.value)}
-              value={model}
-            /> */}
           </FormField>
           <FormField>
             <label>Year</label>
-            <input
+            <select
               name="year"
               id="year"
               type="number"
               onChange={e => setYear(e.target.value)}
               value={year}
-            />
+            >
+              <option>{null}</option>
+              {yearData.map(year => {
+                return <option>{year}</option>
+              })}
+            </select>
           </FormField>
           <FormField>
-            <label>Requested Appointment</label>
-            <input
-              name="requestedAppointment"
-              id="requestedAppointment"
-              type="datetime-local"
-              onChange={e => setRequestedAppointment(e.target.value)}
-              value={requestedAppointment}
-            />
+            <label>Reason</label>
+            <textarea
+              rows="3"
+              cols="10"
+              className="reasonField"
+              name="reason"
+              id="reason"
+              type="text"
+              onChange={e => setReason(e.target.value)}
+              value={reason}
+            >
+              {' '}
+            </textarea>
+          </FormField>
+          <FormField>
+            <div className="scheduleTitles">
+              {' '}
+              <label>Requested Appointment</label>
+              <label>2nd Request (optional)</label>
+            </div>
+
+            <div className="scheduleInputDiv">
+              <input
+                className="scheduleCalendar"
+                name="requestedAppointment"
+                id="requestedAppointment"
+                type="datetime-local"
+                onChange={e => setRequestedAppointment(e.target.value)}
+                value={requestedAppointment}
+              />
+              <input
+                className="scheduleCalendar"
+                name="secondChoiceAppointment"
+                id="secondChoiceAppointment"
+                type="datetime-local"
+                onChange={e => setSecondChoiceAppointment(e.target.value)}
+                value={secondChoiceAppointment}
+              />
+            </div>
+            <div className="warningBox">
+              <p>
+                Please note that the date and time you requested may not be
+                available.
+              </p>
+              <p>
+                We will contact you to confirm your actual appointment details.
+              </p>
+            </div>
           </FormField>
           <FormActions>
-            <button type="submit" onSubmit={onSubmit}>
+            <button
+              className="appointmentSendButton"
+              type="submit"
+              onSubmit={onSubmit}
+            >
               Send
             </button>
-            {/* Send Email */}
           </FormActions>
         </Form>
-        {/* <button onClick={() => onSubmit()}>Send Email</button> */}
-        <section>
-          <p>Hi My name is nathan</p>
-        </section>
       </Container>
     </>
   )

@@ -23,7 +23,12 @@ const FooterNav = () => {
     <Container>
       <footer className="bottomFooter">
         <div className="footerLogo">
-          <img height="150px" width="150px" src="./images/samfooterlogo.svg" />
+          <img
+            alt="Swander's Tiny Logo"
+            height="150px"
+            width="150px"
+            src="./images/samfooterlogo.svg"
+          />
         </div>
         <div className="footerNav">
           <h6 className="whiteTitle">Useful Links</h6>
@@ -98,16 +103,31 @@ const FooterNav = () => {
             target="_blank"
             href="https://www.facebook.com/swandersautomotive/"
           >
-            <img height="30px" width="30px" src="./images/facebook-icon.png" />
+            <img
+              sry="Facebook Icon"
+              height="30px"
+              width="30px"
+              src="./images/facebook-icon.png"
+            />
           </a>
           <a target="_blank" href="https://www.google.com">
-            <img height="30px" width="30px" src="./images/googleplusicon.png" />
+            <img
+              src="Google+ Icon"
+              height="30px"
+              width="30px"
+              src="./images/googleplusicon.png"
+            />
           </a>
           <a
             target="_blank"
             href="https://www.yelp.com/biz/swanders-auto-beverly-hills-2"
           >
-            <img height="30px" width="30px" src="./images/yelpicon.png" />
+            <img
+              alt="Yelp Logo Icon"
+              height="30px"
+              width="30px"
+              src="./images/yelpicon.png"
+            />
           </a>{' '}
           <div className="creditsFooter">
             <h2>5546 N. Lecanto Hwy. Beverly Hills, FL 34465 (352) 527-0440</h2>

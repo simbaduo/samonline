@@ -6,10 +6,13 @@ import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
 const CarSalesPage = () => {
   return (
     <Page>
-      <BreadcrumbsComponent
-        nextOne={'Car Sales'}
-        nextOneUrl={'/CarSalesPage'}
-      />
+      <div className="breadCrumbDiv">
+        <BreadcrumbsComponent
+          nextOne={'Car Sales'}
+          nextOneUrl={'/CarSalesPage'}
+        />
+      </div>
+      <div className="carTable">Testing where does it go now</div>
     </Page>
   )
 }

@@ -4,9 +4,13 @@ import { Breadcrumb } from 'react-bootstrap'
 const BreadcrumbsComponent = props => {
   return (
     <span className="flexThis">
-      <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+      <Breadcrumb.Item className="breadCrumbText" href="/">
+        Home
+      </Breadcrumb.Item>
       {'>'}
-      <Breadcrumb.Item href={props.nextOneUrl}>{props.nextOne}</Breadcrumb.Item>
+      <Breadcrumb.Item className="breadCrumbText" href={props.nextOneUrl}>
+        {props.nextOne}
+      </Breadcrumb.Item>
     </span>
   )
 }

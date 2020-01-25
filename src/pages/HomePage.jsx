@@ -1,18 +1,20 @@
-//TO DO - make more components
 //TO DO - ADA compliance
-//TO DO - review how I got here
 //TO DO - Put Images directory in correct location
+//TO DO - Complete Auth
+//TO DO - Build out all landing pages
+//TO DO - Deploy To Docker
+//TO DO - Review Filter Page
+//TO DO - Make Required Fields
+
+//TO DO - why do i have to use height rem instead of height 100%
 
 //TO DO - CSS Issues
 //TO DO - fix nav bar top margin
-//TO DO - why do i have to add font family to all CSS
 //TO DO - put ongoing specials in triangle?
-//TO DO - why cant i bolden certain things?
-//TO DO - the A's look weird
-//TO DO - make squiggle its own component
-//TO DO - triangle position absolute?
 //TO DO - Check CSS on a big screen white bottom for carimage
 //TO DO - bring in screen to make minor edits on large display?
+//TO DO - Fix BreadCrumbs
+//TO DO - Why cant i bold the titles??
 
 //TO DO - NAV
 //TO DO - Finish Hamburger Menu Submenu items and CSS
@@ -29,13 +31,12 @@
 //TO DO - Add Current Specials Table. !!! CHECK SCREENSHOTS IN WIREFRAME FOLDER FOR STYLING !!!
 //TO DO - Click Redeem Now. Links you to Appointments page with Special Offers filled out with selected special offer
 //TO DO - Print Coupon link of selected special
+//TO DO - Veteran Display Page
 
 //TO DO - APPOINTMENTS
 //TO DO - Specials Offers dropdown. Linked from SpecialsPage db?
-//TO DO - Calendar dropdown for First and Second Choice of appointment
 //TO DO - Finish Input Field Layout. !!! CHECK SCREENSHOTS IN WIREFRAME FOLDER FOR STYLING !!!
 //TO DO - Print Coupon link of selected special
-// * TO DO - Store Appointment Input data into db to be accessed by admin
 //TO DO - Spit error message if not all fields are entered
 //TO DO - send message thanking you for submission after hitting enter
 //TO DO - Allow Enter for Submit
@@ -49,7 +50,6 @@
 //TO DO - google reviews? can i pull reviews from google API and store them into my own filtered db?
 
 //TO DO - DIRECTIONS
-//TO DO - Static Image of Map for now.
 //TO DO - Google API account is set up with key access to route to location. Low Priority
 
 import React from 'react'
@@ -59,6 +59,7 @@ import Page from '../components/Page'
 import CarouselComponent from '../components/CarouselComponent'
 import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
 import AdviceServiceCouponComponent from '../components/AdviceServiceCouponComponent'
+import AffiliatesComponent from '../components/AffiliatesComponent'
 import HomeSchedulerComponent from '../components/HomeSchedulerComponent'
 
 // import { NavLink } from 'react-router-dom'
@@ -92,7 +93,7 @@ const VetContentContainer = styled(ContentContainer)`
   background-image: url('./images/veteranbg.jpg');
   background-size: cover;
   text-align: left;
-  border: solid purple 3px;
+  // border: solid purple 3px;
   width: 100%;
   display: flex;
   padding-top: 30px;
@@ -133,7 +134,7 @@ const DiagonalColorContainer = styled(ContentContainer)`
 const DiagonalImageContainer = styled(ContentContainer)`
   //background-color: white;
   //background: linear-gradient(to right bottom, white 50%, #c23225 50%);
-  background-image: url('./images/newcarcollage.jpg');
+  background-image: url('./images/dualcartest.jpg');
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -157,6 +158,7 @@ const HomePage = () => {
           <VetContentText>
             <div className="oilChangeTextBox">
               <img
+                alt="Squiggle"
                 className="squiggleImg"
                 height="12px"
                 width="60px"
@@ -229,7 +231,12 @@ const HomePage = () => {
         <ContentContainer>
           <div className="specialsContainer">
             <div className="specialsBox">
-              <img height="12px" width="60px" src="./images/squiggle.png" />
+              <img
+                alt="Squiggle"
+                height="12px"
+                width="60px"
+                src="./images/squiggle.png"
+              />
               <h1 className="specialsTitle">
                 <span className="redText">SYNTHETIC OIL CHANGE</span>
               </h1>
@@ -252,17 +259,7 @@ const HomePage = () => {
           <div className="logoDisplay">
             <AdviceServiceCouponComponent />
           </div>
-          <div className="affiliateLogos">
-            <img height="100px" src="./images/amsoil.jpeg" />
-            <img height="100px" src="./images/ASE.png" />
-            <img height="100px" src="./images/ATI.jpg" />
-            <img height="100px" src="./images/BG.png" />
-            <img height="100px" src="./images/Geico.png" />
-            <img height="100px" src="./images/Jasper.jpg" />
-            <img height="100px" src="./images/napaautocarelogo.png" />
-            <img height="100px" src="./images/RC.png" />
-            <img height="100px" src="./images/worldpac.jpeg" />
-          </div>
+          <AffiliatesComponent />
           <div className="homeScheduler">
             <HomeSchedulerComponent />
           </div>
