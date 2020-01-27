@@ -51,15 +51,17 @@ const NavBar = () => {
           SERVICES
         </a>
         <div className="dropdownNavContent">
-          <a href="/ServicesPages/OilChangePage">OIL CHANGE</a>
-          <a href="/ServicesPages/ACPage">A/C SYSTEM</a>
-          <a href="/ServicesPages/AlignmentPage">ALIGNMENT</a>
-          <a href="/ServicesPages/HosesPage">HOSES / COOLING SYSTEM</a>
-          <a href="/ServicesPages/BrakesPage">BRAKES</a>
-          <a href="/ServicesPages/DiagnosticsPage">DIAGNOSTICS</a>
-          <a href="/ServicesPages/SteeringPage">STEERING</a>
-          <a href="/ServicesPages/TiresPage">TIRES</a>
-          <a href="/ServicesPages/AccessoriesPage">LIFT KITS / ACCESSORIES</a>
+          <a href="/ServicesPages/ACPage">Ac System</a>
+          <a href="/ServicesPages/AlignmentPage">Alignment</a>
+          <a href="/ServicesPages/BrakesPage">Brakes</a>
+          <a href="/ServicesPages/HosesPage">Cooling</a>
+          <a href="/ServicesPages/DiagnosticsPage">Diagnostics</a>
+          <a href="/ServicesPages/InspectionsPage">Digital Inspections</a>
+          <a href="/ServicesPages/AccessoriesPage">Lift Kits</a>
+          <a href="/ServicesPages/OilChangePage">Oil Change</a>
+          <a href="/ServicesPages/TuneUpPage">Prevention</a>
+          <a href="/ServicesPages/SteeringPage">Steering</a>
+          <a href="/ServicesPages/TiresPage">Tires</a>
         </div>
       </div>
       {/* </NavLink> */}

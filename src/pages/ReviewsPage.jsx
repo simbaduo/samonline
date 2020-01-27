@@ -8,7 +8,7 @@ const ReviewsPage = () => {
   const [reviews, setReviews] = useState([])
 
   const getReviews = async () => {
-    const resp = await Axios.get('https://localhost:5001/api/Reviews')
+    const resp = await Axios.get('https://samonlineback.herokuapp.com/api/Reviews')
     setReviews(resp.data)
     console.log(resp.data)
   }

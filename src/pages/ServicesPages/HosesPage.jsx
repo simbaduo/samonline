@@ -9,10 +9,10 @@ const HosesPage = () => {
       <BreadcrumbsComponentExtra
         nextOne={'Services'}
         nextOneUrl={'/ServicesPage'}
-        secondOne={'Hoses / Radiators / Starters'}
+        secondOne={'Cooling'}
         secondOneUrl={'/ServicesPages/HosesPage'}
       />
-      <h1 className="servicesTitle">Hoses / Radiators / Water Pumps</h1>
+      <h1 className="servicesTitle">Cooling System</h1>
       <p className="servicesBodyText">
         Your vehicle’s cooling system is designed to cool and protect both your
         engine and transmission. On some vehicles it also plays a part in the

@@ -8,28 +8,33 @@ const InspectionsPage = () => {
       <BreadcrumbsComponentExtra
         nextOne={'Services'}
         nextOneUrl={'/ServicesPage'}
-        secondOne={'Digital Courtesy Inspections'}
+        secondOne={'Inspections'}
         secondOneUrl={'/ServicesPages/InspectionsPage'}
       />
       <h1 className="servicesTitle">Digital Vehicle Inspection</h1>
       <p className="servicesBodyText">
-        Air Conditioning isn’t a luxury for drivers in Beverly Hills, it’s a
-        necessity. It is possible plex systems controlled by various computers,
-        valves, actuators, and vehicle specific fluids. Without the proper
-        equipment, training, or information it is almost impossible to make a
-        proper diagnosis or repair. This is why you can feel completely
-        confident knowing that decades of experience and state of the art
-        equipment will allow the ASE certified technicians at Swander’s
-        Automotive to properly diagnosethe interior temperature of your car to
-        well over 100 degrees in the summer which is not only uncomfortable,
-        it’s dangerous. To ensure a safe and comfortable driving experience in
-        our Florida heat, it is essential that your A/C system is working
-        properly and efficiently. Today’s newer vehicles havefor com, repair,
-        and service your air conditioning system. You will also have our Peace
-        of Mind Warranty assuring you that our repairs are guaranteed. If you
-        feel that your air conditioning is not quite as cold as it used to be,
-        or if it doesn’t work at all, give us a call and schedule an appointment
-        today.
+        With every repair, Swander’s Automotive offers all of our customers a 27
+        pt. digital courtesy inspection sent directly to any smart phone or
+        email address. An ASE certified technician will visually inspect your
+        tires, belts, lights, wipers, hoses, brakes, suspension, and more. Your
+        battery will be tested, fluid levels topped, and tire pressures
+        adjusted. Our digital inspections are thorough and include technician
+        notes, pictures, and sometimes videos. The digital inspection will
+        evaluate items with a 3-color rating system: 1.RED: In need of immediate
+        attention--possible safety issue. 2.YELLOW: Maintenance items due by
+        vehicle’s mileage--suggest repair, replacement, or service but not an
+        emergency. 3.GREEN: Great! No need of attention at this current time!
+        These ratings assure that you are aware of which repairs need immediate
+        attention, which repairs may need attention in the near future, and
+        areas that are in great shape. At Swander’s Automotive we will never
+        attempt to sell you unnecessary repairs or services. Our goal is to
+        treat your vehicle as one of our own. We will only suggest items that we
+        would (and do) perform on our own vehicles. At Swander’s Automotive we
+        are committed to safety and longevity of your vehicle. It is our goal
+        that after each visit you have a complete understanding of the overall
+        condition of your vehicle. We feel that prevention is the best medicine
+        and thorough inspections are the best way to save you time, money, and
+        future headaches.
       </p>{' '}
     </Page>
   )

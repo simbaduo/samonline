@@ -1,17 +1,40 @@
 import React from 'react'
+import styled from 'styled-components'
+import { colors } from '../../utils/theme'
+
+
 
 import Page from '../../components/Page'
+import NavBar from '../../components/NavBar'
 import BreadcrumbsComponentExtra from '../../components/BreadcrumbsComponentExtra'
+import FooterNav from '../../components/FooterNav'
+
+
+const Container = styled.div`
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: ${colors.light};
+`
+
+
+
+
 
 const AccessoriesPage = () => {
   return (
-    <Page>
-      <BreadcrumbsComponentExtra
-        nextOne={'Services'}
-        nextOneUrl={'/ServicesPage'}
-        secondOne={'Accessories'}
-        secondOneUrl={'/ServicesPages/AccessoriesPage'}
-      />
+    <>
+    <Container><NavBar />
+      <div className="pageContainer"><div className="crumbContainer">
+        <BreadcrumbsComponentExtra
+          className="crumbItems"
+          nextOne={'Services'}
+          nextOneUrl={'/ServicesPage'}
+          secondOne={'Accessories'}
+          secondOneUrl={'/ServicesPages/AccessoriesPage'}
+        />
+      </div>
       <h1 className="servicesTitle">Lift Kits / Accessories</h1>
       <p className="servicesBodyText">
         Swander’s Automotive is a Rough Country Dealer/Distributor. We recognize
@@ -26,8 +49,11 @@ const AccessoriesPage = () => {
         Replacement Guarantee. Our team of ASE certified professionals will
         gladly go over options and help you find the perfect upgrades for your
         truck, jeep, or SUV.
-      </p>{' '}
-    </Page>
+      </p>{' '}</div>
+      
+      <FooterNav /></Container>
+      
+    </>
   )
 }
 

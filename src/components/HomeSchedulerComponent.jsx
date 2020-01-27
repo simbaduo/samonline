@@ -9,23 +9,56 @@ const HomeSchedulerComponent = () => {
           <p>Let us know how we can help you. Request an appointment </p>
           <p>using the form below.</p>
         </div>
-        <h1 className="centerArea"></h1>
         <div className="homeAppointmentPhoto"></div>
       </div>
+
       <div className="homeScheduleContainer">
         <div className="homeScheduleInnerDiv">
-          <input
-            className="lineInput"
-            type="text"
-            placeHolder="First Name"
-          ></input>
-          <input
-            className="lineInput"
-            type="text"
-            placeHolder="Last Name"
-          ></input>
-          <input className="lineInput" type="text" placeHolder="Email"></input>
-          <input className="lineInput" type="text" placeHolder="Phone"></input>
+          <div className="row">
+            <div className="control">
+              <label htmlFor="firstName">First Name</label>
+              <input name="firstName" className="lineInput" type="text" />
+            </div>
+            <div className="control">
+              <label htmlFor="lastName">Last Name</label>
+
+              <input
+                className="lineInput"
+                type="text"
+                placeHolder="Last Name"
+              />
+            </div>
+            <div className="control">
+              <input className="lineInput" type="text" placeHolder="Email" />
+            </div>
+            <div className="control">
+              <input className="lineInput" type="text" placeHolder="Phone" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="control">
+              <input
+                className="lineInput"
+                type="text"
+                placeHolder="Appointment Reason"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="control double">
+              <input
+                className="lineInput"
+                type="text"
+                placeHolder="Vehicle Information"
+              />
+            </div>
+            <div className="control">
+              <input className="lineInput" type="date" />
+            </div>
+            <div className="control">
+              <input className="lineInput" type="time" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="homeAppointmentReasonContainer">

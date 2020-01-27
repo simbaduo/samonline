@@ -91,7 +91,7 @@ const HamburgerNav = () => {
           </NavLink>
 
           <div onClick={dropDownFunc}>
-            <span class="far fa-star"></span>
+            <span className="far fa-star"></span>
             <p className="servicesHamburgerDropdown">
               &nbsp;&nbsp;&nbsp;&nbsp;SERVICES
             </p>
@@ -124,7 +124,7 @@ const HamburgerNav = () => {
             APPOINTMENTS
           </NavLink>
           <div onClick={dropDownFunc}>
-            <span class="far fa-star"></span>
+            <span className="far fa-star"></span>
             <p className="iconTextHamburger">ABOUT US</p>
           </div>
           {dropDown && (

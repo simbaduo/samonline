@@ -174,7 +174,7 @@ const CarouselComponent = () => {
           <CarouselImageContainer>
             <img
               alt="American Flag / Veteran Benefits"
-              src="./images/FinancingAd.png"
+              src="./images/americanflag.jpg"
             />
           </CarouselImageContainer>
         </CarouselItemContainer>

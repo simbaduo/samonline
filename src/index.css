@@ -1,3 +1,5 @@
+/* TO DO - bottom margin is white beflow  */
+
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 :root {
@@ -163,6 +165,24 @@ li {
   width: 100%;
 }
 
+.crumbContainer {
+  /* display: flex;
+  /* border: solid red 2px; */
+  /* width: 45%; */
+  /* justify-content: center; */
+  /* margin-bottom: -5rem; */
+  /* height: 222px;
+  position: absolute;  */
+}
+
+.pageContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .veteranInputBox {
   display: flex;
   align-items: center;
@@ -298,24 +318,49 @@ li {
   flex-direction: row;
   width: 100%;
   background-color: rgb(25, 25, 25);
-  padding-top: 2rem;
+  padding-top: 3rem;
   /* padding-left: 20rem; */
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   /* border: solid red 3px; */
   justify-content: center;
 }
 
 .footerLogo {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-end;
   width: 20%;
+  align-items: initial;
   /* border: solid green 2px; */
+  padding: 0;
+  margin: 0;
+  margin-top: -10px;
 }
 
 .footerNav {
   list-style: none;
-  width: 30%;
+  width: auto;
+  /* border: solid white 3px; */
+  margin-left: 50px;
+}
+
+.contactFooter {
+  list-style: none;
+  width: auto;
+  /* border: solid white 3px; */
+  margin-left: 50px;
+  padding: 0;
+  margin-top: -2px;
+}
+
+.footerList {
+  /* border: solid purple 2px; */
+  margin: 0;
+  padding: 0;
+}
+
+.footerList li {
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .bottomNavList {
@@ -324,19 +369,24 @@ li {
   grid-gap: 10px;
   list-style: none;
   font-size: 0.75rem;
-  /* border: solid white 3px; */
   margin: 0;
   padding: 0;
-  border: solid red 3px;
+  /* border: solid red 3px; */
   max-width: 320px;
 }
 
 .bottomNavList li {
-  border: thin solid pink;
+  padding-bottom: 15px;
+  /* border: thin solid pink; */
 }
 
-.footerList {
-  /* border: solid purple 2px; */
+.bottomNavList li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.footerList li {
+  color: grey;
 }
 
 .footerLinks {
@@ -358,6 +408,9 @@ li {
   color: white;
   font-weight: 1000;
   font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 /* 
 .bottomBar {
@@ -550,6 +603,20 @@ li {
 .flexThis {
   display: flex;
   flex-direction: row;
+  /* color: red; */
+  text-decoration: none;
+  align-items: flex-end;
+}
+
+.flexThis a {
+  display: flex;
+  flex-direction: row;
+  color: red;
+  text-decoration: none;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .dropdownNavContent {
@@ -766,22 +833,6 @@ p {
   border-top: thin white 5px;
 }
 
-.lineInput {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid grey;
-  margin: 0 10px 0 10px;
-  font-size: 18px;
-  color: grey;
-}
-
-.lineInput:focus {
-  background: transparent;
-  border: none;
-  /* border-bottom: 1px solid rgb(240, 50, 77); */
-  color: red;
-}
-
 .homeScheduler {
   margin-top: 5rem;
   width: 100%;
@@ -789,24 +840,6 @@ p {
   /* display: flex; */
 }
 
-.homeAppointmentInstructions {
-  text-align: right;
-  border: solid yellow 3px;
-  color: rgb(240, 50, 77);
-  line-height: 0.75;
-  width: 50%;
-  flex: 1;
-}
-
-.homeAppointmentPhoto {
-  /* border: solid blue 2px; */
-  width: 50%;
-  background-image: url('/images/bookappointment.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: solid purple 3px;
-  flex: 1;
-}
 
 .appointmentTitle {
   display: flex;
@@ -820,26 +853,87 @@ p {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: center;
   border: solid green 2px;
+  /* height: 500px; */
 }
 
-.centerArea {
+.homeAppointmentInstructions {
+  text-align: right;
+  border: solid yellow 3px;
+  color: rgb(240, 50, 77);
+  line-height: 0.75;
+  /* width: 30%; */
+  flex: 1;
+  /* font-size: 6px; */
+}
+
+.homeAppointmentPhoto {
+  /* border: solid blue 2px; */
+  background-image: url('/images/bookappointment.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: solid purple 3px;
+  flex: 1;
+}
+
+.leftArea {
   flex: 1;
   border: solid blue 3px;
 }
 
+.rightArea {
+  border: solid green 3px;
+  flex: 1;
+}
+
 .homeScheduleInnerDiv {
-  display: flex;
   border: solid black 2px;
+  max-width: 900px;
+}
+
+.homeScheduleInnerDiv .row {
+  display: flex;
   justify-content: center;
-  width: 50%;
 }
 
 .homeScheduleContainer {
   margin-top: 1.2rem;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   border: solid purple 2px;
+  height: 20rem;
+}
+
+.lineInput {
+  background: transparent;
+  font-size: 18px;
+  color: grey;
+  border: none;
+  width: ;
+}
+
+.lineInput:focus {
+  background: transparent;
+  /* border-bottom: 1px solid rgb(240, 50, 77); */
+  color: red;
+}
+
+.homeScheduleInnerDiv .control {
+  flex: 1;
+  margin: 10px;
+  border-bottom: thin solid black;
+  padding-bottom: 5px;
+}
+
+.homeScheduleInnerDiv .control.double {
+  flex: 2;
+}
+
+.homeScheduleInnerDiv label {
+  text-transform: uppercase;
+  font-size: 0.8em;
 }
 
 .homeAppointmentReasonContainer {
@@ -878,34 +972,37 @@ p {
   flex-direction: row;
   align-items: flex-start;
   height: auto;
-  flex: 1;
+  flebox: 1;
   width: 78%;
 }
 
 .carTable {
 }
 
-.breadCrumbText {
+.breadCrumbTextt {
   color: red;
   text-decoration: none;
 }
 
 .servicesTitle {
+  margin-top: 2rem;
   text-align: left;
   /* border: solid red 2px; */
-  width: 70%;
+  width: 80%;
   /* color: red; */
-  text-decoration: underline;
-  margin-bottom: 0;
-  font-size: 2.4rem;
-  text-transform: uppercase;
+  /* margin-bottom: .8rem; */
+  line-height: 0.8;
+  font-size: 1.5rem;
+  /* text-transform: uppercase; */
   font-weight: 900;
+  color: black;
 }
 
 .servicesBodyText {
-  width: 70%;
+  width: 80%;
   padding-bottom: 0;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .reviewTable {
@@ -945,8 +1042,7 @@ p {
 .reviewInfo li {
   margin-bottom: 2px;
 }
-
-.reviewText {
+.lineInput .reviewText {
   display: flex;
   flex-direction: column;
   /* border: solid purple 4px; */
@@ -958,6 +1054,10 @@ p {
   text-decoration: none;
   text-align: left;
   margin-left: 10px;
+}
+
+.hey {
+  border-bottom: 1px solid grey;
 }
 
 .greyText {
@@ -973,10 +1073,6 @@ select,
 input,
 button {
   outline: none;
-}
-
-input {
-  height: 5px;
 }
 
 textarea {
@@ -1020,6 +1116,7 @@ textarea {
 .phoneContainer input {
   border: solid 1px rgba(110, 110, 110, 0.438);
   border-radius: 2px;
+  height: 10px;
 }
 
 .phoneContainer {
@@ -1041,9 +1138,133 @@ textarea {
 }
 
 label {
-  line-height: 0.4;
+  line-height: 0.5;
 }
 
 .appointmentSendButton:hover {
   background-color: rgb(240, 50, 77);
+}
+
+.affiliateLogos {
+  margin: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.affiliateLogos a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ada-icon {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+
+.phoneNumber {
+  font-size: 16px;
+}
+
+.socialMediaFooter {
+  margin-left: 50px;
+}
+
+.socialMediaFooter h2 {
+  /* font-size: 16px; */
+  line-height: 0.5;
+}
+
+.dropdownNavContent a {
+  text-transform: uppercase;
+}
+
+.contactUsContainer h3 {
+  text-transform: uppercase;
+}
+
+.contactSendButton {
+  width: 100%;
+  border: solid purple 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.specialsRedeemButton {
+  width: 100%;
+  border: solid purple 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.contactSendDiv {
+  width: 80%;
+  border: solid purple 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.specialsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: right;
+  width: 100%;
+  border: solid red 2px;
+}
+
+.specialsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: right;
+  /* width: 50%; */
+  border: solid blue 2px;
+  flex: 1.25;
+}
+
+.specialsSpacer {
+  flex: 4;
+  border: solid green 2px;
+  height: auto;
+}
+
+.specialsActions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.welcomeText {
+  line-height: 0.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: solid black 2px;
+  width: 80%;
+}
+
+.welcomeText h1 {
+  font-size: 48px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.glowTitle {
+  font-weight: 900;
+  /* glow here */
+}
+
+.welcomeText h3 {
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
 }

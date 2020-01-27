@@ -9,7 +9,7 @@ const ACPage = () => {
       <BreadcrumbsComponentExtra
         nextOne={'Services'}
         nextOneUrl={'/ServicesPage'}
-        secondOne={'A/C Repair'}
+        secondOne={'AC Repair'}
         secondOneUrl={'/ServicesPages/ACPage'}
       />
       <h1 className="servicesTitle">Air Conditioning</h1>

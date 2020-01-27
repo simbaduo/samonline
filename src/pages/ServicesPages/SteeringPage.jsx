@@ -12,7 +12,7 @@ const SteeringPage = () => {
         secondOne={'Steering'}
         secondOneUrl={'/ServicesPages/SteeringPage'}
       />
-      <h1 className="servicesTitle">Sunspension / Steering</h1>
+      <h1 className="servicesTitle">Sunspension</h1>
       <p className="servicesBodyText">
         Properly aligned steering and suspension can help deliver a smooth and
         controlled ride. The steering system and suspension systems bear the

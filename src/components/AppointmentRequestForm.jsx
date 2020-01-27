@@ -9,8 +9,6 @@ const Container = styled.div`
 `
 
 const Form = styled.form`
-  padding: 1rem;
-  max-width: 960px;
   margin: 0 auto;
 `
 
@@ -32,7 +30,7 @@ const FormField = styled.div`
   }
 
   textarea {
-    min-height: 30vh;
+    // min-height: 30vh;
   }
 
   select {
@@ -81,7 +79,7 @@ const AppointmentRequestForm = () => {
     // prevents the page from refreshing
     event.preventDefault()
 
-    const response = await axios.post('https://localhost:5001/api/email', {
+    const response = await axios.post('https://samonlineback.herokuapp.com/api/email', {
       firstName: firstName,
       lastName: lastName,
       phoneNumber: phoneNumber,
@@ -99,7 +97,7 @@ const AppointmentRequestForm = () => {
 
   useEffect(() => {
     const makeApiCall = async () => {
-      const resp = await axios.get(`https://localhost:5001/make`)
+      const resp = await axios.get(`//samonlineback.herokuapp.com/make`)
       if (resp.status === 200) {
         setMakeData(resp.data.terms)
         console.log(resp.data.terms)
@@ -109,7 +107,7 @@ const AppointmentRequestForm = () => {
   }, [])
 
   const modelApiCall = async () => {
-    const resp = await axios.get(`https://localhost:5001/make/${make}/model`)
+    const resp = await axios.get(`//samonlineback.herokuapp.com/make/${make}/model`)
     if (resp.status === 200) {
       setModelData(resp.data.terms)
     }
@@ -122,9 +120,9 @@ const AppointmentRequestForm = () => {
 
   const yearApiCall = async (make, model) => {
     console.log(`${make} ${model}, in year api`)
-    console.log(`https://localhost:5001/make/${make}/model/${model}`)
+    console.log(`//samonlineback.herokuapp.com/make/${make}/model/${model}`)
     const resp = await axios.get(
-      `https://localhost:5001/make/${make}/model/${model}`
+      `//samonlineback.herokuapp.com/make/${make}/model/${model}`
     )
     if (resp.status === 200) {
       setYearData(resp.data.terms)
@@ -151,6 +149,7 @@ const AppointmentRequestForm = () => {
                 type="text"
                 onChange={e => setFirstName(e.target.value)}
                 value={firstName}
+                required
               />
             </FormField>
             <FormField>
@@ -161,6 +160,7 @@ const AppointmentRequestForm = () => {
                 type="text"
                 onChange={e => setLastName(e.target.value)}
                 value={lastName}
+                required
               />
             </FormField>
           </div>
@@ -174,6 +174,7 @@ const AppointmentRequestForm = () => {
                 type="text"
                 onChange={e => setEmail(e.target.value)}
                 value={email}
+                required
               />
             </FormField>
             <div></div>
@@ -189,6 +190,7 @@ const AppointmentRequestForm = () => {
                 type="text"
                 onChange={e => setPhoneNumber(e.target.value)}
                 value={phoneNumber}
+                required
               />
             </FormField>
             <div className="phoneEmptyDiv"></div>
@@ -200,6 +202,7 @@ const AppointmentRequestForm = () => {
               id="make"
               onChange={e => setMake(e.target.value)}
               value={make}
+              required
             >
               <option>{null}</option>
               {makeData.map(make => {
@@ -213,6 +216,7 @@ const AppointmentRequestForm = () => {
               id="model"
               onChange={e => setModel(e.target.value)}
               value={model}
+              required
             >
               <option>{null}</option>
               {modelData.map(model => {
@@ -228,6 +232,7 @@ const AppointmentRequestForm = () => {
               type="number"
               onChange={e => setYear(e.target.value)}
               value={year}
+              required
             >
               <option>{null}</option>
               {yearData.map(year => {
@@ -246,6 +251,7 @@ const AppointmentRequestForm = () => {
               type="text"
               onChange={e => setReason(e.target.value)}
               value={reason}
+              required
             >
               {' '}
             </textarea>
@@ -265,6 +271,7 @@ const AppointmentRequestForm = () => {
                 type="datetime-local"
                 onChange={e => setRequestedAppointment(e.target.value)}
                 value={requestedAppointment}
+                required
               />
               <input
                 className="scheduleCalendar"
@@ -273,6 +280,7 @@ const AppointmentRequestForm = () => {
                 type="datetime-local"
                 onChange={e => setSecondChoiceAppointment(e.target.value)}
                 value={secondChoiceAppointment}
+                required
               />
             </div>
             <div className="warningBox">
@@ -286,11 +294,7 @@ const AppointmentRequestForm = () => {
             </div>
           </FormField>
           <FormActions>
-            <button
-              className="appointmentSendButton"
-              type="submit"
-              onSubmit={onSubmit}
-            >
+            <button className="appointmentSendButton" type="submit">
               Send
             </button>
           </FormActions>

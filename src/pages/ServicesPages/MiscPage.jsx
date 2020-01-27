@@ -8,7 +8,7 @@ const MiscPage = () => {
       <BreadcrumbsComponentExtra
         nextOne={'Services'}
         nextOneUrl={'/ServicesPage'}
-        secondOne={'Misc. / Additional Services'}
+        secondOne={'Misc'}
         secondOneUrl={'/ServicesPages/MiscPage'}
       />
       <h1 className="servicesTitle">Misc. / Additional Services</h1>

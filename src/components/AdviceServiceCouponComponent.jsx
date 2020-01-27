@@ -14,7 +14,7 @@ const AdviceServiceCouponComponent = () => {
             Check out our advice on keeping your vehicle in excellent condition.
             Click to learn more.
           </p>
-          <a href="#" className="subscribeButton">
+          <a href="/ServicesPages/TuneUpPage" className="subscribeButton">
             Learn More
           </a>
         </div>
@@ -28,10 +28,9 @@ const AdviceServiceCouponComponent = () => {
         </div>
         <div className="cta">
           <p>
-            See our full list of automotive repairs and services. Click to learn
-            more.
+            Check out our Current Specials! Click to learn more.
           </p>
-          <a href="#" className="subscribeButton">
+          <a href="/SpecialsPage" className="subscribeButton">
             Learn More
           </a>
         </div>
@@ -48,7 +47,7 @@ const AdviceServiceCouponComponent = () => {
             See our full list of automotive repairs and services. Click to learn
             more.
           </p>
-          <a href="#" className="subscribeButton">
+          <a href="/ServicesPage" className="subscribeButton">
             Learn More
           </a>
         </div>

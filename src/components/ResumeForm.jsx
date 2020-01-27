@@ -7,11 +7,7 @@ const Container = styled.div`
   padding-bottom: 10px;
 `
 
-const Form = styled.form`
-  padding: 1rem;
-  max-width: 960px;
-  margin: 0 auto;
-`
+const Form = styled.form``
 
 const FormField = styled.div`
   display: flex;
@@ -61,12 +57,10 @@ const FormActions = styled.div`
 // Add Calendar datepicker
 // Hook up to proper api endpoint for submission...
 const AppointmentRequestForm = () => {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [make, setMake] = useState('')
-  const [model, setModel] = useState('')
-  const [year, setYear] = useState('')
+  const [phone, setPhone] = useState('')
+  const [resume, setResume] = useState('')
 
   // BONUS: add a "submitting..." state to your button
   const onSubmit = async event => {
@@ -83,13 +77,11 @@ const AppointmentRequestForm = () => {
     // model: model,
     // year: year,
     // }const sendAppointment = async () => {
-    const response = await axios.post('https://localhost:5001/api/email', {
-      firstName: firstName,
-      lastName: lastName,
+    const response = await axios.post('//samonlineback.herokuapp.com/api/resume', {
+      name: name,
+      phone: phone,
       email: email,
-      make: make,
-      model: model,
-      year: year,
+      resume: resume,
     })
     console.log(response.data)
   }
@@ -100,11 +92,11 @@ const AppointmentRequestForm = () => {
         <FormField>
           <label>Name</label>
           <input
-            name="firstName"
-            id="firstName"
+            name="name"
+            id="name"
             type="text"
-            onChange={e => setFirstName(e.target.value)}
-            value={firstName}
+            onChange={e => setName(e.target.value)}
+            value={name}
           />
         </FormField>
         <FormField>
@@ -120,21 +112,21 @@ const AppointmentRequestForm = () => {
         <FormField>
           <label>Phone</label>
           <input
-            name="make"
-            id="make"
+            name="phone"
+            id="phone"
             type="text"
-            onChange={e => setMake(e.target.value)}
-            value={make}
+            onChange={e => setPhone(e.target.value)}
+            value={phone}
           />
         </FormField>
         <FormField>
           <label>Resume</label>
           <input
-            name="model"
-            id="model"
+            name="resume"
+            id="resume"
             type="text"
-            onChange={e => setModel(e.target.value)}
-            value={model}
+            onChange={e => setResume(e.target.value)}
+            value={resume}
           />
         </FormField>
         <FormActions>

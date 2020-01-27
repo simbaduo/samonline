@@ -9,7 +9,7 @@ const OilChangePage = () => {
       <BreadcrumbsComponentExtra
         nextOne={'Services'}
         nextOneUrl={'/ServicesPage'}
-        secondOne={'Oil Change'}
+        secondOne={'LOF'}
         secondOneUrl={'/ServicesPages/OilChangePage'}
       />
       <h1 className="servicesTitle">Oil &amp; Filter Change</h1>

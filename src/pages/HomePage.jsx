@@ -1,6 +1,6 @@
 //TO DO - ADA compliance
 //TO DO - Put Images directory in correct location
-//TO DO - Complete Auth
+
 //TO DO - Build out all landing pages
 //TO DO - Deploy To Docker
 //TO DO - Review Filter Page
@@ -52,8 +52,9 @@
 //TO DO - DIRECTIONS
 //TO DO - Google API account is set up with key access to route to location. Low Priority
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 import Page from '../components/Page'
 import CarouselComponent from '../components/CarouselComponent'
@@ -142,7 +143,24 @@ const DiagonalImageContainer = styled(ContentContainer)`
   width: 100%;
 `
 
+const Form = styled.form``
+
 const HomePage = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+
+  const onSubmit = async event => {
+    // prevents the page from refreshing
+    event.preventDefault()
+
+    const response = await axios.post('https://samonlineback.herokuapp.com/api/veteran', {
+      name: name,
+      email: email,
+    })
+
+    console.log(response.data)
+  }
+
   return (
     <>
       <Page>
@@ -170,32 +188,39 @@ const HomePage = () => {
               <p className="smallText">*Must Have Valid Proof.</p>
             </div>
             <ContentContainer>
-              <div className="submitContainer">
-                <div className="submitBox">
-                  <input
-                    type="text"
-                    className="inputField"
-                    placeholder="name"
-                  />
+              <Form onSubmit={onSubmit}>
+                {' '}
+                <div className="submitContainer">
+                  <div className="submitBox">
+                    <input
+                      type="text"
+                      className="inputField"
+                      placeholder="name"
+                      onChange={e => setName(e.target.value)}
+                      value={name}
+                    />
 
-                  <input
-                    className="inputField"
-                    type="text"
-                    placeholder="e-mail"
-                  ></input>
+                    <input
+                      className="inputField"
+                      type="text"
+                      placeholder="e-mail"
+                      onChange={e => setEmail(e.target.value)}
+                      value={email}
+                    ></input>
 
-                  <input
-                    className="subscribeButton"
-                    type="submit"
-                    value="SUBSCRIBE"
-                  />
+                    <input
+                      className="subscribeButton"
+                      type="submit"
+                      value="SUBSCRIBE"
+                    />
 
-                  <ul className="VeteranSubscribeBox"></ul>
+                    <ul className="VeteranSubscribeBox"></ul>
+                  </div>
+                  <a className="smallLink" href="https://www.ebay.com">
+                    Click Here To Learn More
+                  </a>
                 </div>
-                <a className="smallLink" href="https://www.ebay.com">
-                  Click Here To Learn More
-                </a>
-              </div>
+              </Form>
             </ContentContainer>
           </VetContentText>
 
@@ -209,53 +234,59 @@ const HomePage = () => {
           <p className="reviewText">5 Star Rating Based On 124 Reviews</p> */}
         </VetContentContainer>
 
-        <DiagonalColorContainer>
-          <p className="callUsText">
-            Call Us: <span className="redNumText"> (352) 527-0440</span>
-          </p>
-        </DiagonalColorContainer>
+        <DiagonalColorContainer></DiagonalColorContainer>
 
         <ContentContainer>
-          <TextPadding>
-            <p className="addressText">
-              5546 N. Lecanto Hwy. Beverly Hills, FL 34465
-            </p>
-          </TextPadding>
+          <TextPadding></TextPadding>
         </ContentContainer>
+        <div className="specialsContainer">
+          <div className="specialsBox">
+            <img
+              alt="Squiggle"
+              height="12px"
+              width="60px"
+              src="./images/squiggle.png"
+            />
+            <h1 className="specialsTitle">
+              <span className="redText">SYNTHETIC OIL CHANGE</span>
+            </h1>
+            <h3>$49.99</h3>
 
-        <DiagonalImageContainer></DiagonalImageContainer>
+            <p className="specialsText">
+              Swander's Auto uses full synthetic NAPA-Grade oil which extends
+              oil change interval to twice as long. Stop in today for a free
+              inspection and full synthetic oil change.
+            </p>
+            <div className="redeemBox">
+              <input
+                className="redeemButton"
+                type="submit"
+                value="REDEEM OFFER"
+              />
+            </div>
+          </div>
+        </div>
+        <DiagonalImageContainer>
+          <div className="welcomeText">
+            <img
+              alt="Squiggle"
+              className="squiggleImg"
+              height="12px"
+              width="60px"
+              src="./images/squiggle.png"
+            />
+            <h1>Welcome to</h1>
+            <h1 className="glowTitle">Swander's Automotive</h1>
+            <h3>
+              Provides quality car care in Beverly Hills, Florida since 1989
+            </h3>
+          </div>
+        </DiagonalImageContainer>
 
         {/* <div className="specialAd">
           <img src="./images/triangle.jpg" />
         </div> */}
         <ContentContainer>
-          <div className="specialsContainer">
-            <div className="specialsBox">
-              <img
-                alt="Squiggle"
-                height="12px"
-                width="60px"
-                src="./images/squiggle.png"
-              />
-              <h1 className="specialsTitle">
-                <span className="redText">SYNTHETIC OIL CHANGE</span>
-              </h1>
-              <h3>$49.99</h3>
-
-              <p className="specialsText">
-                Swander's Auto uses full synthetic NAPA-Grade oil which extends
-                oil change interval to twice as long. Stop in today for a free
-                inspection and full synthetic oil change.
-              </p>
-              <div className="redeemBox">
-                <input
-                  className="redeemButton"
-                  type="submit"
-                  value="REDEEM OFFER"
-                />
-              </div>
-            </div>
-          </div>
           <div className="logoDisplay">
             <AdviceServiceCouponComponent />
           </div>
