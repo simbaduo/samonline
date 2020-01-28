@@ -21,7 +21,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   width: 100%;
   max-width: ${({ withPadding }) => withPadding ? '960px' : 'none'};
-  padding: 1rem;
+  padding: ${({ withPadding }) => withPadding ? '1rem' : '0'};
   margin: 0 auto;
 `
 
