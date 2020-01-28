@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { colors } from '../utils/theme'
 
 const Container = styled.div`
-  padding-top: 20px;
+  // padding-top: 20px;
   // padding-bottom: 20px;
   display: flex;
   flex-direction: row;
@@ -13,9 +13,10 @@ const Container = styled.div`
   justify-content: space-around;
   background-color: ${colors.light};
 
-  @media (max-width: 500px) {
-    display: none;
-  }
+  // @media (max-width: 750px) {
+    display: flex;
+  //   flex-direction: column;
+  // }
 `
 
 const FooterNav = () => {
@@ -25,6 +26,7 @@ const FooterNav = () => {
         <footer className="bottomFooter">
           <div className="footerLogo">
             <img
+              className="mediaImg"
               alt="Swander's Tiny Logo"
               height="125px"
               width="175px"
@@ -110,6 +112,8 @@ const FooterNav = () => {
           </div>
           <div className="socialMediaFooter">
             <h2 className="whiteTitle">Social Media</h2>
+            <div className="socialLogoIcons">
+
             <a
               target="_blank"
               href="https://www.facebook.com/swandersautomotive/"
@@ -140,6 +144,7 @@ const FooterNav = () => {
                 src="./images/yelpicon.png"
               />
             </a>{' '}
+            </div>
             <div className="creditsFooter"></div>
           </div>
         </footer>

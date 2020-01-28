@@ -1,9 +1,9 @@
 {
-  "short_name": "Samonline",
-  "name": "Samonline",
+  "short_name": "Swander's Auto",
+  "name": "Swander's Automotive",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "samlogo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

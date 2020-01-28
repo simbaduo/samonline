@@ -25,31 +25,35 @@ const HomeSchedulerComponent = () => {
               <input
                 className="lineInput"
                 type="text"
-                placeHolder="Last Name"
               />
             </div>
             <div className="control">
-              <input className="lineInput" type="text" placeHolder="Email" />
+            <label htmlFor="lastName">Email</label>
+
+              <input className="lineInput" type="text"/>
             </div>
             <div className="control">
-              <input className="lineInput" type="text" placeHolder="Phone" />
+            <label htmlFor="lastName">Phone</label>
+
+              <input className="lineInput" type="text" />
             </div>
           </div>
           <div className="row">
             <div className="control">
+            <label htmlFor="lastName">Reason</label>
+
               <input
                 className="lineInput"
                 type="text"
-                placeHolder="Appointment Reason"
               />
             </div>
           </div>
           <div className="row">
             <div className="control double">
+            <label htmlFor="lastName">Vehicle Info</label>
               <input
                 className="lineInput"
                 type="text"
-                placeHolder="Vehicle Information"
               />
             </div>
             <div className="control">
@@ -61,7 +65,7 @@ const HomeSchedulerComponent = () => {
           </div>
         </div>
       </div>
-      <div className="homeAppointmentReasonContainer">
+      {/* <div className="homeAppointmentReasonContainer">
         <div className="homeAppointmentReasonDiv">
           <input
             className="homeAppointmentField"
@@ -69,7 +73,7 @@ const HomeSchedulerComponent = () => {
             placeHolder="Appointment Reason"
           ></input>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

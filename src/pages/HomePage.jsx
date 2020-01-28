@@ -73,7 +73,7 @@ const HideWhenMobile = styled.div`
 `;
 
 const HideWhenDesktop = styled.div`
-  @media (min-width: 500px) {
+  @media (min-width: 501px) {
     display: none;
     background-color: red;
   }
@@ -272,13 +272,14 @@ const HomePage = () => {
                       oil change interval to twice as long. Stop in today for a free
                       inspection and full synthetic oil change.
                     </p>
-                    <div className="redeemBox">
+                    <div className="redeemContainer"><div className="redeemBox">
                       <input
                         className="redeemButton"
                         type="submit"
                         value="REDEEM OFFER"
                       />
-                    </div>
+                    </div></div>
+                    
                   </div>
                 </div>
               </ContentContainer>

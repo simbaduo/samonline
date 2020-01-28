@@ -51,7 +51,7 @@ const styles = {
 }
 
 const Container = styled.div`
-  @media (min-width: 501px) {
+  @media (min-width: 901px) {
     display: none;
   }
 `

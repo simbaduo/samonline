@@ -1,6 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import samlogo from '../images/samlogo.svg'
+
+
+// import samlogo from '../images/samlogo.svg'
 
 import { colors } from '../utils/theme'
 
@@ -13,7 +17,7 @@ const Container = styled.div`
   justify-content: space-around;
   background-color: ${colors.light};
 
-  @media (max-width: 500px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `
@@ -21,18 +25,12 @@ const Container = styled.div`
 const NavBar = () => {
   return (
     <Container>
-      {/* <img
-        className="navLogo"
-        height="150px"
-        width="150px"
-        src="./images/samlogo.svg"
-      /> */}
-      <NavLink
-        to="/"
+      <img
         className="nav-link"
-        activeStyle={{ color: '#F0324D' }}
-        exact={true}
-      ></NavLink>
+        height="200px"
+        width="200px"
+        src={samlogo}
+      />
       <NavLink
         to="/"
         className="nav-link"

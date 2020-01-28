@@ -13,7 +13,7 @@ const ServicesContainer = styled.div`
   margin-left: 5rem;
   justify-content: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: 825px) {
     flex-direction: column;
     margin-top: 1rem;
     margin-bottom: 1rem;
