@@ -67,13 +67,6 @@ body {
   font-size: 10px;
 }
 
-.specialsTitle {
-  margin-top: 0.5rem;
-  font-weight: 900;
-  margin-bottom: -1.6rem;
-  text-align: right;
-}
-
 .freeText {
   font-size: 40px;
   font-family: 'Quicksand', sans-serif;
@@ -272,31 +265,38 @@ li {
   border: solid black 4px;
 }
 
-.specialsContainer {
+.homepageSpecialsContainer {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   /* justify-content: flex-end; */
   align-items: right;
   /* margin-left: auto; */
-  width: 80%;
+  width: 100%;
   border: solid green 3px;
   /* justify-content: right; */
   /* text-align: right; */
 }
 
-.specialsBox {
+.homepageSpecialsBox {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   border: solid blue 3px;
 }
 
-.specialsText {
+.homepageSpecialsText {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   border: solid blue 3px;
+  text-align: right;
+}
+
+.homepageSpecialsTitle {
+  margin-top: 0.5rem;
+  font-weight: 900;
+  margin-bottom: -1.6rem;
   text-align: right;
 }
 
@@ -728,23 +728,15 @@ p {
   /* margin-right: 2rem; */
 }
 
-.outterDiv {
-  display: flex;
-  width: 100%;
-  height: 20rem;
-  margin-top: 20rem;
-  justify-content: center;
-}
-
 .innerDiv {
   flex: 1;
   font-size: 1.5rem;
-  margin-left: 60px;
+  /* margin-left: 60px; */
 }
 
-.innerDiv:last-child {
+/* .innerDiv:last-child {
   margin-right: 60px;
-}
+} */
 
 .tips-advice,
 .coupons,
@@ -823,10 +815,6 @@ p {
 
 .subscribeButton:hover {
   background-color: rgb(240, 50, 77);
-}
-
-.logoDisplay {
-  margin-bottom: 5rem;
 }
 
 .creditsFooter {
@@ -1248,8 +1236,6 @@ label {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  border: solid black 2px;
-  width: 80%;
 }
 
 .welcomeText h1 {
@@ -1258,13 +1244,24 @@ label {
   text-transform: uppercase;
 }
 
-.glowTitle {
-  font-weight: 900;
-  /* glow here */
-}
-
 .welcomeText h3 {
   font-size: 14px;
   color: white;
   text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .welcomeText {
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  .welcomeText h1 {
+    font-size: 30px;
+  }
+
+  .welcomeText h3 {
+    font-size: 12px;
+  }
 }
