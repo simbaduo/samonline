@@ -20,23 +20,27 @@ const InnerContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  max-width: 960px;
-  padding: 1rem;
+  max-width: ${({ withPadding }) => withPadding ? '960px' : 'none'};
+  padding: ${({ withPadding }) => withPadding ? '1rem' : '0'};
   margin: 0 auto;
 `
 
 /**
  * This is our basic page component
  */
-const Page = ({ children }) => {
+const Page = ({ children, withPadding }) => {
   return (
     <Container>
       <NavBar />
       <HamburgerNav />
-      <InnerContainer>{children}</InnerContainer>
+      <InnerContainer withPadding={withPadding}>{children}</InnerContainer>
       <FooterNav />
     </Container>
   )
 }
+
+Page.defaultProps = {
+  withPadding: true,
+};
 
 export default Page

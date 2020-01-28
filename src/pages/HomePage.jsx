@@ -65,7 +65,27 @@ import HomeSchedulerComponent from '../components/HomeSchedulerComponent'
 
 // import { NavLink } from 'react-router-dom'
 
-/** re-usable flex containers (TODO: move to separate folder) */
+// Wrap this component around anything you want to disappear on mobile
+const HideWhenMobile = styled.div`
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+const HideWhenDesktop = styled.div`
+  @media (min-width: 500px) {
+    display: none;
+    background-color: red;
+  }
+`;
+
+const CenterWhenMobile = styled.div`
+  @media (max-width: 500px) {
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
 const FlexColumn = styled.div`
   display: flex;
   flex: 1;
@@ -83,28 +103,22 @@ const TextPadding = styled.div`
   padding: 20px;
 `
 
-/** layout-specific containers */
-const ContentContainer = styled(FlexColumn)`
-  //background-color: rgb(255, 255, 255);
-  //min-height: 200px;
-`
+const ContentContainer = styled(FlexColumn)``
 
 const VetContentContainer = styled(ContentContainer)`
-  //background-color: red;
   background-image: url('./images/veteranbg.jpg');
   background-size: cover;
   text-align: left;
-  // border: solid purple 3px;
-  width: 100%;
-  display: flex;
   padding-top: 30px;
+
+  @media (max-width: 500px) {
+    background-image: none;
+  }
 `
+
 const VetContentText = styled(ContentContainer)`
-  //background-color: red;
-  // background-image: url('./images/veteranbg.jpg');
   background-size: cover;
   text-align: left;
-  // border: solid gold 3px;
   width: 80%;
   display: flex;
   justify-content: left;
@@ -112,7 +126,6 @@ const VetContentText = styled(ContentContainer)`
 `
 
 const VetContentSpacer = styled(ContentContainer)`
-  //background-color: red;
   background-image: url('./images/veteranbg.jpg');
   background-size: cover;
   text-align: left;
@@ -123,18 +136,15 @@ const VetContentSpacer = styled(ContentContainer)`
 `
 
 const DiagonalColorContainer = styled(ContentContainer)`
-  //background-color: rgb(255, 255, 255);
   background: linear-gradient(
     to right bottom,
-    #c23225 50%,
+    #bb3729 50%,
     rgb(255, 255, 255) 50%
   );
   min-height: 200px;
 `
 
 const DiagonalImageContainer = styled(ContentContainer)`
-  //background-color: white;
-  //background: linear-gradient(to right bottom, white 50%, #c23225 50%);
   background-image: url('./images/dualcartest.jpg');
   background-size: cover;
   height: 100%;
@@ -163,15 +173,19 @@ const HomePage = () => {
 
   return (
     <>
-      <Page>
+      <Page withPadding={false}>
         <div className="topHeader">
           {/* <a className="topLogo" href="/">
             <img height="200rem" width="200rem" src="./images/samlogo.svg" />
           </a> */}
         </div>
-        <div className="carouselBox">
-          <CarouselComponent />
-        </div>
+
+        <HideWhenMobile>
+          <div className="carouselBox">
+            <CarouselComponent />
+          </div>
+        </HideWhenMobile>
+        
         <VetContentContainer>
           <VetContentText>
             <div className="oilChangeTextBox">
@@ -234,44 +248,86 @@ const HomePage = () => {
           <p className="reviewText">5 Star Rating Based On 124 Reviews</p> */}
         </VetContentContainer>
 
-        <DiagonalColorContainer></DiagonalColorContainer>
+        <DiagonalColorContainer />
 
-        <ContentContainer>
-          <TextPadding></TextPadding>
-        </ContentContainer>
-        <div className="specialsContainer">
-          <div className="specialsBox">
-            <img
-              alt="Squiggle"
-              height="12px"
-              width="60px"
-              src="./images/squiggle.png"
-            />
-            <h1 className="specialsTitle">
-              <span className="redText">SYNTHETIC OIL CHANGE</span>
-            </h1>
-            <h3>$49.99</h3>
+        <HideWhenMobile>
+          <ContentContainer>
+            <FlexRow>
+              <ContentContainer>
+                <div className="homepageSpecialsContainer">
+                  <div className="homepageSpecialsBox">
+                    <img
+                      alt="Squiggle"
+                      height="12px"
+                      width="60px"
+                      src="./images/squiggle.png"
+                    />
+                    <h1 className="homepageSpecialsTitle">
+                      <span className="redText">SYNTHETIC OIL CHANGE</span>
+                    </h1>
+                    <h3>$49.99</h3>
 
-            <p className="specialsText">
-              Swander's Auto uses full synthetic NAPA-Grade oil which extends
-              oil change interval to twice as long. Stop in today for a free
-              inspection and full synthetic oil change.
-            </p>
-            <div className="redeemBox">
-              <input
-                className="redeemButton"
-                type="submit"
-                value="REDEEM OFFER"
-              />
+                    <p className="homepageSpecialsText">
+                      Swander's Auto uses full synthetic NAPA-Grade oil which extends
+                      oil change interval to twice as long. Stop in today for a free
+                      inspection and full synthetic oil change.
+                    </p>
+                    <div className="redeemBox">
+                      <input
+                        className="redeemButton"
+                        type="submit"
+                        value="REDEEM OFFER"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </ContentContainer>
+              <ContentContainer />
+            </FlexRow>
+          </ContentContainer>
+        </HideWhenMobile>
+
+        <HideWhenDesktop>
+          {/* <ContentContainer> */}
+            <div className="homepageSpecialsContainer">
+              <div className="homepageSpecialsBox">
+                <img
+                  alt="Squiggle"
+                  height="12px"
+                  width="60px"
+                  src="./images/squiggle.png"
+                />
+                <h1 className="homepageSpecialsTitle">
+                  <span className="redText">SYNTHETIC OIL CHANGE</span>
+                </h1>
+                <h3>$49.99</h3>
+
+                <p className="homepageSpecialsText">
+                  Swander's Auto uses full synthetic NAPA-Grade oil which extends
+                  oil change interval to twice as long. Stop in today for a free
+                  inspection and full synthetic oil change.
+                </p>
+                <div className="redeemBox">
+                  <input
+                    className="redeemButton"
+                    type="submit"
+                    value="REDEEM OFFER"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <DiagonalImageContainer>
+          {/* </ContentContainer> */}
+        </HideWhenDesktop>
+        
+        {/* TODO: figure out conflicts between flex: 1 and background-size: cover...
+          background image height growing not causing flex container to expand vertically...
+         */}
+        <DiagonalImageContainer>    
           <div className="welcomeText">
             <img
               alt="Squiggle"
               className="squiggleImg"
-              height="12px"
+              height="16px"
               width="60px"
               src="./images/squiggle.png"
             />
@@ -287,9 +343,7 @@ const HomePage = () => {
           <img src="./images/triangle.jpg" />
         </div> */}
         <ContentContainer>
-          <div className="logoDisplay">
-            <AdviceServiceCouponComponent />
-          </div>
+          <AdviceServiceCouponComponent />
           <AffiliatesComponent />
           <div className="homeScheduler">
             <HomeSchedulerComponent />
