@@ -163,7 +163,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Page>
+      <Page withPadding={false}>
         <div className="topHeader">
           {/* <a className="topLogo" href="/">
             <img height="200rem" width="200rem" src="./images/samlogo.svg" />
