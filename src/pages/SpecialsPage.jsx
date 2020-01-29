@@ -31,7 +31,7 @@ const SpecialsPage = () => {
             plus tax and surcharge
           </p>
           <FormActions>
-            <button className="contactSendDiv" type="submit">
+            <button className="reviewSubmitButton" type="submit">
               Redeem Now
             </button></FormActions>
             <div className="specialsActions"><p>Exp. 6/1/2020</p>

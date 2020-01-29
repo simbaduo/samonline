@@ -241,9 +241,7 @@ const ContactUsPage = () => {
           </FormField> */}
             <FormActions>
               <div className="contactSendDiv">
-                <button className="contactSendButton" type="submit">
-                  Submit
-                </button>
+                <input className="redeemButton" type="submit" value="Submit"/>
               </div>
             </FormActions>
           </Form>

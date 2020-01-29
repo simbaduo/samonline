@@ -27,6 +27,8 @@ import DirectionsPage from '../pages/DirectionsPage'
 import ContactUsPage from '../pages/ContactUsPage'
 import NotFoundPage from '../pages/NotFoundPage'
 import AdminPage from '../pages/AdminPage'
+import SubmitReviewPage from '../pages/SubmitReviewPage'
+
 
 const Router = () => {
   return (
@@ -109,8 +111,9 @@ const Router = () => {
         <Route exact path="/ExperiencePage" component={ExperiencePage}></Route>
         <Route exact path="/DirectionsPage" component={DirectionsPage}></Route>
         <Route exact path="/ResumePage" component={ResumePage}></Route>
-
         <Route exact path="/ContactUsPage" component={ContactUsPage}></Route>
+        <Route exact path="/SubmitReviewPage" component={SubmitReviewPage}></Route>
+
         <Route path="*" component={NotFoundPage}></Route>
       </Switch>
     </BrowserRouter>

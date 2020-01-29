@@ -70,21 +70,21 @@ const HideWhenMobile = styled.div`
   @media (max-width: 500px) {
     display: none;
   }
-`;
+`
 
 const HideWhenDesktop = styled.div`
   @media (min-width: 501px) {
     display: none;
     background-color: red;
   }
-`;
+`
 
 const CenterWhenMobile = styled.div`
   @media (max-width: 500px) {
     justify-content: center;
     align-items: center;
   }
-`;
+`
 
 const FlexColumn = styled.div`
   display: flex;
@@ -146,7 +146,9 @@ const DiagonalColorContainer = styled(ContentContainer)`
 
 const DiagonalImageContainer = styled(ContentContainer)`
   background-image: url('./images/dualcartest.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   min-height: 500px;
@@ -163,10 +165,13 @@ const HomePage = () => {
     // prevents the page from refreshing
     event.preventDefault()
 
-    const response = await axios.post('https://samonlineback.herokuapp.com/api/veteran', {
-      name: name,
-      email: email,
-    })
+    const response = await axios.post(
+      'https://samonlineback.herokuapp.com/api/veteran',
+      {
+        name: name,
+        email: email,
+      }
+    )
 
     console.log(response.data)
   }
@@ -185,7 +190,7 @@ const HomePage = () => {
             <CarouselComponent />
           </div>
         </HideWhenMobile>
-        
+
         <VetContentContainer>
           <VetContentText>
             <div className="oilChangeTextBox">
@@ -225,7 +230,7 @@ const HomePage = () => {
                     <input
                       className="subscribeButton"
                       type="submit"
-                      value="SUBSCRIBE"
+                      value="Subscribe"
                     />
 
                     <ul className="VeteranSubscribeBox"></ul>
@@ -268,18 +273,19 @@ const HomePage = () => {
                     <h3>$49.99</h3>
 
                     <p className="homepageSpecialsText">
-                      Swander's Auto uses full synthetic NAPA-Grade oil which extends
-                      oil change interval to twice as long. Stop in today for a free
-                      inspection and full synthetic oil change.
+                      Swander's Auto uses full synthetic NAPA-Grade oil which
+                      extends oil change interval to twice as long. Stop in
+                      today for a free inspection and full synthetic oil change.
                     </p>
-                    <div className="redeemContainer"><div className="redeemBox">
-                      <input
-                        className="redeemButton"
-                        type="submit"
-                        value="REDEEM OFFER"
-                      />
-                    </div></div>
-                    
+                    <div className="redeemContainer">
+                      <div className="redeemBox">
+                        <input
+                          className="redeemButton"
+                          type="submit"
+                          value="Redeem Offer"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </ContentContainer>
@@ -290,40 +296,40 @@ const HomePage = () => {
 
         <HideWhenDesktop>
           {/* <ContentContainer> */}
-            <div className="homepageSpecialsContainer">
-              <div className="homepageSpecialsBox">
-                <img
-                  alt="Squiggle"
-                  height="12px"
-                  width="60px"
-                  src="./images/squiggle.png"
-                />
-                <h1 className="homepageSpecialsTitle">
-                  <span className="redText">SYNTHETIC OIL CHANGE</span>
-                </h1>
-                <h3>$49.99</h3>
+          <div className="homepageSpecialsContainer">
+            <div className="homepageSpecialsBox">
+              <img
+                alt="Squiggle"
+                height="12px"
+                width="60px"
+                src="./images/squiggle.png"
+              />
+              <h1 className="homepageSpecialsTitle">
+                <span className="redText">SYNTHETIC OIL CHANGE</span>
+              </h1>
+              <h3>$49.99</h3>
 
-                <p className="homepageSpecialsText">
-                  Swander's Auto uses full synthetic NAPA-Grade oil which extends
-                  oil change interval to twice as long. Stop in today for a free
-                  inspection and full synthetic oil change.
-                </p>
-                <div className="redeemBox">
-                  <input
-                    className="redeemButton"
-                    type="submit"
-                    value="REDEEM OFFER"
-                  />
-                </div>
+              <p className="homepageSpecialsText">
+                Swander's Auto uses full synthetic NAPA-Grade oil which extends
+                oil change interval to twice as long. Stop in today for a free
+                inspection and full synthetic oil change.
+              </p>
+              <div className="redeemBox">
+                <input
+                  className="redeemButton"
+                  type="submit"
+                  value="Redeem Offer"
+                />
               </div>
             </div>
+          </div>
           {/* </ContentContainer> */}
         </HideWhenDesktop>
-        
+
         {/* TODO: figure out conflicts between flex: 1 and background-size: cover...
           background image height growing not causing flex container to expand vertically...
          */}
-        <DiagonalImageContainer>    
+        <DiagonalImageContainer>
           <div className="welcomeText">
             <img
               alt="Squiggle"

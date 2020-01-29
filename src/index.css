@@ -21,7 +21,10 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  margin-top: 3rem;
+}
+
+#root {
+  position: relative;
 }
 
 .nav-link {
@@ -99,7 +102,7 @@ body {
   /* border: solid green 3px; */
   width: 8%;
   justify-content: flex-end;
-  margin-top: 3.7rem;
+  margin-top: 5.5rem;
   align-self: flex-end;
 }
 
@@ -237,10 +240,15 @@ li {
   font-size: 9px;
   font-weight: 1000;
   font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
 }
 
 .redeemButton:hover {
   background-color: rgb(240, 50, 77);
+}
+
+.redeemButton:active {
+  background-color: rgb(182, 43, 64);
 }
 
 .specialAd {
@@ -299,12 +307,11 @@ li {
   text-align: right;
 }
 
-.reviewBox {
+/* .reviewBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* border: solid blue 2px; */
-}
 
 .reviewText {
   text-decoration: underline;
@@ -323,7 +330,6 @@ li {
   /* border: solid red 3px; */
   justify-content: center;
   margin: 0;
-  padding: 0;
 }
 
 .footerLogo {
@@ -368,6 +374,19 @@ li {
   margin-bottom: 8px;
 }
 
+.footerNav {
+  list-style: none;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* border: solid white 3px; */
+}
+
 .bottomNavList {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -375,20 +394,11 @@ li {
   list-style: none;
   font-size: 0.75rem;
   margin: 0;
+  /* margin-left: 40px; */
   padding: 0;
   /* border: solid red 3px; */
   max-width: 320px;
-}
-
-.footerNav {
-  list-style: none;
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  /* border: solid white 3px; */
+  width: 200px;
 }
 
 .bottomNavList li {
@@ -426,14 +436,15 @@ li {
   grid-gap: 10px;
   list-style: none;
   font-size: 0.75rem;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
+  max-width: 500px;
   /* border: solid red 3px; */
-  max-width: 100%;
 }
 
-.servicesListItem {
+.servicesList li {
   list-style: square;
+  max-width: 200px;
   color: black;
 }
 
@@ -463,19 +474,11 @@ li {
 
 .servicesContainer {
   /* border: solid red 2px; */
-  width: 80%;
-  margin-left: 5rem;
-  margin-right: 5rem;
-
-  justify-content: center;
   /* padding: 5rem; */
 }
 
 .servicesBox {
   /* border: solid green 2px; */
-  width: 70%;
-  justify-content: center;
-  display: flex;
 }
 
 .whiteBold {
@@ -502,6 +505,7 @@ li {
 
 .carouselButton {
   margin: 0;
+  margin-bottom: 4rem;
   padding: 10px;
   padding-left: 25px;
   padding-right: 25px;
@@ -526,8 +530,8 @@ li {
 .carouselButton:hover {
   color: white;
   background-color: #f0324d;
-  transition-delay: 1s;
-  -webkit-transition-delay: 1s;
+  transition-delay: .1s;
+  -webkit-transition-delay: .1s;
 }
 
 .warrantyImg {
@@ -547,6 +551,7 @@ li {
   /* width: 40%;
   text-align: right; */
   font-weight: 100;
+  margin-bottom: 0;
 }
 
 .napaBackgroundTitle {
@@ -665,6 +670,7 @@ li {
 .yellowText {
   text-decoration: underline;
   color: #faad14;
+  margin-bottom: 0;
 }
 
 .napaDiv {
@@ -890,6 +896,11 @@ p {
   background-color: rgb(240, 50, 77);
 }
 
+.subscribeButton:active {
+  background-color: rgb(182, 43, 64);
+}
+
+
 .creditsFooter {
   border-top: thin white 5px;
 }
@@ -958,12 +969,12 @@ p {
 }
 
 .homeScheduleContainer {
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
   /* border: solid purple 2px; */
-  height: 20rem;
+  /* height: 20rem; */
   width: 100%;
 }
 
@@ -1070,29 +1081,33 @@ p {
   /* border: solid red 2px; */
   /* display: flex; */
   width: 90%;
-  margin-top: 4.8rem;
+  margin-top: 1rem;
 }
 
 .reviewBox {
   border-top: solid rgb(180, 180, 180, 0.5) 1px;
   border-bottom: solid rgb(180, 180, 180, 0.5) 1px;
-
   display: flex;
-  justify-content: flex-start;
   margin-bottom: 1.5px;
+  /* border: solid green 2px; */
+  /* text-align: left; */
 }
 
 .reviewList {
-  text-align: left;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
+  justify-content: center;
+  /* border: solid green 2px; */
+  padding-left: 20px;
+  
+  /* text-align: left; */
+  /* flex-direction: row; */
+  /* align-items: flex-start; */
+  /* width: 100%; */
 }
 
 .reviewInfo {
   border-right: solid rgba(180, 180, 180, 0.5) 1px;
-  flex: 0.5;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1100,10 +1115,31 @@ p {
   font-weight: 900;
 }
 
+.starsImg {
+  /* border: solid red 2px; */
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+}
+
 .reviewInfo li {
   margin-bottom: 2px;
 }
-.lineInput .reviewText {
+
+.reviewText {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+.lineInput {
   display: flex;
   flex-direction: column;
   /* border: solid purple 4px; */
@@ -1206,6 +1242,10 @@ label {
   background-color: rgb(240, 50, 77);
 }
 
+.appointmentSendButton:active {
+  background-color: rgb(182, 43, 64);
+}
+
 .affiliateLogos {
   margin: 0.75rem;
   display: flex;
@@ -1221,7 +1261,7 @@ label {
 }
 
 .ada-icon {
-  position: fixed;
+  position: absolute;
   left: 10px;
   bottom: 10px;
 }
@@ -1354,7 +1394,6 @@ label {
     padding-top: 3rem;
     /* padding-left: 20rem; */
     padding-bottom: 4rem;
-    /* border: solid green 3px; */
     justify-content: center;
     align-items: center;
   }
@@ -1439,3 +1478,163 @@ label {
     width: 100%;
   }
 } */
+
+
+/* Review Component & Page CSS */
+
+
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: solid red 2px; */
+  margin-bottom: 5rem;
+}
+
+.reviewInnerContainer {
+  width: 40%;
+  /* border: solid blue 2px; */
+}
+
+
+.star-rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.star {
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  background-color: grey;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+  clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+}
+
+.star.selected {
+  background-color: rgb(247, 89, 89);
+}
+
+p {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.reviewTitle {
+  text-align: center;
+  font-size: 50px;
+}
+
+.reviewTitle:hover {
+  color: rgb(148, 40, 40);
+
+}
+
+.testPageColor {
+  background-color: blue;
+}
+
+.AnotherTestPage {
+  background-color: blue;
+
+}
+
+.starCount {
+  margin-top: 2rem;
+}
+
+.reviewSubmitButton {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  width: 150px;
+  /* width: 80%; */
+  font-size: 12px;
+  font-weight: 1000;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1.5rem;
+  /* text-transform: uppercase; */
+}
+
+.reviewSubmitButton:hover {
+  background-color: rgb(240, 50, 77);
+}
+
+.reviewSubmitButton:active {
+  background-color: rgb(182, 43, 64);
+}
+
+
+.manualPaddingDiv {
+  margin: 0;
+  padding: 0;
+  padding-left: 4rem;
+}
+
+.bottomRightHalfDiv {
+  display: flex;
+  align-items: flex-end;
+  /* border: solid red 2px; */
+}
+
+.testContainer {
+  display: flex;
+}
+
+.rightHalfDiv {
+  display: flex;
+  flex-direction: column;
+  /* border: solid red 3px; */
+  justify-content: flex-end;
+}
+
+.topRightHalfDiv {
+  display: flex;
+}
+
+.navReviewFlex {
+  display: flex;
+  /* border: solid red 2px; */
+  align-items: center;
+}
+
+.navStars {
+  padding-right: 10px;
+}
+
+.underlineText {
+  text-decoration: underline;
+  color: rgb(87, 88, 91);
+}
+
+.underlineText:hover {
+  text-decoration: none;
+}

@@ -73,6 +73,7 @@ const AppointmentRequestForm = () => {
   const [modelData, setModelData] = useState([])
   const [yearData, setYearData] = useState([])
   const [secondChoiceAppointment, setSecondChoiceAppointment] = useState([])
+  const [closeWindow, setCloseWindow] = useState(false)
 
   // BONUS: add a "submitting..." state to your button
   const onSubmit = async event => {
@@ -133,8 +134,19 @@ const AppointmentRequestForm = () => {
     if (make && model) yearApiCall(make, model)
   }, [make, model])
 
+  // this.state =(deps:[], popUpClose : false)
+
+  // const {deps} = this.state;
+  // let submitClose =() => this.setState(popUpClose:false)
+
+  const submitClose = () => {
+    if (submitClose == false)
+    setCloseWindow(true)
+  }
+
   return (
     <>
+
       <div className="appointmentTitle">
         <h1>Personal Information</h1>
       </div>
@@ -294,7 +306,7 @@ const AppointmentRequestForm = () => {
             </div>
           </FormField>
           <FormActions>
-            <button className="appointmentSendButton" type="submit">
+            <button className="appointmentSendButton" type="submit" onClick={submitClose}>
               Send
             </button>
           </FormActions>

@@ -1,6 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import samfooterlogo from  '../images/samfooterlogo.svg'
+import facebookicon from '../images/facebook-icon.png'
+import yelpicon from '../images/yelpicon.png'
+import googleicon from '../images/googleplusicon.png'
+import adaicon from '../images/handicap.png'
+
 
 import { colors } from '../utils/theme'
 
@@ -30,7 +36,7 @@ const FooterNav = () => {
               alt="Swander's Tiny Logo"
               height="125px"
               width="175px"
-              src="./images/samfooterlogo.svg"
+              src={samfooterlogo}
             />
           </div>
           <div className="footerNav">
@@ -122,7 +128,7 @@ const FooterNav = () => {
                 sry="Facebook Icon"
                 height="35px"
                 width="35px"
-                src="./images/facebook-icon.png"
+                src={facebookicon}
               />
             </a>
             <a target="_blank" href="https://www.google.com">
@@ -130,7 +136,7 @@ const FooterNav = () => {
                 src="Google+ Icon"
                 height="35px"
                 width="35px"
-                src="./images/googleplusicon.png"
+                src={googleicon}
               />
             </a>
             <a
@@ -141,7 +147,7 @@ const FooterNav = () => {
                 alt="Yelp Logo Icon"
                 height="35px"
                 width="35px"
-                src="./images/yelpicon.png"
+                src={yelpicon}
               />
             </a>{' '}
             </div>
@@ -151,7 +157,7 @@ const FooterNav = () => {
       </Container>
       <img
         className="ada-icon"
-        src="./images/handicap.png"
+        src={adaicon}
         alt="If You Are Using A Screen Reader And Are Having Problems Using This Website, please call Swander's Automotive (352) 527-0440 For Assistance."
         title="If You Are Using A Screen Reader And Are Having Problems Using This Website, please call Swander's Automotive (352) 527-0440 For Assistance."
         width="25"

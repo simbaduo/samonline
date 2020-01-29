@@ -18,8 +18,8 @@ const ReviewsPage = () => {
   }, [])
 
   return (
-    <Page>
-      <BreadcrumbsComponent nextOne={'Reviews'} nextOneUrl={'/ReviewsPage'} />
+    <Page withPadding={false}>
+      <div className="manualPaddingDiv"><BreadcrumbsComponent nextOne={'Reviews'} nextOneUrl={'/ReviewsPage'} />
       <div className="reviewTable">
         {reviews.map(reviews => {
           return (
@@ -28,11 +28,11 @@ const ReviewsPage = () => {
                 <div className="reviewInfo">
                   <li>{reviews.name}</li>
                   <li className="greyText">{reviews.date}</li>
-                  <li>
+                  <li className="starsImg">
                     <img
                       alt="5 Star Review Image"
-                      height="25px"
-                      width="120px"
+                      height="30px"
+                      width="150px"
                       src="./images/reviews.png"
                     />
                   </li>
@@ -44,7 +44,8 @@ const ReviewsPage = () => {
             </div>
           )
         })}
-      </div>
+      </div></div>
+      
     </Page>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import samlogo from '../images/samlogo.svg'
+import stars from  '../images/stars.png'
 
 
 // import samlogo from '../images/samlogo.svg'
@@ -9,13 +10,13 @@ import samlogo from '../images/samlogo.svg'
 import { colors } from '../utils/theme'
 
 const Container = styled.div`
-  padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   background-color: ${colors.light};
+  margin: 0;
+  padding: 0;
 
   @media (max-width: 900px) {
     display: none;
@@ -24,14 +25,24 @@ const Container = styled.div`
 
 const NavBar = () => {
   return (
+    <>
     <Container>
-      <img
+      <div className="testContainer">
+        <div className="imgDiv">      <img
         className="nav-link"
         height="200px"
         width="200px"
         src={samlogo}
-      />
-      <NavLink
+      /></div>
+        <div className="rightHalfDiv">
+            <div className="topRightHalfDiv">
+              <div className="reviewTopHalfDiv">
+                <p>Beverly Hills Auto Repair</p>
+                <div className="navReviewFlex"><img className="navStars" height="18px" width="100px" src={stars}/><a className="underlineText" href="/ReviewsPage">5 Star Rating Based On 123 Reviews</a></div>
+              </div>
+              <div className="addressTopHalfDiv"></div>
+            </div>
+            <div className="bottomRightHalfDiv"><NavLink
         to="/"
         className="nav-link"
         activeStyle={{ color: '#F0324D' }}
@@ -108,8 +119,24 @@ const NavBar = () => {
         activeStyle={{ color: '#F0324D' }}
       >
         DIRECTIONS
-      </NavLink>
+      </NavLink></div>
+        </div>
+      </div>
+      {/* <div>
+        <p>5 star Reviews!</p>
+        <p>5 star Reviews!</p>
+
+      </div> */}
+      {/* <img
+        className="nav-link"
+        height="200px"
+        width="200px"
+        src={samlogo}
+      /> */}
+  
+      
     </Container>
+    </>
   )
 }
 

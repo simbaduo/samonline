@@ -130,9 +130,8 @@ const AppointmentRequestForm = () => {
           />
         </FormField>
         <FormActions>
-          <button type="submit" onSubmit={onSubmit}>
-            Submit
-          </button>
+          <input type="submit" onSubmit={onSubmit} value="Submit" className="redeemButton"/>
+
           {/* Send Email */}
         </FormActions>
       </Form>
