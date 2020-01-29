@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import NavBar from './NavBar'
 import HamburgerNav from './HamburgerNav'
+import MobileHeader from './MobileHeader'
+
 import FooterNav from './FooterNav'
 import { colors } from '../utils/theme'
 
@@ -35,6 +37,7 @@ const Page = ({ children, withPadding }) => {
     <Container>
       <NavBar />
       <HamburgerNav />
+      <MobileHeader />
       <InnerContainer withPadding={withPadding}>{children}</InnerContainer>
       <FooterNav />
     </Container>

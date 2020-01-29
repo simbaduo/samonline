@@ -29,6 +29,7 @@ const styles = {
   bmMenuWrap: {
     position: 'fixed',
     height: '100%',
+    width: '200px',
   },
   bmMenu: {
     background: colors.dark,
@@ -83,7 +84,7 @@ const HamburgerNav = () => {
         <LinksContainer>
           <NavLink
             to="/"
-            className="nav-link"
+            className="nav-linkHamburger"
             activeStyle={{ color: '#f0324d' }}
             exact={true}
           >
@@ -92,40 +93,54 @@ const HamburgerNav = () => {
 
           <div onClick={dropDownFunc}>
             <span className="far fa-star"></span>
-            <p className="servicesHamburgerDropdown">
-              &nbsp;&nbsp;&nbsp;&nbsp;SERVICES
+            <p className="servicesHamburgerDropdown hamburgerUnderline">
+              SERVICES
             </p>
           </div>
           {dropDown && (
             <div className="dropDown">
-              <a href="/ServicesPages/OilChangePage">Oil Change</a>
+              <a href="/ServicesPages/ACPage">AC</a>
+              <a href="/ServicesPages/AccessoriesPage">Accessories</a>
+              <a href="/ServicesPages/AlignmentPage">Alignment</a>
+              <a href="/ServicesPages/BatteryPage">Battery</a>
               <a href="/ServicesPages/BrakesPage">Brakes</a>
+              <a href="/ServicesPages/HosesPage">Cooling</a>
+              <a href="/ServicesPages/DiagnosticsPage">Diagnostics</a>
+              <a href="/ServicesPages/InspectionsPage">Inspections</a>
+              <a href="/ServicesPages/OilChangePage">Oil Change</a>
+              <a href="/ServicesPages/MiscPage">Misc</a>
+              <a href="/ServicesPages/SteeringPage">Steering</a>
+              <a href="/ServicesPages/TiresPage">Tires</a>
+              <a href="/ServicesPages/TuneUpPage">Tune Up</a>
+
+
+
             </div>
           )}
           <NavLink
             to="/CarSalesPage"
-            className="nav-link"
+            className="nav-linkHamburger"
             activeStyle={{ color: '#f0324d' }}
           >
             CAR SALES
           </NavLink>
           <NavLink
             to="/SpecialsPage"
-            className="nav-link"
+            className="nav-linkHamburger"
             activeStyle={{ color: '#fff' }}
           >
             SPECIALS
           </NavLink>
           <NavLink
             to="/AppointmentPage"
-            className="nav-link"
+            className="nav-linkHamburger"
             activeStyle={{ color: '#fff' }}
           >
             APPOINTMENTS
           </NavLink>
           <div onClick={dropDownFunc}>
-            <span className="far fa-star"></span>
-            <p className="iconTextHamburger">ABOUT US</p>
+            {/* <span className="far fa-star"></span> */}
+            <p className="iconTextHamburger hamburgerUnderline">ABOUT US</p>
           </div>
           {dropDown && (
             <div className="dropDown">
@@ -136,14 +151,14 @@ const HamburgerNav = () => {
           )}
           <NavLink
             to="/ReviewsPage"
-            className="nav-link"
+            className="nav-linkHamburger"
             activeStyle={{ color: '#fff' }}
           >
             REVIEWS
           </NavLink>
           <NavLink
             to="/DirectionsPage"
-            className="nav-link"
+            className="nav-linkHamburger"
             activeStyle={{ color: '#fff' }}
           >
             DIRECTIONS

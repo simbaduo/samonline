@@ -62,6 +62,7 @@ import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
 import AdviceServiceCouponComponent from '../components/AdviceServiceCouponComponent'
 import AffiliatesComponent from '../components/AffiliatesComponent'
 import HomeSchedulerComponent from '../components/HomeSchedulerComponent'
+import samlogo from '../images/samlogo.png'
 
 // import { NavLink } from 'react-router-dom'
 
@@ -252,7 +253,7 @@ const HomePage = () => {
           </a>
           <p className="reviewText">5 Star Rating Based On 124 Reviews</p> */}
         </VetContentContainer>
-
+        
         <DiagonalColorContainer />
 
         <HideWhenMobile>
@@ -329,7 +330,7 @@ const HomePage = () => {
         {/* TODO: figure out conflicts between flex: 1 and background-size: cover...
           background image height growing not causing flex container to expand vertically...
          */}
-        <DiagonalImageContainer>
+         <HideWhenMobile><DiagonalImageContainer>
           <div className="welcomeText">
             <img
               alt="Squiggle"
@@ -344,17 +345,20 @@ const HomePage = () => {
               Provides quality car care in Beverly Hills, Florida since 1989
             </h3>
           </div>
-        </DiagonalImageContainer>
+        </DiagonalImageContainer></HideWhenMobile>
+        
 
         {/* <div className="specialAd">
           <img src="./images/triangle.jpg" />
         </div> */}
         <ContentContainer>
           <AdviceServiceCouponComponent />
-          <AffiliatesComponent />
-          <div className="homeScheduler">
+          <div className="mobileColumn"><AffiliatesComponent />
+</div>
+          <div className="hideWhenMobile"> <div className="homeScheduler">
             <HomeSchedulerComponent />
-          </div>
+          </div></div>
+         
         </ContentContainer>
         {/* <div className="nextBox"></div> */}
       </Page>

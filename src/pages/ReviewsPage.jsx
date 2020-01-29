@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import Page from '../components/Page'
 import BreadcrumbsComponent from '../components/BreadcrumbsComponent'
 import Axios from 'axios'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+
 
 const ReviewsPage = () => {
   const [reviews, setReviews] = useState([])
@@ -18,6 +20,7 @@ const ReviewsPage = () => {
   }, [])
 
   return (
+    <>
     <Page withPadding={false}>
       <div className="manualPaddingDiv"><BreadcrumbsComponent nextOne={'Reviews'} nextOneUrl={'/ReviewsPage'} />
       <div className="reviewTable">
@@ -45,8 +48,13 @@ const ReviewsPage = () => {
           )
         })}
       </div></div>
+      <div className="reviewSubmitButtonContainer">
+        <div className="reviewSubmitButtonInnerDiv">
+        <a href="/SubmitReviewPage" className="reviewSubmitButton" type="Submit">Leave A Review!</a></div></div>
+      
       
     </Page>
+    </>
   )
 }
 

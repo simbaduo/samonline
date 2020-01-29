@@ -70,7 +70,7 @@ const CarouselComponent = () => {
     <>
       <Carousel
         showStatus={false}
-        // autoPlay={true}
+        autoPlay={true}
         emulateTouch={true}
         infiniteLoop={true}
         transitionTime={750}

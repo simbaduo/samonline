@@ -73,7 +73,8 @@ const AppointmentRequestForm = () => {
   const [modelData, setModelData] = useState([])
   const [yearData, setYearData] = useState([])
   const [secondChoiceAppointment, setSecondChoiceAppointment] = useState([])
-  const [closeWindow, setCloseWindow] = useState(false)
+  // const [closeWindow, setCloseWindow] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
 
   // BONUS: add a "submitting..." state to your button
   const onSubmit = async event => {
@@ -94,6 +95,7 @@ const AppointmentRequestForm = () => {
     })
 
     console.log(response.data)
+    setSubmitted(true)
   }
 
   useEffect(() => {
@@ -108,12 +110,13 @@ const AppointmentRequestForm = () => {
   }, [])
 
   const modelApiCall = async () => {
-    const resp = await axios.get(`//samonlineback.herokuapp.com/make/${make}/model`)
+    if (make) {const resp = await axios.get(`//samonlineback.herokuapp.com/make/${make}/model`)
     if (resp.status === 200) {
       setModelData(resp.data.terms)
     }
 
-    console.log(resp.data)
+    console.log(resp.data)}
+    
   }
   useEffect(() => {
     modelApiCall()
@@ -134,19 +137,11 @@ const AppointmentRequestForm = () => {
     if (make && model) yearApiCall(make, model)
   }, [make, model])
 
-  // this.state =(deps:[], popUpClose : false)
 
-  // const {deps} = this.state;
-  // let submitClose =() => this.setState(popUpClose:false)
 
-  const submitClose = () => {
-    if (submitClose == false)
-    setCloseWindow(true)
-  }
-
-  return (
+  if (!submitted) {
+return (
     <>
-
       <div className="appointmentTitle">
         <h1>Personal Information</h1>
       </div>
@@ -272,7 +267,7 @@ const AppointmentRequestForm = () => {
             <div className="scheduleTitles">
               {' '}
               <label>Requested Appointment</label>
-              <label>2nd Request (optional)</label>
+              <label className="requestHeight">2nd Request (optional)</label>
             </div>
 
             <div className="scheduleInputDiv">
@@ -306,7 +301,7 @@ const AppointmentRequestForm = () => {
             </div>
           </FormField>
           <FormActions>
-            <button className="appointmentSendButton" type="submit" onClick={submitClose}>
+            <button className="appointmentSendButton" type="submit">
               Send
             </button>
           </FormActions>
@@ -314,6 +309,15 @@ const AppointmentRequestForm = () => {
       </Container>
     </>
   )
+  }
+  else { return (
+    <h1>Your Request Has Been Submitted! Thank You</h1>
+  )
+    
+    // <a href="/Home">Home</a>
+  }
+
+  
 }
 
 export default AppointmentRequestForm

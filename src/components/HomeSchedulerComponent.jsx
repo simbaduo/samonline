@@ -22,44 +22,39 @@ const HomeSchedulerComponent = () => {
             <div className="control">
               <label htmlFor="lastName">Last Name</label>
 
-              <input
-                className="lineInput"
-                type="text"
-              />
+              <input className="lineInput" type="text" />
             </div>
             <div className="control">
-            <label htmlFor="lastName">Email</label>
+              <label htmlFor="lastName">Email</label>
 
-              <input className="lineInput" type="text"/>
+              <input className="lineInput" type="text" />
             </div>
             <div className="control">
-            <label htmlFor="lastName">Phone</label>
+              <label htmlFor="lastName">Phone</label>
 
               <input className="lineInput" type="text" />
             </div>
           </div>
           <div className="row">
             <div className="control">
-            <label htmlFor="lastName">Reason</label>
+              <label htmlFor="lastName">Reason</label>
 
-              <input
-                className="lineInput"
-                type="text"
-              />
+              <input className="lineInput" type="text" />
             </div>
           </div>
           <div className="row">
             <div className="control double">
-            <label htmlFor="lastName">Vehicle Info</label>
-              <input
-                className="lineInput"
-                type="text"
-              />
+              <label htmlFor="lastName">Vehicle Info</label>
+              <input className="lineInput" type="text" />
             </div>
             <div className="control">
+              <label htmlFor="date">Date</label>
+
               <input className="lineInput" type="date" />
             </div>
             <div className="control">
+              <label htmlFor="time">Time</label>
+
               <input className="lineInput" type="time" />
             </div>
           </div>

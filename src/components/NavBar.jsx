@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import samlogo from '../images/samlogo.svg'
+import samlogo from '../images/samlogo.png'
 import stars from  '../images/stars.png'
 
 
@@ -30,16 +30,20 @@ const NavBar = () => {
       <div className="testContainer">
         <div className="imgDiv">      <img
         className="nav-link"
-        height="200px"
+        height="140px"
         width="200px"
         src={samlogo}
       /></div>
         <div className="rightHalfDiv">
             <div className="topRightHalfDiv">
-              <div className="reviewTopHalfDiv">
-                <p>Beverly Hills Auto Repair</p>
-                <div className="navReviewFlex"><img className="navStars" height="18px" width="100px" src={stars}/><a className="underlineText" href="/ReviewsPage">5 Star Rating Based On 123 Reviews</a></div>
-              </div>
+              <div className="reviewTopHalfTotal">
+                <div className="reviewTopHalfDivUpper"><p>Beverly Hills Auto Repair</p>
+                <div ClassName="simpleFlex"><img className="navStars" height="18px" width="100px" src={stars}/><a className="underlineText" href="/ReviewsPage">5 Star Rating Based On 123 Reviews</a></div></div>
+                
+                <div className="navReviewFlex">
+                <p>Call Us <span className="redText">(352) - 527 - 0440</span></p>
+                  </div>
+                  </div>
               <div className="addressTopHalfDiv"></div>
             </div>
             <div className="bottomRightHalfDiv"><NavLink

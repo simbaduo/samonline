@@ -31,8 +31,47 @@ body {
   text-decoration: none;
   color: rgb(87, 88, 91);
   padding-top: 10px;
-  margin-left: 2rem;
+  margin-left: 10px;
 }
+
+.nav-linkHamburger {
+  text-decoration: none;
+  color: white;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.nav-linkHamburger:hover {
+  text-decoration: none;
+  color: rgb(226, 147, 147);
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.nav-linkHamburger:active {
+  text-decoration: none;
+  color: rgb(179, 66, 66);
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  /* color: white;
+  text-decoration: none; */
+}
+
+.dropDown a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburgerUnderline {
+  text-decoration: underline;
+}
+
 .nav-link:hover {
   color: #f0324d;
 }
@@ -530,8 +569,8 @@ li {
 .carouselButton:hover {
   color: white;
   background-color: #f0324d;
-  transition-delay: .1s;
-  -webkit-transition-delay: .1s;
+  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
 }
 
 .warrantyImg {
@@ -749,6 +788,12 @@ li {
   color: white;
 }
 
+.servicesHamburgerDropDown {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
 .servicesHamburgerDropdown:active {
   color: #f0324d;
 }
@@ -900,7 +945,6 @@ p {
   background-color: rgb(182, 43, 64);
 }
 
-
 .creditsFooter {
   border-top: thin white 5px;
 }
@@ -950,7 +994,7 @@ p {
 
 .leftArea {
   flex: 1;
-  /* border: solid blue 3px; */
+  /* border: solid blue 3px ; */
 }
 
 .rightArea {
@@ -993,10 +1037,11 @@ p {
 }
 
 .homeScheduleInnerDiv .control {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   margin: 10px;
   border-bottom: thin solid black;
-  padding-bottom: 15px;
 }
 
 .homeScheduleInnerDiv .control.double {
@@ -1006,6 +1051,7 @@ p {
 .homeScheduleInnerDiv label {
   text-transform: uppercase;
   font-size: 0.8em;
+  margin: 0 1em 1em 0;
 }
 
 .homeAppointmentReasonContainer {
@@ -1098,7 +1144,7 @@ p {
   justify-content: center;
   /* border: solid green 2px; */
   padding-left: 20px;
-  
+
   /* text-align: left; */
   /* flex-direction: row; */
   /* align-items: flex-start; */
@@ -1136,21 +1182,9 @@ p {
   text-decoration: none;
 }
 
-
-
-
 .lineInput {
-  display: flex;
-  flex-direction: column;
   /* border: solid purple 4px; */
-  justify-content: center;
-  align-items: flex-start;
-  flex: 3;
-  height: 5rem;
-  font-size: 1.8vh;
-  text-decoration: none;
-  text-align: left;
-  margin-left: 10px;
+  /* height: 5rem; */
 }
 
 .hey {
@@ -1367,6 +1401,26 @@ label {
   text-transform: uppercase;
 }
 
+@media (max-width: 1500px) {
+  .mobileColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .hideWhenMobile {
+      display: none;
+    }
+  }
+
+  .affiliateLogos {
+    flex-direction: row;
+    flex-flow: wrap;
+    width: 60%;
+  }
+}
+
 @media (max-width: 600px) {
   .mediaImg {
     height: 175px;
@@ -1410,18 +1464,45 @@ label {
     /* max-width: 899px; */
     width: 100%;
   }
-}
 
-@media (max-width: 900px) {
-  .affiliateResize {
+  .topHalf {
     display: flex;
     flex-direction: column;
+    /* border: solid green 2px; */
+    /* height: 500px; */
   }
 
+  .hideInMobile {
+    display: none;
+  }
+}
+
+.mobileHeader {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+@media (max-width: 700px) {
   .affiliateLogos {
     display: flex;
     flex-direction: column;
     margin: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .oilChangeTextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid green 2px; */
+    width: 250px;
+  }
+
+  .affiliateResize {
+    display: flex;
+    flex-direction: column;
   }
 
   .affiliateLogos a {
@@ -1479,9 +1560,7 @@ label {
   }
 } */
 
-
 /* Review Component & Page CSS */
-
 
 .reviewContainer {
   display: flex;
@@ -1497,7 +1576,6 @@ label {
   width: 40%;
   /* border: solid blue 2px; */
 }
-
 
 .star-rating {
   display: flex;
@@ -1543,7 +1621,7 @@ label {
 
 p {
   flex-basis: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .reviewTitle {
@@ -1553,7 +1631,6 @@ p {
 
 .reviewTitle:hover {
   color: rgb(148, 40, 40);
-
 }
 
 .testPageColor {
@@ -1562,7 +1639,6 @@ p {
 
 .AnotherTestPage {
   background-color: blue;
-
 }
 
 .starCount {
@@ -1592,7 +1668,6 @@ p {
   background-color: rgb(182, 43, 64);
 }
 
-
 .manualPaddingDiv {
   margin: 0;
   padding: 0;
@@ -1602,28 +1677,55 @@ p {
 .bottomRightHalfDiv {
   display: flex;
   align-items: flex-end;
+  padding-left: 2rem;
+  padding-right: 5rem;
   /* border: solid red 2px; */
 }
 
 .testContainer {
   display: flex;
+  width: 100%;
+  border: solid purple 5px;
+  justify-content: flex-start;
+}
+
+.reviewTopHalfTotal {
+  display: flex;
+  flex-direction: row;
+  border: solid green 2px;
+  width: 100%;
+  /* justify-content: space-between; */
+}
+
+.reviewTopHalfDivUpper {
+  display: flex;
+  flex-direction: column;
+  border: solid blue 2px;
+  flex: 2;
+  width: 100%;
+}
+
+.navReviewFlex {
+  display: flex;
+  flex: 2;
+  border: solid red 2px;
+  align-items: flex-end;
+}
+
+.navReviewFlex p {
+  margin: 0;
 }
 
 .rightHalfDiv {
   display: flex;
   flex-direction: column;
-  /* border: solid red 3px; */
+  border: solid pink 3px;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .topRightHalfDiv {
   display: flex;
-}
-
-.navReviewFlex {
-  display: flex;
-  /* border: solid red 2px; */
-  align-items: center;
 }
 
 .navStars {
@@ -1637,4 +1739,97 @@ p {
 
 .underlineText:hover {
   text-decoration: none;
+}
+
+.reviewSubmitButtonContainer {
+  /* border: solid red 2px; */
+  display: flex;
+  justify-content: center;
+}
+
+.reviewSubmitButtonInnerDiv {
+  /* border: solid red 2px; */
+  display: flex;
+  width: 60%;
+  justify-content: center;
+}
+
+.reviewSubmitButton {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  width: 350px;
+  /* width: 80%; */
+  font-size: 16px;
+  font-weight: 1000;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+reviewSubmitButton:active {
+  background-color: rgb(182, 43, 64);
+}
+
+.mobileHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid purple 2px; */
+  padding-top: 40px;
+}
+
+.mobileReviewBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* border: solid green 2px; */
+}
+
+.mobileContactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.tiny {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(87, 88, 91);
+}
+
+.tiny:hover {
+  font-size: 12px;
+  text-decoration: underline;
+  color: rgb(87, 88, 91);
+}
+
+.inlineContainer {
+  display: flex;
+  align-items: center;
+  /* border: solid black 2px; */
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.starsAdjust {
+  margin-top: -3px;
+}
+
+.requestHeight {
+  line-height: 1.4;
 }

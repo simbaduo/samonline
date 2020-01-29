@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 // import { render } from "react-dom";
 
 // import "./styles.css";
@@ -15,19 +16,17 @@ const ReviewComponent = ({ totalStars }) => {
   )
 
   const goToPage = () => {
-    if (starsSelected === 5){
-      setRated5Stars = true;
+    if (starsSelected === 5) {
+      setRated5Stars(true)
+    } else {
+      setRatedOther(true)
     }
-    else {
-      setRatedOther = true;
-    }
-
   }
 
   if (rated5Stars) {
-    return <Redirect to="https://www.google.com" />
+    return window.location.replace('https://www.google.com')
   } else if (ratedOther) {
-    return <Redirect to="/ContactUs" />
+    return <Redirect to="/ContactUsPage" />
   }
 
   return (
