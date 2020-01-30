@@ -206,20 +206,29 @@ const HomePage = () => {
               <p className="oilChangeText">OIL CHANGE TO A VETERAN</p>
               <p className="smallText">Every Month.</p>
               <p className="smallText">*Must Have Valid Proof.</p>
-            </div>
-            <ContentContainer>
-              <Form onSubmit={onSubmit}>
-                {' '}
-                <div className="submitContainer">
-                  <div className="submitBox">
-                    <a
-                      className="subscribeButton"
+              <a
+                      className="subscribeButton2"
                       type="submit"
                       value="Subscribe"
                       href="/VeteransPage"
                     >
                       Subscribe
                     </a>
+
+            </div>
+            <ContentContainer>
+              <Form onSubmit={onSubmit}>
+                {' '}
+                <div className="submitContainer">
+                  <div className="submitBox">
+                    {/* <a
+                      className="subscribeButton"
+                      type="submit"
+                      value="Subscribe"
+                      href="/VeteransPage"
+                    >
+                      Subscribe
+                    </a> */}
                   </div>
                 </div>
               </Form>

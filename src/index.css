@@ -263,6 +263,28 @@ li {
   font-weight: bold;
 }
 
+.subscribeButton2 {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  /* padding: 13px 20px 30px 20px; */
+  height: 30px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* width: 20%; */
+  font-size: 14px;
+  /* border: solid pink 3px; */
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 290px;
+}
+
 .submitBox a {
 /* width: 150px; */
 margin: 15px 0 40px 0;
@@ -1722,7 +1744,7 @@ font-size: 120px;
       flex-flow: wrap;
       justify-content: center;
       width: 70%;
-      border: solid red 2px;
+      /* border: solid red 2px; */
     }
   }
 
@@ -1739,6 +1761,13 @@ font-size: 120px;
   .affiliateResize {
     display: flex;
     flex-direction: column;
+  }
+
+  .subscribeButton2 {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+
   }
 }
 
@@ -1924,14 +1953,14 @@ p {
 .testContainer {
   display: flex;
   width: 100%;
-  border: solid purple 5px;
+  /* border: solid purple 5px; */
   justify-content: flex-start;
 }
 
 .reviewTopHalfTotal {
   display: flex;
   flex-direction: row;
-  border: solid green 2px;
+  /* border: solid green 2px; */
   width: 100%;
   /* justify-content: space-between; */
 }
@@ -1939,7 +1968,7 @@ p {
 .reviewTopHalfDivUpper {
   display: flex;
   flex-direction: column;
-  border: solid blue 2px;
+  /* border: solid blue 2px; */
   flex: 2;
   width: 100%;
 }
@@ -1947,7 +1976,7 @@ p {
 .navReviewFlex {
   display: flex;
   flex: 2;
-  border: solid red 2px;
+  /* border: solid red 2px; */
   align-items: flex-end;
 }
 
@@ -1958,7 +1987,7 @@ p {
 .rightHalfDiv {
   display: flex;
   flex-direction: column;
-  border: solid pink 3px;
+  /* border: solid pink 3px; */
   justify-content: flex-end;
   width: 100%;
 }
@@ -2034,7 +2063,14 @@ reviewSubmitButton:active {
   align-items: center;
   margin-bottom: 0;
   padding-bottom: 0;
+  margin-top: 25px;
   /* border: solid green 2px; */
+}
+
+.mobileReviewBox p {
+  font-size: 18px;
+  font-weight: 900;
+
 }
 
 .mobileContactBox {
@@ -2110,4 +2146,8 @@ reviewSubmitButton:active {
   justify-content: center;
   align-items: center;
   margin: 10rem 0 15rem 0;
+}
+
+.imgContainer {
+  
 }

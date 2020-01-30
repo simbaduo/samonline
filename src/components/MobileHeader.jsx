@@ -15,9 +15,9 @@ const MobileHeader = () => {
       <Container>
         {' '}
         <div className="mobileHeader">
-          <img height="80px" width="130px" src={samlogo} />
+          <img height="160px" width="260px" src={samlogo} />
           <div className="mobileReviewBox">
-            <p>Beverly Hills Auto Repair</p>
+            <p><strong>Beverly Hills Auto Repair</strong></p>
             <span className="inlineContainer">
               <img
                 className="starsAdjust"

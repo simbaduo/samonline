@@ -43,9 +43,10 @@ const CarSalesPage = () => {
                   <div className="reviewInfo">
                     <li>
                       <img
-                      alt="5 Star Review Image"
+                      alt="Vehicle Default Picture"
                       height="250px"
-                      width="120px"
+                      width="300px"
+                      className="imgContainer"
                       src={vehicles.imageUrl}
                     />
                       {/* {images.map(image => {
