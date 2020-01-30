@@ -67,7 +67,7 @@ const ContactUsPage = () => {
     // prevents the page from refreshing
     event.preventDefault()
 
-    const response = await axios.post('https://samonlineback.herokuapp.com/api/ContactUs', {
+    const response = await axios.post('https://localhost:5001/api/ContactUs', {
       name: name,
       email: email,
       phone: phone,
@@ -80,7 +80,7 @@ const ContactUsPage = () => {
     <>
       <Page>
         <div className="contactUsContainer">
-          <h3>Your Information</h3>
+          <h3>How Can We Help?</h3>
         </div>
         <Container>
           <Form onSubmit={onSubmit}>
@@ -240,9 +240,10 @@ const ContactUsPage = () => {
             </div>
           </FormField> */}
             <FormActions>
-              <div className="contactSendDiv">
-                <input className="redeemButton" type="submit" value="Submit"/>
-              </div>
+              <div className="contactSendContainer"><div className="contactSendDiv">
+                <input className="contactSendButton" type="submit" value="Submit"/>
+              </div></div>
+              
             </FormActions>
           </Form>
         </Container>

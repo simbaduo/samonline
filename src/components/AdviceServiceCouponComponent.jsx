@@ -58,7 +58,7 @@ const AdviceServiceCouponComponent = () => {
           </div>
           <div className="cta">
             <p>
-              Check out our Current Specials! Click to learn more.
+            See our full list of automotive repairs and services. Click on the button below to learn more.
             </p>
             <a href="/SpecialsPage" className="subscribeButton">
               Learn More

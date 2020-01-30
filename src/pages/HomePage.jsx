@@ -112,7 +112,7 @@ const VetContentContainer = styled(ContentContainer)`
   text-align: left;
   padding-top: 30px;
 
-  @media (max-width: 500px) {
+  @media (max-width: 900px) {
     background-image: none;
   }
 `
@@ -161,7 +161,7 @@ const Form = styled.form``
 const HomePage = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-
+  const [isCompleted, setIsCompleted] = useState(false)
   const onSubmit = async event => {
     // prevents the page from refreshing
     event.preventDefault()
@@ -212,33 +212,15 @@ const HomePage = () => {
                 {' '}
                 <div className="submitContainer">
                   <div className="submitBox">
-                    <input
-                      type="text"
-                      className="inputField"
-                      placeholder="name"
-                      onChange={e => setName(e.target.value)}
-                      value={name}
-                    />
-
-                    <input
-                      className="inputField"
-                      type="text"
-                      placeholder="e-mail"
-                      onChange={e => setEmail(e.target.value)}
-                      value={email}
-                    ></input>
-
-                    <input
+                    <a
                       className="subscribeButton"
                       type="submit"
                       value="Subscribe"
-                    />
-
-                    <ul className="VeteranSubscribeBox"></ul>
+                      href="/VeteransPage"
+                    >
+                      Subscribe
+                    </a>
                   </div>
-                  <a className="smallLink" href="https://www.ebay.com">
-                    Click Here To Learn More
-                  </a>
                 </div>
               </Form>
             </ContentContainer>
@@ -253,7 +235,7 @@ const HomePage = () => {
           </a>
           <p className="reviewText">5 Star Rating Based On 124 Reviews</p> */}
         </VetContentContainer>
-        
+
         <DiagonalColorContainer />
 
         <HideWhenMobile>
@@ -330,35 +312,44 @@ const HomePage = () => {
         {/* TODO: figure out conflicts between flex: 1 and background-size: cover...
           background image height growing not causing flex container to expand vertically...
          */}
-         <HideWhenMobile><DiagonalImageContainer>
-          <div className="welcomeText">
-            <img
-              alt="Squiggle"
-              className="squiggleImg"
-              height="16px"
-              width="60px"
-              src="./images/squiggle.png"
-            />
-            <h1>Welcome to</h1>
-            <h1 className="glowTitle">Swander's Automotive</h1>
-            <h3>
-              Provides quality car care in Beverly Hills, Florida since 1989
-            </h3>
-          </div>
-        </DiagonalImageContainer></HideWhenMobile>
-        
+        <HideWhenMobile>
+          <DiagonalImageContainer>
+            <div className="welcomeText">
+              <img
+                alt="Squiggle"
+                className="squiggleImg"
+                height="16px"
+                width="60px"
+                src="./images/squiggle.png"
+              />
+              <h1>Welcome to</h1>
+              <h1 className="glowTitle">Swander's Automotive</h1>
+              <h3>
+                Provides quality car care in Beverly Hills, Florida since 1989
+              </h3>
+            </div>
+          </DiagonalImageContainer>
+        </HideWhenMobile>
 
         {/* <div className="specialAd">
           <img src="./images/triangle.jpg" />
         </div> */}
         <ContentContainer>
           <AdviceServiceCouponComponent />
-          <div className="mobileColumn"><AffiliatesComponent />
-</div>
-          <div className="hideWhenMobile"> <div className="homeScheduler">
-            <HomeSchedulerComponent />
-          </div></div>
-         
+          <div className="mobileColumn">
+            <AffiliatesComponent />
+          </div>
+          <div className="hideWhenMobile">
+            {' '}
+            <div className="homeScheduler">
+              {isCompleted ? (
+                <>
+                <h1>wow this actually works</h1></>
+              ) : (
+                <HomeSchedulerComponent setIsCompleted={setIsCompleted} />
+              )}
+            </div>
+          </div>
         </ContentContainer>
         {/* <div className="nextBox"></div> */}
       </Page>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const AffiliatesComponent = () => {
   return (
-    <div className="affiliateLogos">
+    <div className="affiliateContainer"><div className="affiliateLogos">
       <a target="_blank" href="https://www.napaautocare.com/warranty.aspx">
         <img
           alt="Napa Auto Care Logo"
@@ -45,7 +45,8 @@ const AffiliatesComponent = () => {
       <a target="_blank" href="https://www.michelinman.com/about-us.html">
         <img alt="Michelin Logo" className="michelinLogo" height="35px" src="./images/michelin.png" />
       </a>
-    </div>
+    </div></div>
+    
   )
 }
 

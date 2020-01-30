@@ -30,7 +30,7 @@ const BreadcrumbsComponentExtra = props => {
         <BreadcrumbItem active tag="AboutUsPage">
           ABOUT US
         </BreadcrumbItem>
-        <BreadcrumbItem active tag="ReviewsPage">
+        <BreadcrumbItem active tag="reviews">
           REVIEWS
         </BreadcrumbItem>
         <BreadcrumbItem active tag="DirectionsPage">

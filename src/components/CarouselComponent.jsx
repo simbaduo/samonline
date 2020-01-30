@@ -64,18 +64,26 @@ const FullWidthContainer = styled.div`
   padding-top: 20px;
   width: 100%;
 `
+const Container = styled.div`
+  @media (max-width: 700px) {
+    display: none;
+  }
+`
+
+
 
 const CarouselComponent = () => {
   return (
     <>
+    <Container>
       <Carousel
         showStatus={false}
-        autoPlay={true}
+        // autoPlay={true}
         emulateTouch={true}
         infiniteLoop={true}
         transitionTime={750}
         showThumbs={false}
-        interval={8000}
+        interval={5000}
       >
         <CarouselItemContainer>
           <CarouselContentContainer>
@@ -127,7 +135,7 @@ const CarouselComponent = () => {
                   that is honored at more than 14,000 locations nationwide -
                   more than any other automotive repair brand.
                 </p>
-                <form action="https://www.napaautocare.com/warranty.aspx">
+                <form action="https://www.napaautocare.com/warranty.aspx" target="_blank">
                   <button
                     className="carouselButton"
                     value="Go to NAPA Warranty Page"
@@ -192,7 +200,8 @@ const CarouselComponent = () => {
             <img src="./images/FinancingAd.png" />
           </CarouselItemContainer> */}
         </CarouselItemContainer>
-      </Carousel>
+      </Carousel></Container>
+      
     </>
   )
 }

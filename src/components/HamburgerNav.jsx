@@ -65,16 +65,26 @@ const LinksContainer = styled.div`
   padding-left: 0;
   margin-left: 0;
   color: white;
+  outline: none;
 `
 
 const HamburgerNav = () => {
   const [dropDown, setDropDown] = useState(false)
+  const [dropDown2, setDropDown2] = useState(false)
 
   const dropDownFunc = () => {
     if (!dropDown) {
       setDropDown(true)
     } else {
       setDropDown(false)
+    }
+  }
+
+  const dropDownFunc2 = () => {
+    if (!dropDown2) {
+      setDropDown2(true)
+    } else {
+      setDropDown2(false)
     }
   }
 
@@ -108,13 +118,10 @@ const HamburgerNav = () => {
               <a href="/ServicesPages/DiagnosticsPage">Diagnostics</a>
               <a href="/ServicesPages/InspectionsPage">Inspections</a>
               <a href="/ServicesPages/OilChangePage">Oil Change</a>
-              <a href="/ServicesPages/MiscPage">Misc</a>
               <a href="/ServicesPages/SteeringPage">Steering</a>
               <a href="/ServicesPages/TiresPage">Tires</a>
               <a href="/ServicesPages/TuneUpPage">Tune Up</a>
-
-
-
+              <a href="/ServicesPages/MiscPage">Misc</a>
             </div>
           )}
           <NavLink
@@ -138,11 +145,11 @@ const HamburgerNav = () => {
           >
             APPOINTMENTS
           </NavLink>
-          <div onClick={dropDownFunc}>
+          <div onClick={dropDownFunc2}>
             {/* <span className="far fa-star"></span> */}
             <p className="iconTextHamburger hamburgerUnderline">ABOUT US</p>
           </div>
-          {dropDown && (
+          {dropDown2 && (
             <div className="dropDown">
               <a href="/ResumePage">CAREERS</a>
               <a href="/AboutUsPage">CONTACT US</a>
@@ -150,7 +157,7 @@ const HamburgerNav = () => {
             </div>
           )}
           <NavLink
-            to="/ReviewsPage"
+            to="/reviews"
             className="nav-linkHamburger"
             activeStyle={{ color: '#fff' }}
           >

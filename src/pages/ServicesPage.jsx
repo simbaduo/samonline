@@ -24,7 +24,8 @@ const ServicesPage = () => {
                 Alignments
               </a>
             </li>
-            <li>Automobile Detailing</li>
+            <li><a className="servicePageLinks" href="/ServicesPages/MiscPage">
+              Automobile Detailing</a></li>
             <li>
               <a className="servicePageLinks" href="/ServicesPages/BatteryPage">
                 Batteries / Alternators / Starters
@@ -35,7 +36,7 @@ const ServicesPage = () => {
                 Brakes
               </a>
             </li>
-            <li>Cooling System Flush</li>
+            <li><a className="servicePageLinks" href="/ServicesPages/HosesPage">Cooling System Flush</a></li>
 
             <li>
               <a
@@ -54,22 +55,27 @@ const ServicesPage = () => {
               </a>
             </li>
 
-            <li className="nonLinkedServiceItem">Electrical</li>
-            <li className="nonLinkedServiceItem">Fluid Exchanges</li>
-            <li className="nonLinkedServiceItem">Front End Repair</li>
-            <li className="nonLinkedServiceItem">Fuel Injection Service</li>
-            <li className="nonLinkedServiceItem">Headlight Restoration</li>
-            <li className="nonLinkedServiceItem">
-              Heating &amp; Cooling Services
+            <li className="nonLinkedServiceItem"> <a
+                className="servicePageLinks"
+                href="/ServicesPages/DiagnosticsPage"
+              >Electrical</a></li>
+            <li className="nonLinkedServiceItem"><a className="servicePageLinks" href="/ServicesPages/MiscPage">Fluid Exchanges</a></li>
+            <li className="nonLinkedServiceItem"><a
+                className="servicePageLinks"
+                href="/ServicesPages/SteeringPage"
+              >Front End Repair</a></li>
+            <li className="nonLinkedServiceItem">              <a className="servicePageLinks" href="/ServicesPages/TuneUpPage">
+Fuel Injection Service</a></li>
+            <li className="nonLinkedServiceItem"><a className="servicePageLinks" href="/ServicesPages/MiscPage">Headlight Restoration</a></li>
+            <li className="nonLinkedServiceItem"><a className="servicePageLinks" href="/ServicesPages/HosesPage">
+              Heating &amp; Cooling Services</a>
             </li>
 
             <li>
               <a className="servicePageLinks" href="/ServicesPages/HosesPage">
-                Hoses / Radiators / Water Pumps (Cooling System)
+                Hoses / Radiators / Water Pumps
               </a>
             </li>
-            <li className="nonLinkedServiceItem">Lighting</li>
-
             <li>
               <a
                 className="servicePageLinks"
@@ -78,11 +84,7 @@ const ServicesPage = () => {
                 Lift Kits / Accessories
               </a>
             </li>
-            <li>
-              <a className="servicePageLinks" href="/ServicesPages/MiscPage">
-                Misc. / Additional Services
-              </a>
-            </li>
+            
             <li>
               <a
                 className="servicePageLinks"
@@ -115,6 +117,11 @@ const ServicesPage = () => {
                 href="/ServicesPages/AccessoriesPage"
               >
                 Vehicle Customization
+              </a>
+            </li>
+            <li>
+              <a className="servicePageLinks" href="/ServicesPages/MiscPage">
+                Misc. / Additional Services
               </a>
             </li>
           </ul>

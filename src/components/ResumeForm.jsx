@@ -41,7 +41,7 @@ const FormField = styled.div`
 
 const FormActions = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   button {
     border-radius: 7px;
@@ -129,8 +129,8 @@ const AppointmentRequestForm = () => {
             value={resume}
           />
         </FormField>
-        <FormActions>
-          <input type="submit" onSubmit={onSubmit} value="Submit" className="redeemButton"/>
+        <FormActions><div className="resumeSubmitContainer"><input type="submit" onSubmit={onSubmit} value="Submit" className="redeemButton"/>
+</div>
 
           {/* Send Email */}
         </FormActions>

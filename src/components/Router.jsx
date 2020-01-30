@@ -21,14 +21,14 @@ import CarSalesPage from '../pages/CarSalesPage'
 import SpecialsPage from '../pages/SpecialsPage'
 import AppointmentPage from '../pages/AppointmentPage'
 import AboutUsPage from '../pages/AboutUsPage'
-import ReviewsPage from '../pages/ReviewsPage'
+import reviews from '../pages/ReviewsPage'
 import ExperiencePage from '../pages/ExperiencePage'
 import DirectionsPage from '../pages/DirectionsPage'
+import VeteransPage from '../pages/VeteransPage'
 import ContactUsPage from '../pages/ContactUsPage'
 import NotFoundPage from '../pages/NotFoundPage'
 import AdminPage from '../pages/AdminPage'
 import SubmitReviewPage from '../pages/SubmitReviewPage'
-
 
 const Router = () => {
   return (
@@ -107,14 +107,20 @@ const Router = () => {
           component={AppointmentPage}
         ></Route>
         <Route exact path="/AboutUsPage" component={AboutUsPage}></Route>
-        <Route exact path="/ReviewsPage" component={ReviewsPage}></Route>
+        <Route exact path="/reviews" component={reviews}></Route>
         <Route exact path="/ExperiencePage" component={ExperiencePage}></Route>
         <Route exact path="/DirectionsPage" component={DirectionsPage}></Route>
         <Route exact path="/ResumePage" component={ResumePage}></Route>
         <Route exact path="/ContactUsPage" component={ContactUsPage}></Route>
-        <Route exact path="/SubmitReviewPage" component={SubmitReviewPage}></Route>
+        <Route
+          exact
+          path="/SubmitReviewPage"
+          component={SubmitReviewPage}
+        ></Route>
+        <Route exact path="/VeteransPage" component={VeteransPage}></Route>
 
         <Route path="*" component={NotFoundPage}></Route>
+      
       </Switch>
     </BrowserRouter>
   )
