@@ -62,20 +62,23 @@ const ContactUsPage = () => {
   const [phone, setPhone] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = async event => {
     // prevents the page from refreshing
     event.preventDefault()
 
-    const response = await axios.post('https://localhost:5001/api/ContactUs', {
+    const response = await axios.post('https://samonlineback.herokuapp.com/api/ContactUs', {
       name: name,
       email: email,
       phone: phone,
       subject: subject,
       message: message,
     })
+    setSubmitted(true)
   }
 
+  if (!submitted){
   return (
     <>
       <Page>
@@ -86,7 +89,7 @@ const ContactUsPage = () => {
           <Form onSubmit={onSubmit}>
             <div className="nameContainer">
               <FormField>
-                <label>First Name</label>
+                <label>Name</label>
                 <input
                   name="name"
                   id="name"
@@ -97,7 +100,7 @@ const ContactUsPage = () => {
                 />
               </FormField>
             </div>
-            <div className="emailAndPhoneContainer">
+            <div className="nameContainer">
               <FormField>
                 <label>Email</label>
                 <input
@@ -191,8 +194,8 @@ const ContactUsPage = () => {
             <FormField>
               <label>Message</label>
               <textarea
-                rows="3"
-                cols="10"
+                // rows="2"
+                // cols="8"
                 // className="reasonField"
                 name="message"
                 id="message"
@@ -250,6 +253,15 @@ const ContactUsPage = () => {
       </Page>
     </>
   )
-}
+} else { return (
+<>
+
+  <Page><div className="contactUsCompleteDiv">
+    <h1>Thank You For Your Feedback</h1>
+    <h3 className="redText">Someone will be contacting you shortly.</h3>
+  </div></Page></>
+
+
+)}}
 
 export default ContactUsPage

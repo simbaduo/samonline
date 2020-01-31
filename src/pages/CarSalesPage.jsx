@@ -41,7 +41,7 @@ const CarSalesPage = () => {
               <div className="reviewBox">
                 <ul className="vehicleImgContainer">
                   <div className="reviewInfo">
-                    <li>
+                    <li className="imgPhotoSection">
                       <img
                       alt="Vehicle Default Picture"
                       height="250px"

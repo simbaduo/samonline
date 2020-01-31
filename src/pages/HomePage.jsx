@@ -109,6 +109,8 @@ const ContentContainer = styled(FlexColumn)``
 const VetContentContainer = styled(ContentContainer)`
   background-image: url('./images/veteranbg.jpg');
   background-size: cover;
+  background-position: bottom right;
+
   text-align: left;
   padding-top: 30px;
 
@@ -146,14 +148,24 @@ const DiagonalColorContainer = styled(ContentContainer)`
 `
 
 const DiagonalImageContainer = styled(ContentContainer)`
-  background-image: url('./images/dualcartest.jpg');
+  background-image: url('./images/newdualcar.jpg');
   background-size: contain;
   background-position: bottom center;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  min-height: 500px;
+  min-height: 800px;
   width: 100%;
+
+  // @media (min-width: 900px) {
+  //   background-size: cover;
+  //   height: 800px;
+  //   width: 650px;
+  // }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
 `
 
 const Form = styled.form``
@@ -207,14 +219,13 @@ const HomePage = () => {
               <p className="smallText">Every Month.</p>
               <p className="smallText">*Must Have Valid Proof.</p>
               <a
-                      className="subscribeButton2"
-                      type="submit"
-                      value="Subscribe"
-                      href="/VeteransPage"
-                    >
-                      Subscribe
-                    </a>
-
+                className="subscribeButton2"
+                type="submit"
+                value="Subscribe"
+                href="/VeteransPage"
+              >
+                Subscribe
+              </a>
             </div>
             <ContentContainer>
               <Form onSubmit={onSubmit}>
@@ -271,11 +282,11 @@ const HomePage = () => {
                     </p>
                     <div className="redeemContainer">
                       <div className="redeemBox">
-                        <input
-                          className="redeemButton"
+                        <a
+                          className="redeemButton2"
                           type="submit"
-                          value="Redeem Offer"
-                        />
+                          href="/AppointmentPage"
+                        >REDEEM OFFER</a>
                       </div>
                     </div>
                   </div>
@@ -353,12 +364,26 @@ const HomePage = () => {
             <div className="homeScheduler">
               {isCompleted ? (
                 <>
-                <h1>wow this actually works</h1></>
+                <div className="homeSchedulerReply"><h1>Thank you for your Submission!</h1>
+                  <h2 className="redText">We will be contacting you shortly.</h2></div>
+                  
+                </>
               ) : (
                 <HomeSchedulerComponent setIsCompleted={setIsCompleted} />
               )}
             </div>
+            
           </div>
+          <div className="mobileAppointmentButton">
+            <a
+                className="subscribeButton2"
+                type="submit"
+                value="Subscribe"
+                href="/AppointmentPage"
+              >
+                Schedule An Appointment
+              </a>
+            </div>
         </ContentContainer>
         {/* <div className="nextBox"></div> */}
       </Page>

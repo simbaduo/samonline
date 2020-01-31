@@ -6,13 +6,16 @@ import Page from '../components/Page'
 
 const AppointmentPage = () => {
   return (
+    <>
     <Page>
-      <BreadcrumbsComponent
+      <div className="customBreadCumbSpacing"><BreadcrumbsComponent
         nextOne={'Appointments'}
         nextOneUrl={'/AppointmentPage'}
-      />
+      /></div>
+      
       <AppointmentRequestForm />
     </Page>
+    </>
   )
 }
 

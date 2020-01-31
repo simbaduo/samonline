@@ -58,6 +58,7 @@ const NavBar = () => {
                   <p>
                     Call Us <span className="redText">(352) - 527 - 0440</span>
                   </p>
+                  <a className="greyLink" href="/DirectionsPage">5546 N. Lecanto Hwy. Beverly Hills FL 34465</a>
                 </div>
               </div>
               <div className="addressTopHalfDiv"></div>

@@ -152,7 +152,7 @@ const HamburgerNav = () => {
           {dropDown2 && (
             <div className="dropDown">
               <a href="/ResumePage">CAREERS</a>
-              <a href="/AboutUsPage">CONTACT US</a>
+              <a href="/ContactUsPage">CONTACT US</a>
               <a href="https://www.google.com">GOOGLE +</a>
             </div>
           )}

@@ -6,10 +6,14 @@ import { NavLink } from 'react-router-dom'
 
 const ServicesPage = () => {
   return (
-    <Page>
-      <BreadcrumbsComponent nextOne={'Services'} nextOneUrl={'/ServicesPage'} />
+    <Page withPadding={false}><div className="servicesBody">
+                <BreadcrumbsComponent nextOne={'Services'} nextOneUrl={'/ServicesPage'} />
+
       <div className="servicesContainer">
         <div className="servicesBox">
+
+          <div className="servicesListContainer">
+
           <ul className="servicesList">
             <li>
               <a className="servicePageLinks" href="/ServicesPages/ACPage">
@@ -125,7 +129,9 @@ Fuel Injection Service</a></li>
               </a>
             </li>
           </ul>
+          </div>
         </div>
+      </div>
       </div>
     </Page>
   )

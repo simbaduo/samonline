@@ -23,23 +23,23 @@ const SpecialsPage = () => {
       <BreadcrumbsComponent nextOne={'Specials'} nextOneUrl={'/SpecialsPage'} />
       <div className="specialsContainer">
         <div className="specialsBox">
-          <h1 className="redText">Full Brake Package</h1>
-          <h2>$179.99</h2>
+          <h2 className="redText underline">Full Brake Package</h2>
+          <h3>$179.99</h3>
           <p>
             Are your brakes stuttering or squealing? $179.99* includes: Quality
             upgraded brake pads New rotors Installation *per axle on most cars,
             plus tax and surcharge
           </p>
           <FormActions>
-            <button className="reviewSubmitButton" type="submit">
+            <a href="/AppointmentPage" className="reviewSubmitButton">
               Redeem Now
-            </button></FormActions>
-            <div className="specialsActions"><p>Exp. 6/1/2020</p>
+            </a></FormActions>
+            <div className="specialsActions"><h6>Exp. 6/1/2020</h6>
             <p>Print Coupon</p></div>
             
           
         </div>
-        <div className="specialsSpacer">hi </div>
+        <div className="specialsSpacer"> </div>
       </div>
     </Page>
   )

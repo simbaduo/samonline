@@ -10,12 +10,14 @@ const DirectionsPage = () => {
         nextOne={'Directions'}
         nextOneUrl={'/DirectionsPage'}
       />
-      <img
+      <div className="directionsDiv"><img
+        className="directionsImg"
         alt="Directions to Swander's Automotive"
         width="800px"
         height="520px"
         src="./images/gpslocation.png"
-      />
+      /></div>
+      
     </Page>
   )
 }

@@ -78,7 +78,7 @@ const CarouselComponent = () => {
     <Container>
       <Carousel
         showStatus={false}
-        autoPlay={true}
+        // autoPlay={true}
         emulateTouch={true}
         infiniteLoop={true}
         transitionTime={750}
@@ -160,6 +160,7 @@ const CarouselComponent = () => {
         <CarouselItemContainer>
           <CarouselContentContainer>
             <CarouselTextContainer>
+              <div className="moveVeteranText">
               {/* <div className="vetContainer"> */}
               <FullWidthContainer>
                 <h1 className="vetTopHeader">WE APPRECIATE</h1>
@@ -178,6 +179,7 @@ const CarouselComponent = () => {
                   Excludes tires, batteries, and oil changes{' '}
                 </p>
               </FullWidthContainer>
+              </div>
             </CarouselTextContainer>
           </CarouselContentContainer>
           <CarouselImageContainer>

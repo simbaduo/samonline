@@ -15,7 +15,7 @@ const HomeSchedulerComponent = props => {
     event.preventDefault()
 
     const response = await axios.post(
-      'https://localhost:5001/api/appointment',
+      'https://samonlineback.herokuapp.com/api/appointment',
       {
         firstName: firstName,
         lastName: lastName,
@@ -38,8 +38,7 @@ const HomeSchedulerComponent = props => {
       <div className="topHalf">
         <div className="homeAppointmentInstructions">
           <h1>Schedule An Appointment</h1>
-          <p>Let us know how we can help you. Request an appointment </p>
-          <p>using the form below.</p>
+          <p>Let us know how we can help you. Request an appointment using the form below.</p>
         </div>
         <div className="homeAppointmentPhoto"></div>
       </div>
@@ -123,7 +122,7 @@ const HomeSchedulerComponent = props => {
                 />
               </div>
               <input
-                className="scheduleCalendar"
+                className="scheduleCalendar2"
                 name="requestedAppointment"
                 id="requestedAppointment"
                 type="datetime-local"
@@ -142,9 +141,10 @@ const HomeSchedulerComponent = props => {
               <input className="lineInput" id="firstName" type="time" />
             </div> */}
             </div>
-            <button className="appointmentSendButton" type="submit">
-              Send
-            </button>
+            <div className="homeSchedulerSubmitButtonContainer"><button className="homeAppointmentButtonDiv" type="submit">
+              Submit
+            </button></div>
+            
           </div>
         </div>
       </form>
