@@ -107,7 +107,7 @@ const FooterNav = () => {
               </li>
               <li>
                 <span className="whiteBold">Phone Number: </span>{' '}
-                <span className="redText phoneNumber">(352) 527 - 0440</span>
+                <a href="tel:352-527-0440"><span className="redText phoneNumber">(352) 527 - 0440</span></a>
               </li>
             </ul>
           </div>

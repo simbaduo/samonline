@@ -114,7 +114,7 @@ const VetContentContainer = styled(ContentContainer)`
   text-align: left;
   padding-top: 30px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1025px) {
     background-image: none;
   }
 `
@@ -192,12 +192,6 @@ const HomePage = () => {
   return (
     <>
       <Page withPadding={false}>
-        <div className="topHeader">
-          {/* <a className="topLogo" href="/">
-            <img height="200rem" width="200rem" src="./images/samlogo.svg" />
-          </a> */}
-        </div>
-
         <HideWhenMobile>
           <div className="carouselBox">
             <CarouselComponent />
@@ -345,7 +339,7 @@ const HomePage = () => {
               <h1>Welcome to</h1>
               <h1 className="glowTitle">Swander's Automotive</h1>
               <h3>
-                Provides quality car care in Beverly Hills, Florida since 1989
+                Providing Quality Car Care in Beverly Hills, Florida since 1989
               </h3>
             </div>
           </DiagonalImageContainer>

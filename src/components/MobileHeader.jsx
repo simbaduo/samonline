@@ -4,7 +4,7 @@ import styled, { withTheme } from 'styled-components'
 import stars from '../images/stars.png'
 
 const Container = styled.div`
-  @media (min-width: 901px) {
+  @media (min-width: 1026px) {
     display: none;
   }
 `
@@ -33,7 +33,7 @@ const MobileHeader = () => {
           <div className="mobileContactBox">
             <span ClassName="inlineContainer">
               <span>Call Us:</span>
-              <span className="redText">(352) 527 - 0440</span>
+              <a href="tel:352-527-0440"><span className="redText largeNumber">(352) 527 - 0440</span></a>
             </span>
             <p className="tiny">5546 N. Lecanto Hwy. Beverly Hills FL 34465</p>
           </div>

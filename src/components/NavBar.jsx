@@ -17,7 +17,7 @@ const Container = styled.div`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1025px) {
     display: none;
   }
 `
@@ -56,7 +56,7 @@ const NavBar = () => {
 
                 <div className="navReviewFlex">
                   <p>
-                    Call Us <span className="redText">(352) - 527 - 0440</span>
+                    Call Us <span className="redText largeNumber">(352) - 527 - 0440</span>
                   </p>
                   <a className="greyLink" href="/DirectionsPage">5546 N. Lecanto Hwy. Beverly Hills FL 34465</a>
                 </div>

@@ -163,11 +163,11 @@ const CarouselComponent = () => {
               <div className="moveVeteranText">
               {/* <div className="vetContainer"> */}
               <FullWidthContainer>
-                <h1 className="vetTopHeader">WE APPRECIATE</h1>
+                <h1 className="vetTopHeader blueGlow">WE APPRECIATE</h1>
               </FullWidthContainer>
 
               <FullWidthContainer>
-                <h1 className="vetNextHeader">OUR VETERANS</h1>
+                <h1 className="vetNextHeader blueGlow">OUR VETERANS</h1>
               </FullWidthContainer>
               {/* </div> */}
 

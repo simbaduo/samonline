@@ -52,7 +52,7 @@ const styles = {
 }
 
 const Container = styled.div`
-  @media (min-width: 901px) {
+  @media (min-width: 1026px) {
     display: none;
   }
 `

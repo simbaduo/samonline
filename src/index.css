@@ -27,8 +27,6 @@ body {
   position: relative;
 }
 
-
-
 .nav-linkHamburger {
   text-decoration: none;
   color: white;
@@ -71,8 +69,21 @@ body {
   color: #f0324d;
 }
 
-.topHeader {
-  margin-top: 2rem;
+.mobileCallIcon {
+  position: fixed;
+  bottom: 8%;
+  right: 8%;
+  z-index: 999;
+}
+
+.styleBurger {
+  z-index: 998;
+}
+
+@media (min-width: 1026px) {
+  .mobileCallIcon {
+    display: none;
+  }
 }
 
 .callUsText {
@@ -171,75 +182,14 @@ li {
 }
 
 .moveVeteranText {
-margin-left: 250px;
-margin-top: 50px;
-text-align: left;
-/* border: solid red 2px; */
-line-height: 1;
-}
-
-
-
-.vetTopHeader {
-  margin: 0;
-  color: white;
-  /* position: absolute; */
-  /* left: 40rem;
-  top: 2rem; */
-  font-style: normal;
-  font-variant-ligatures: normal;
-  font-variant-caps: normal;
-  font-variant-numeric: normal;
-  font-variant-east-asian: normal;
-  font-weight: 800;
-  font-stretch: normal;
-  font-size: 2em;
-  /* line-height: 1.5em; */
-  font-family: Intro, Verdana, sans-serif;
-  text-transform: uppercase;
-  /* border: solid red 2px; */
-}
-
-
-
-.vetNextHeader {
-  margin: 0;
-  color: white;
-  /* position: absolute; */
-  /* left: 40rem;
-  top: 2rem; */
-  font-style: normal;
-  font-variant-ligatures: normal;
-  font-variant-caps: normal;
-  font-variant-numeric: normal;
-  font-variant-east-asian: normal;
-  font-weight: 900;
-  font-stretch: normal;
-  font-size: 3em;
-  /* line-height: 1.5em; */
-  font-family: Intro, Verdana, sans-serif;
-  text-transform: uppercase;
-  /* border: solid red 2px; */
-}
-
-.vetContainer {
-  /* border: solid pink 4px; */
-}
-
-.vetText {
-  color: white;
-  /* border: solid red 2px; */
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.vetSubText {
-  color: white;
-  font-size: 10px;
-  /* border: solid red 2px; */
-  font-weight: 300;
+  margin-left: 250px;
+  margin-top: 50px;
   text-align: left;
+  /* border: solid red 2px; */
+  line-height: 1;
 }
+
+
 
 /* .napaBackgroundLocationtest {
   position: absolute;
@@ -263,8 +213,6 @@ line-height: 1;
   font-family: Intro, Verdana, sans-serif;
 }
 
-
-
 .flexThis {
   display: flex;
   flex-direction: row;
@@ -284,9 +232,6 @@ line-height: 1;
   text-transform: uppercase;
 }
 
-
-
-
 .submitContainer {
   display: flex;
   flex-direction: row;
@@ -296,9 +241,6 @@ line-height: 1;
   margin-top: 7px;
   margin-bottom: 5px;
 }
-
-
-
 
 .crumbContainer {
   /* display: flex;
@@ -345,14 +287,12 @@ line-height: 1;
   margin-right: 10px;
 }
 
-
 .submitBox {
   display: flex;
   justify-content: flex-start;
   width: 100%;
   /* border: solid red 2px; */
 }
-
 
 .subscribeButton {
   background-color: black;
@@ -365,7 +305,7 @@ line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* width: 20%; */
   font-size: 14px;
   /* border: solid pink 3px; */
@@ -386,7 +326,7 @@ line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* width: 20%; */
   font-size: 14px;
   /* border: solid pink 3px; */
@@ -396,7 +336,6 @@ line-height: 1;
   font-weight: bold;
   margin-left: 290px;
 }
-
 
 .homeSchedulerSubmitButtonContainer {
   display: flex;
@@ -424,12 +363,11 @@ line-height: 1;
 }
 
 .homeSchedulerReply {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
 }
-
 
 .homeAppointmentButtonDiv:hover {
   background-color: rgb(240, 50, 77);
@@ -438,9 +376,6 @@ padding-bottom: 50px;
 .homeAppointmentButtonDiv:active {
   background-color: rgb(182, 43, 64);
 }
-
-
-
 
 .subscribeButton2:hover {
   background-color: rgb(240, 50, 77);
@@ -459,14 +394,13 @@ padding-bottom: 50px;
 }
 
 .submitBox a {
-/* width: 150px; */
-margin: 15px 0 40px 0;
-/* margin-bottom: 10px; */
-padding-right: 10px;
-padding-left: 10px;
-/* font-size: 12px; */
+  /* width: 150px; */
+  margin: 15px 0 40px 0;
+  /* margin-bottom: 10px; */
+  padding-right: 10px;
+  padding-left: 10px;
+  /* font-size: 12px; */
 }
-
 
 .subscribeButton {
   /* background-color: black;
@@ -522,8 +456,6 @@ padding-left: 10px;
   background-repeat: no-repeat;
   width: 100%;
 }
-
-
 
 .tips-advice {
   background-image: url('/images/tips-and-advices.jpg');
@@ -582,13 +514,6 @@ padding-left: 10px;
 .subscribeButton:active {
   background-color: rgb(182, 43, 64);
 }
-
-
-
-
-
-
-
 
 .redeemBox {
   display: flex;
@@ -739,10 +664,10 @@ padding-left: 10px;
 }
 
 .vehicleList li::before {
-  content: "\2022";
+  content: '\2022';
   color: red;
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
@@ -1007,7 +932,6 @@ padding-left: 10px;
   font-weight: 100;
   margin-top: 40px;
   font-size: 20px;
-
 }
 
 .napaBackgroundTitle {
@@ -1028,7 +952,6 @@ padding-left: 10px;
   font-family: Intro, Verdana, sans-serif;
   text-transform: uppercase;
 }
-
 
 .warrantyCarouselTitle {
   /* position: absolute;
@@ -1055,10 +978,6 @@ padding-left: 10px;
   /* border: solid green 3px; */
   display: flex;
 }
-
-
-
-
 
 .dropdownNavContent {
   display: none;
@@ -1197,8 +1116,6 @@ padding-left: 10px;
 p {
   /* margin-right: 2rem; */
 }
-
-
 
 .creditsFooter {
   border-top: thin white 5px;
@@ -1349,8 +1266,6 @@ p {
   width: 78%;
 }
 
-
-
 .carTable {
 }
 
@@ -1399,11 +1314,15 @@ p {
   padding-left: 200px;
 }
 
-
 @media (max-width: 930px) {
   .vehicleImgContainer {
-   
     padding-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .scheduleTitles {
+    line-height: 4;
   }
 }
 .directionsDiv {
@@ -1411,10 +1330,7 @@ p {
   justify-content: center;
 }
 
-
-
 @media (max-width: 840px) {
-
   .directionsImg {
     width: 400px;
     height: 260px;
@@ -1436,13 +1352,13 @@ p {
   }
 
   .vehicleInfo {
-margin-left: 0;
+    margin-left: 0;
   }
 
   .imgContainer {
     height: 100px;
     width: 100px;
-   
+
     /* border: solid red 2px; */
   }
 
@@ -1460,26 +1376,23 @@ margin-left: 0;
     /* margin-right: 200px; */
   }
 
-.reviewText {
-  /* border: solid red 2px; */
+  .reviewText {
+    /* border: solid red 2px; */
+  }
+
+  .reviewText li {
+    font-size: 10px;
+  }
+
+  .reviewInfo li {
+    font-size: 12px;
+  }
+
+  .starsImg img {
+    height: 10px;
+    width: 50px;
+  }
 }
-
-.reviewText li {
-  font-size: 10px;
-}
-
-.reviewInfo li {
-  font-size: 12px;
-}
-
-.starsImg img {
-  height: 10px;
-  width: 50px;
-}
-
-}
-
-
 
 .reviewList {
   display: flex;
@@ -1514,10 +1427,9 @@ margin-left: 0;
   margin-bottom: 1.5px;
   /* border: solid black 2px; */
   width: 100%;
-  
+
   /* text-align: left; */
 }
-
 
 .starsImg {
   /* border: solid red 2px; */
@@ -1662,14 +1574,12 @@ label {
 }
 
 .resumeSubmitContainer {
-/* border: solid red 2px; */
-display: flex;
-justify-content: center;
-width: 120px;
-font-size: 120px;
+  /* border: solid red 2px; */
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  font-size: 120px;
 }
-
-
 
 .affiliateLogos {
   margin: 0.75rem;
@@ -1692,7 +1602,22 @@ font-size: 120px;
 }
 
 .phoneNumber {
-  font-size: 16px;
+  font-size: 18px;
+  
+}
+
+.largeNumber {
+  font-size: 30px;
+  margin-left: 8px;
+  font-weight: 900;
+}
+
+.contactFooter a {
+  text-decoration: none;
+}
+
+.mobileContactBox a {
+  text-decoration: none;
 }
 
 .socialMediaFooter {
@@ -1781,9 +1706,9 @@ font-size: 120px;
 }
 
 .specialsActions h2 {
-margin: 0;
-padding: 0;
-font-size: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
 }
 
 .contactUsCompleteDiv {
@@ -1808,8 +1733,16 @@ font-size: 40px;
   font-size: 80px;
   color: white;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 255, 0), 0 0 5px rgb(184, 184, 13);
+}
 
+.glowTitle {
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 255, 0),
+    0 0 5px rgb(184, 184, 13);
+}
+
+.blueGlow {
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(9, 125, 160),
+    0 0 5px rgb(184, 184, 13);
 }
 
 .welcomeText h3 {
@@ -1820,31 +1753,26 @@ font-size: 40px;
 }
 
 @media (max-width: 1720px) {
-
   .welcomeText {
     margin-top: 20rem;
   }
 
   .welcomeText h1 {
     font-size: 60px;
- 
   }
 
   .welcomeText h3 {
     font-size: 18px;
- 
   }
 }
 
 @media (max-width: 1200px) {
-
   .welcomeText {
     margin-top: 28rem;
   }
 
   .welcomeText h1 {
     font-size: 50px;
- 
   }
 }
 
@@ -1854,91 +1782,72 @@ font-size: 40px;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .warrantyCarouselText {
     font-size: 18px;
-
   }
 
   .warrantyCarouselTitle {
     font-size: 18px;
-
   }
 }
 
 @media (max-width: 1400px) {
   .warrantyCarouselText {
     font-size: 14px;
-
   }
 
   .warrantyCarouselTitle {
     font-size: 16px;
-
   }
 }
 
-
-
-  
-
-  @media (max-width: 1120px) {
-    .warrantyCarouselText {
-      font-size: 12px;
-      line-height: 2;
-      margin-top: 10px;
-    }
-
-    .warrantyCarouselTitle {
-      font-size: 14px;
-  
-    }
-    
-    .carouselButton {
-    
-      margin-top: 10px;
-      margin: 0;
-      margin-bottom: 100px;
-      padding: 5px;
-      padding-left: 15px;
-      padding-right: 15px;
-      font-size: 10px;
-    
-    }
+@media (max-width: 1120px) {
+  .warrantyCarouselText {
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 10px;
   }
 
-  @media (max-width: 1000px) {
-    .warrantyCarouselText {
-      font-size: 8px;
-      line-height: 2;
-    }
-    .warrantyCarouselTitle {
-      font-size: 10px;
-  
-    }
-    
-    
-    .carouselButton {
-    
-      margin-top: 10px;
-    }
+  .warrantyCarouselTitle {
+    font-size: 14px;
   }
 
-
-  @media (max-width: 850px) {
-    .warrantyCarouselText {
-      font-size: 6px;
-
-    }
-    
-    .carouselButton {
-    
-      margin-top: 10px;
-      margin-bottom: 100px;
-    }
+  .carouselButton {
+    margin-top: 10px;
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 10px;
   }
-  
- 
+}
+
+@media (max-width: 1000px) {
+  .warrantyCarouselText {
+    font-size: 8px;
+    line-height: 2;
+  }
+  .warrantyCarouselTitle {
+    font-size: 10px;
+  }
+
+  .carouselButton {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .warrantyCarouselText {
+    font-size: 6px;
+  }
+
+  .carouselButton {
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+}
 
 @media (max-width: 600px) {
   .mediaImg {
@@ -1959,7 +1868,6 @@ font-size: 40px;
     font-size: 12px;
   }
 
-  
   .topHalf {
     display: flex;
     flex-direction: column;
@@ -1978,10 +1886,7 @@ font-size: 40px;
   margin-top: 5rem;
 }
 
-
-
-
-@media (max-width: 820px){
+@media (max-width: 820px) {
   .bottomFooter {
     display: flex;
     flex-direction: column;
@@ -2006,7 +1911,6 @@ font-size: 40px;
     /* max-width: 899px; */
     width: 100%;
   }
-
 }
 @media (max-width: 700px) {
   .affiliateLogos {
@@ -2020,15 +1924,13 @@ font-size: 40px;
   .hideWhenMobile {
     display: none;
   }
-
 }
 
 .mobileAppointmentButton {
-/* border: solid red 2px; */
-width: 50%;
-/* margin-top: 10px; */
-margin-bottom: 50px;
-
+  /* border: solid red 2px; */
+  width: 50%;
+  /* margin-top: 10px; */
+  margin-bottom: 50px;
 }
 
 .mobileAppointmentButton a {
@@ -2039,43 +1941,47 @@ margin-bottom: 50px;
 
 @media (min-width: 850px) {
   .mobileAppointmentButton {
-display: none;
+    display: none;
   }
 }
 
 @media (max-width: 600px) {
   .mobileAppointmentButton a {
-font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 450px) {
   .mobileAppointmentButton a {
-font-size: 12px;
+    font-size: 12px;
   }
 }
 
+@media (max-width: 350px) {
+  .mobileAppointmentButton {
+    height: 40px;
+    width: 200px;
+  }
 
-
-
-
+  .mobileAppointmentButton a {
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 1700px) {
-
-   
-    .affiliateContainer {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    .affiliateLogos {
-      flex-direction: row;
-      flex-flow: wrap;
-      justify-content: center;
-      width: 70%;
-      /* border: solid red 2px; */
-    }
+  .affiliateContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
+  .affiliateLogos {
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    width: 70%;
+    /* border: solid red 2px; */
+  }
+}
 
 @media (max-width: 1200px) {
   .oilChangeTextBox {
@@ -2096,16 +2002,12 @@ font-size: 12px;
     margin: 0;
     padding: 0;
     margin-top: 20px;
-
   }
 }
 
-  
-
-  .affiliateLogos a {
-    margin: 15px;
-  }
-
+.affiliateLogos a {
+  margin: 15px;
+}
 
 .amsoilLogo {
   height: 45px;
@@ -2151,11 +2053,147 @@ font-size: 12px;
   height: 30px;
 }
 
-/* @media (max-width: 900px) {
-  .whiteTitle {
-    width: 100%;
+
+.vetTopHeader {
+  margin: 0;
+  color: white;
+  /* position: absolute; */
+  /* left: 40rem;
+  top: 2rem; */
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-size: 4.5em;
+  /* line-height: 1.5em; */
+  font-family: Intro, Verdana, sans-serif;
+  text-transform: uppercase;
+  /* border: solid red 2px; */
+}
+
+.vetNextHeader {
+  margin: 0;
+  color: white;
+  /* position: absolute; */
+  /* left: 40rem;
+  top: 2rem; */
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-size: 3.5em;
+  /* line-height: 1.5em; */
+  font-family: Intro, Verdana, sans-serif;
+  text-transform: uppercase;
+  /* border: solid red 2px; */
+}
+
+.vetContainer {
+  /* border: solid pink 4px; */
+}
+
+.vetText {
+  color: white;
+  /* border: solid red 2px; */
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 7px;
+}
+
+.vetSubText {
+  color: white;
+  font-size: 14px;
+  /* border: solid red 2px; */
+  font-weight: 300;
+  text-align: left;
+  margin-left: 7px;
+
+}
+
+
+
+
+
+
+
+@media (max-width: 1400px) {
+  .vetTopHeader {
+    font-size: 66px;
+    margin-left: 2.2rem;
+    line-height: 0.75;
   }
-} */
+.vetNextHeader {
+  font-size: 50px;
+  margin-left: 2.2rem;
+}
+
+.vetText {
+font-size: 24px;
+margin-left: 2.4rem;
+margin-top: 1rem;
+}
+
+.vetSubText {
+  font-size: 16px;
+  margin-left: 2.4rem;
+}
+
+}
+
+
+@media (max-width: 1100px) {
+  .vetTopHeader {
+    font-size: 46px;
+    margin-left: 2.2rem;
+    line-height: 0.75;
+  }
+.vetNextHeader {
+  font-size: 42px;
+  margin-left: 2.2rem;
+}
+
+.vetText {
+font-size: 18px;
+margin-left: 2.4rem;
+margin-top: 0;
+}
+
+.vetSubText {
+  font-size: 14px;
+  margin-left: 2.4rem;
+}
+
+}
+
+@media (max-width: 808px) {
+  .vetTopHeader {
+    font-size: 38px;
+    margin-left: .6rem;
+    line-height: 0.75;
+  }
+.vetNextHeader {
+  font-size: 32px;
+  margin-left: .6rem;
+}
+
+.vetText {
+font-size: 15px;
+margin-left: 1rem;
+margin-top: 0;
+}
+
+.vetSubText {
+  font-size: 11px;
+  margin-left: 1rem;
+}
+
+}
 
 /* Review Component & Page CSS */
 
@@ -2312,10 +2350,10 @@ p {
 }
 
 .reviewTopHalfDivUpper p {
- padding: 0;
- margin: 0;
- margin-top: 40px;
- margin-left: 2%;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  margin-left: 2%;
 }
 
 .navReviewFlex {
@@ -2428,7 +2466,6 @@ reviewSubmitButton:active {
 .mobileReviewBox p {
   font-size: 18px;
   font-weight: 900;
-
 }
 
 .mobileContactBox {
@@ -2507,5 +2544,4 @@ reviewSubmitButton:active {
 }
 
 .imgContainer {
-  
 }
