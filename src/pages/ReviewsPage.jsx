@@ -22,7 +22,7 @@ const ReviewsPage = () => {
   return (
     <>
     <Page withPadding={false}>
-      <div className="manualPaddingDiv"><BreadcrumbsComponent nextOne={'Reviews'} nextOneUrl={'/ReviewsPage'} />
+      <div className="manualPaddingDiv"><BreadcrumbsComponent nextOne={'Reviews'} nextOneUrl={'/reviews'} />
       <div className="reviewTable">
         {reviews.map(reviews => {
           return (
