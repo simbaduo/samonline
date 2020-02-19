@@ -1,4 +1,4 @@
-# Samonline
+# Swander's Automotive
 
 ![Swander's Auto Homepage Preview](src/images/sampreview.png)
 
