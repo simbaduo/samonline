@@ -154,7 +154,8 @@ const HamburgerNav = () => {
               <a href="/ResumePage">CAREERS</a>
               <a href="/ContactUsPage">CONTACT US</a>
               <a href="https://www.google.com">GOOGLE +</a>
-            </div>
+              <a href="/VeteransPage">VETERANS</a>
+        </div>
           )}
           <NavLink
             to="/reviews"

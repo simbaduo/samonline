@@ -191,6 +191,8 @@ li {
 
 
 
+
+
 /* .napaBackgroundLocationtest {
   position: absolute;
   left: 550px;
@@ -1028,10 +1030,38 @@ li {
   color: rgb(87, 88, 91);
   padding-top: 10px;
   margin-left: 5%;
+  /* font-size: 17px; */
+  font-weight: 900;
   /* margin-left: 30px;
   margin-right: 30px; */
   /* margin-left: 10px; */
 }
+
+.dropdownServicesButton {
+  background-color: rgb(255, 255, 255);
+  color: rgb(87, 88, 91);
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+  font-weight: 900;
+
+}
+
+.bottomRightHalfDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: -80px;
+  /* padding-right: 0; */
+  /* padding-right: 5rem; */
+  /* border: solid red 2px; */
+  padding-top: 20px;
+  padding-bottom: 60px;
+  /* margin-bottom: -10px; */
+}
+
+
 
 .greyLink {
   color: rgb(87, 88, 91);
@@ -1041,13 +1071,7 @@ li {
   color: black;
 }
 
-.dropdownServicesButton {
-  background-color: rgb(255, 255, 255);
-  color: rgb(87, 88, 91);
-  font-size: 16px;
-  border: none;
-  text-decoration: none;
-}
+
 
 .burgerLink {
   color: white;
@@ -1274,6 +1298,17 @@ p {
   text-decoration: none;
 }
 
+/* .breadCrumbTextFirst {
+  margin-left: 0;
+  margin: 0;
+  padding: 0;
+  border: solid yellow 4px;
+} */
+
+.homeBreadCrumb a {
+  margin-left: 0;
+}
+
 .servicesTitle {
   margin-top: 2rem;
   text-align: left;
@@ -1289,10 +1324,12 @@ p {
 }
 
 .servicesBodyText {
-  width: 80%;
+  width: 100%;
   padding-bottom: 0;
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 0;
+  text-align: center;
+  font-size: 17px;
 }
 
 .imgDiv {
@@ -1476,7 +1513,7 @@ p {
 }
 
 .reasonField {
-  height: 50px;
+  height: 60px;
 }
 
 textarea,
@@ -2313,18 +2350,7 @@ p {
   padding-left: 4rem;
 }
 
-.bottomRightHalfDiv {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-  width: 100%;
-  margin-left: -80px;
-  /* padding-right: 0; */
-  /* padding-right: 5rem; */
-  /* border: solid red 2px; */
-  padding-top: 80px;
-  /* margin-bottom: -10px; */
-}
+
 
 .testContainer {
   display: flex;
@@ -2544,4 +2570,152 @@ reviewSubmitButton:active {
 }
 
 .imgContainer {
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-top: 5rem;
+  margin-left: 4rem;
+  padding-bottom: 3rem;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  /* border: solid red 2px; */
+}
+
+.servicesBodyContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  /* border: solid red 2px; */
+}
+
+.servicesBodyBox {
+  width: 80%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: solid green 3px; */
+}
+
+/* .aboutUsContainer {
+  margin: 1rem;
+  margin-top: -2rem;
+  margin-left: 3rem;
+} */
+
+.aboutUsTopPadding {
+  margin-left: 10rem;
+}
+
+.aboutUsTopPadding a {
+  /* margin-left: 0; */
+}
+
+.aboutButtons {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  /* padding: 13px 20px 30px 20px; */
+  height: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 20%; */
+  font-size: 18px;
+  /* border: solid pink 3px; */
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.aboutButtons:hover {
+  background-color: rgb(240, 50, 77);
+}
+
+.aboutButtons:active {
+  background-color: rgb(182, 43, 64);
+}
+
+@media (max-width: 1450px) {
+  .bottomRightHalfDiv {
+    padding-left: 100px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    /* border: solid blue 3px; */
+  }
+  .dropdownServicesButton {
+    display: flex;
+    font-size: 13px;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* border: solid red 3px; */
+    /* padding: 0; */
+    /* margin-top: 0; */
+    /* height: 100%; */
+  
+  }
+}
+
+@media (max-width: 1250px) {
+  /* .bottomRightHalfDiv {
+    padding-left: 100px;
+  } */
+
+  .nav-link {
+    font-size: 11px;
+    /* border: solid blue 3px; */
+  }
+  .dropdownServicesButton {
+    /* display: flex; */
+    font-size: 11px;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* border: solid red 3px; */
+    /* padding: 0; */
+    /* margin-top: 0; */
+    /* height: 100%; */
+  
+  }
+}
+
+@media (max-width: 1120px) {
+
+  .nav-link {
+    font-size: 10px;
+  }
+  
+  .dropdownServicesButton {
+    font-size: 10px;
+  }
+}
+
+
+
+@media (max-width: 1090px) {
+  .bottomRightHalfDiv {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    margin-left: 0;
+    padding: 0;
+    margin: 0;
+    /* border: solid green 2px; */
+    justify-content: flex-start;
+   }
 }

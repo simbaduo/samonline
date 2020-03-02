@@ -26,13 +26,13 @@ const FooterNav = () => {
       <Container>
         <footer className="bottomFooter">
           <div className="footerLogo">
-            <img
+            <a href="/"><img
               className="mediaImg"
               alt="Swander's Tiny Logo"
               height="125px"
               width="175px"
               src={samfooterlogo}
-            />
+            /></a>
           </div>
           <div className="footerNav">
             <h6 className="whiteTitle">Useful Links</h6>

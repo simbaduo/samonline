@@ -28,13 +28,13 @@ const NavBar = () => {
       <Container>
         <div className="testContainer">
           <div className="imgDiv">
-            {' '}
-            <img
+            {' '}<a href="/"><img
               className="nav-link"
               height="140px"
               width="200px"
               src={samlogo}
-            />
+            /></a>
+            
           </div>
           <div className="rightHalfDiv">
             <div className="topRightHalfDiv">
@@ -130,6 +130,7 @@ const NavBar = () => {
                   <a href="https://www.google.com/search?ei=bhsyXru7MOGkggekx6r4Cg&q=Swander%27s+Auto&oq=Swander%27s+Auto&gs_l=psy-ab.3..0i22i10i30l2.4282.4282..4449...0.0..0.124.323.1j2......0....1..gws-wiz.5JVmtRo0oDo&ved=0ahUKEwi7qt2YgarnAhVhkuAKHaSjCq8Q4dUDCAs&uact=5">
                     GOOGLE +
                   </a>
+                  <a href="/VeteransPage">VETERANS</a>
                 </div>
               </div>
               <NavLink

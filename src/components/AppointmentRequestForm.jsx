@@ -267,7 +267,7 @@ return (
             <div className="scheduleTitles">
               {' '}
               <label>Requested Appointment</label>
-              <label className="requestHeight">2nd Request</label>
+              <label className="requestHeight">2nd Request (optional)</label>
             </div>
 
             <div className="scheduleInputDiv">
