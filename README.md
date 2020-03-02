@@ -1,3 +1,8 @@
-# Samonline
+# Swander's Automotive
 
-The website for Swander’s Automotive will have a landing page with a header and footer that will remain static on every page. There will be a photo carousel underneath header nav bar. There will be multiple static pages of information with real content to increase search engine optimization. There will be a dynamic "Specials" page changing frequently, as well as two form submit pages -- 1. veteran’s page and 2. Schedule appointment page.
+![Swander's Auto Homepage Preview](src/images/sampreview.png)
+
+
+This webpage was built for a well-established running business. With previous systems, the client was unable to modify inventory or schedule appointments efficiently and affordably. I created 2 separate projects to solve these problems. I designed an interface where a user can schedule an appointment and an alert/e-mail is sent to the scheduling team. If either appointment can be confirmed, a reply e-mail is automatically sent back to the customer using SendGrid API E-mail service. Administration can also add new vehicles to be displayed on the homepage in live time.
+
+Technologies Used: React JS, CSS, HTML5 --- C#, .NET Core, ASP.NET Core, SQL, PostgreSQL
