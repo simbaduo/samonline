@@ -56,7 +56,7 @@ const NavBar = () => {
 
                 <div className="navReviewFlex">
                   <p>
-                    Call Us <span className="redText largeNumber">(352) - 527 - 0440</span>
+                    Call Us <a className="topNumberLink" href="tel:352-527-0440"><span className="redText largeNumber">(352) - 527 - 0440</span></a>
                   </p>
                   <a className="greyLink" href="/DirectionsPage">5546 N. Lecanto Hwy. Beverly Hills FL 34465</a>
                 </div>

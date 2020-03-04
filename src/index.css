@@ -1037,6 +1037,10 @@ li {
   /* margin-left: 10px; */
 }
 
+.topNumberLink {
+  text-decoration: none;
+}
+
 .dropdownServicesButton {
   background-color: rgb(255, 255, 255);
   color: rgb(87, 88, 91);
@@ -2316,6 +2320,8 @@ p {
 .starCount {
   margin-top: 2rem;
 }
+
+
 
 .reviewSubmitButton {
   background-color: black;
