@@ -25,6 +25,7 @@ import reviews from '../pages/ReviewsPage'
 import ExperiencePage from '../pages/ExperiencePage'
 import DirectionsPage from '../pages/DirectionsPage'
 import VeteransPage from '../pages/VeteransPage'
+import SeniorsPage from '../pages/SeniorsPage'
 import ContactUsPage from '../pages/ContactUsPage'
 import NotFoundPage from '../pages/NotFoundPage'
 import AdminPage from '../pages/AdminPage'
@@ -118,7 +119,7 @@ const Router = () => {
           component={SubmitReviewPage}
         ></Route>
         <Route exact path="/VeteransPage" component={VeteransPage}></Route>
-
+        <Route exact path="/SeniorsPage" component={SeniorsPage}></Route>
         <Route path="*" component={NotFoundPage}></Route>
       
       </Switch>

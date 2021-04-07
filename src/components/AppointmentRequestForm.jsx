@@ -140,7 +140,7 @@ const AppointmentRequestForm = () => {
 
 
   if (!submitted) {
-return (
+    return (
     <>
       <div className="appointmentTitle">
         <h1>Personal Information</h1>

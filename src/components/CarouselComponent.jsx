@@ -85,6 +85,19 @@ const CarouselComponent = () => {
         showThumbs={false}
         interval={5000}
       >
+        
+        {/* <CarouselItemContainer>
+        <a href="./SeniorsPage">
+          <img
+            alt="Rough Country Description"
+            src="./images/graduates6.png"
+          /></a> */}
+          {/* <p className="legend">Legend 4</p> */}
+
+          {/* <CarouselItemContainer>
+            <img src="./images/FinancingAd.png" />
+          </CarouselItemContainer> */}
+        {/* </CarouselItemContainer> */}
         <CarouselItemContainer>
           <CarouselContentContainer>
             <CarouselTextContainer>
@@ -202,7 +215,10 @@ const CarouselComponent = () => {
             <img src="./images/FinancingAd.png" />
           </CarouselItemContainer> */}
         </CarouselItemContainer>
-      </Carousel></Container>
+        
+        
+      </Carousel>
+      </Container>
       
     </>
   )

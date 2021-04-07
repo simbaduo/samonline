@@ -23,8 +23,11 @@ const HomeSchedulerComponent = props => {
         email: email,
         reason: reason,
         requestedAppointment: requestedAppointment,
-        additionalNotes,
-        setAdditionalNotes,
+        additionalNotes: additionalNotes,
+
+        // the code was like this, it still works but was set up incorrectly. Check above and below
+        // additionalNotes,
+        // setAdditionalNotes,
       }
     )
 
@@ -38,7 +41,10 @@ const HomeSchedulerComponent = props => {
       <div className="topHalf">
         <div className="homeAppointmentInstructions">
           <h1>Schedule An Appointment</h1>
-          <p>Let us know how we can help you. Request an appointment using the form below.</p>
+          <p>
+            Let us know how we can help you. Request an appointment using the
+            form below.
+          </p>
         </div>
         <div className="homeAppointmentPhoto"></div>
       </div>
@@ -141,10 +147,11 @@ const HomeSchedulerComponent = props => {
               <input className="lineInput" id="firstName" type="time" />
             </div> */}
             </div>
-            <div className="homeSchedulerSubmitButtonContainer"><button className="homeAppointmentButtonDiv" type="submit">
-              Submit
-            </button></div>
-            
+            <div className="homeSchedulerSubmitButtonContainer">
+              <button className="homeAppointmentButtonDiv" type="submit">
+                Submit
+              </button>
+            </div>
           </div>
         </div>
       </form>

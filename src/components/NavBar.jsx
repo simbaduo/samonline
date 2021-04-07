@@ -30,8 +30,8 @@ const NavBar = () => {
           <div className="imgDiv">
             {' '}<a href="/"><img
               className="nav-link"
-              height="140px"
-              width="200px"
+              height="175px"
+              width="250px"
               src={samlogo}
             /></a>
             
@@ -48,7 +48,7 @@ const NavBar = () => {
                       width="100px"
                       src={stars}
                     />
-                    <a className="underlineText" href="/reviews">
+                    <a href="/reviews">
                       5 Star Rating Based On 123 Reviews
                     </a>
                   </div>
@@ -125,6 +125,7 @@ const NavBar = () => {
                   ABOUT US
                 </a>
                 <div className="dropdownNavContent">
+                  <a href="/SeniorsPage">SENIORS 2020</a>
                   <a href="/ResumePage">CAREERS</a>
                   <a href="/ContactUsPage">CONTACT US</a>
                   <a href="https://www.google.com/search?ei=bhsyXru7MOGkggekx6r4Cg&q=Swander%27s+Auto&oq=Swander%27s+Auto&gs_l=psy-ab.3..0i22i10i30l2.4282.4282..4449...0.0..0.124.323.1j2......0....1..gws-wiz.5JVmtRo0oDo&ved=0ahUKEwi7qt2YgarnAhVhkuAKHaSjCq8Q4dUDCAs&uact=5">

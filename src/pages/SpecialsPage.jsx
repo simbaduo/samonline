@@ -24,9 +24,9 @@ const SpecialsPage = () => {
       <div className="specialsContainer">
         <div className="specialsBox">
           <h2 className="redText underline">Full Brake Package</h2>
-          <h3>$179.99</h3>
+          <h3>$199.99</h3>
           <p>
-            Are your brakes stuttering or squealing? $179.99* includes: Quality
+            Are your brakes stuttering or squealing? $199.99* includes: Quality
             upgraded brake pads New rotors Installation *per axle on most cars,
             plus tax and surcharge
           </p>
