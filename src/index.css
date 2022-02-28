@@ -128,7 +128,6 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  /* border: solid green 3px; */
   width: 55%;
   justify-content: space-around;
   /* padding-top: 0; */
@@ -144,7 +143,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  /* border: solid green 3px; */
   width: 8%;
   justify-content: flex-end;
   margin-top: 5.5rem;
@@ -177,7 +175,6 @@ li {
   flex-direction: column;
   align-items: center;
   width: 20%;
-  /* border: solid red 3px; */
   background-color: 'transparent';
 }
 
@@ -185,7 +182,6 @@ li {
   margin-left: 250px;
   margin-top: 50px;
   text-align: left;
-  /* border: solid red 2px; */
   line-height: 1;
 }
 
@@ -246,7 +242,6 @@ li {
 
 .crumbContainer {
   /* display: flex;
-  /* border: solid red 2px; */
   /* width: 45%; */
   /* justify-content: center; */
   /* margin-bottom: -5rem; */
@@ -293,7 +288,6 @@ li {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  /* border: solid red 2px; */
 }
 
 .subscribeButton {
@@ -347,7 +341,6 @@ li {
 
 .homeAppointmentButtonDiv {
   background-color: black;
-  /* border: solid red 8px; */
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -523,7 +516,6 @@ li {
   justify-content: right;
   width: 140px;
   padding-bottom: 5rem;
-  /* border: solid red 2px; */
 }
 
 .redeemContainer {
@@ -588,7 +580,6 @@ li {
 }
 
 .nextBox {
-  /* border: solid red 2px; */
   background-image: url('/images/newcarcollage.jpg');
   height: 10rem;
   width: 100%;
@@ -611,6 +602,7 @@ li {
   /* border: solid green 3px; */
   /* justify-content: right; */
   /* text-align: right; */
+  padding: 10px;
 }
 
 .homepageSpecialsBox {
@@ -656,7 +648,6 @@ li {
   flex-direction: column;
   flex: 3.5;
   /* align-items: center; */
-  /* border: solid red 2px; */
   margin-left: 80px;
 }
 
@@ -756,14 +747,12 @@ li {
   margin: 0;
   /* margin-left: 40px; */
   padding: 0;
-  /* border: solid red 3px; */
   max-width: 320px;
   width: 200px;
 }
 
 .bottomNavList li {
   padding-bottom: 15px;
-  /* border: thin solid pink; */
 }
 
 .bottomNavList li a:hover {
@@ -780,58 +769,28 @@ li {
   color: grey;
   margin-top: 5rem;
   /* width: 50%; */
-  /* border: solid red 3px; */
 }
 
 .servicePageLinks {
   color: black;
   text-decoration: none;
+  list-style: disc;
   /* width: 50%; */
-  /* border: solid red 3px; */
 }
 
-.servicesBody {
-  margin-top: 20px;
-  margin-left: 60px;
-}
-
-.servicesListContainer {
-}
-
-.servicesList {
-  margin-left: 250px;
-  margin-top: 50px;
-  padding-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  list-style: none;
-  font-size: 1.1rem;
-  /* margin: 0; */
-  /* padding: 0; */
-  max-width: 1000px;
-  /* border: solid red 3px; */
-}
-
-.servicesList li {
-  list-style: square;
-  max-width: 200px;
-  color: black;
-}
 
 .servicePageLinks a {
   color: black;
   text-decoration: none;
+  list-style: disc;
   /* width: 50%; */
-  /* border: solid red 3px; */
 }
 
-.nonLinkedServiceItem {
+.serviceListItem {
   color: black;
   text-decoration: none;
   list-style: disc;
   /* width: 50%; */
-  /* border: solid red 3px; */
 }
 
 .servicePageLinks:hover {
@@ -840,17 +799,8 @@ li {
   margin-top: 5rem;
   font-weight: 900;
   /* width: 50%; */
-  /* border: solid red 3px; */
 }
 
-.servicesContainer {
-  /* border: solid red 2px; */
-  /* padding: 5rem; */
-}
-
-.servicesBox {
-  /* border: solid green 2px; */
-}
 
 .whiteBold {
   color: white;
@@ -912,7 +862,6 @@ li {
 .warrantyTextContainer {
   /* line-height: 3; */
   margin-bottom: 60px;
-  /* border: solid red 2px; */
 }
 
 .warrantyTextInnerDiv {
@@ -928,7 +877,6 @@ li {
   transform: scale(1.5, 1.8); */
   font-family: 'Poppins', sans-serif;
   font-size: 400em/1.5em;
-  /* border: solid red 2px; */
   /* width: 40%;
   text-align: right; */
   font-weight: 100;
@@ -1068,7 +1016,6 @@ a.nav-link {
   margin-left: -80px;
   /* padding-right: 0; */
   /* padding-right: 5rem; */
-  /* border: solid red 2px; */
   padding-top: 50px;
   padding-bottom: 20px;
   /* margin-bottom: -10px; */
@@ -1172,7 +1119,6 @@ p {
 .appointmentTitle {
   display: flex;
   width: 90%;
-  /* border: solid red 2px; */
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -1270,7 +1216,6 @@ p {
 .homeAppointmentReasonContainer {
   display: flex;
   justify-content: center;
-  /* border: solid red 2px; */
   width: 100%;
 }
 
@@ -1326,28 +1271,7 @@ p {
   margin-left: 0;
 }
 
-.servicesTitle {
-  margin-top: 2rem;
-  text-align: left;
-  /* border: solid red 2px; */
-  width: 80%;
-  /* color: red; */
-  /* margin-bottom: .8rem; */
-  line-height: 0.8;
-  font-size: 1.5rem;
-  /* text-transform: uppercase; */
-  font-weight: 900;
-  color: black;
-}
 
-.servicesBodyText {
-  width: 100%;
-  padding-bottom: 0;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 17px;
-}
 
 .imgDiv {
   margin: 0;
@@ -1416,7 +1340,6 @@ p {
     height: 100px;
     width: 100px;
 
-    /* border: solid red 2px; */
   }
 
   .imgPhotoSection {
@@ -1434,7 +1357,6 @@ p {
   }
 
   .reviewText {
-    /* border: solid red 2px; */
   }
 
   .reviewText li {
@@ -1489,7 +1411,6 @@ p {
 }
 
 .starsImg {
-  /* border: solid red 2px; */
   display: flex;
   justify-content: center;
   /* width: 100%; */
@@ -1605,7 +1526,6 @@ textarea {
 }
 
 .phoneEmptyDiv {
-  /* border: solid red 2px; */
   flex: 0.5;
 }
 
@@ -1636,7 +1556,6 @@ label {
 }
 
 .resumeSubmitContainer {
-  /* border: solid red 2px; */
   display: flex;
   justify-content: center;
   width: 120px;
@@ -1727,7 +1646,6 @@ label {
 .specialsContainer {
   display: flex;
   flex-direction: row;
-  /* border: solid red 2px; */
   justify-content: flex-end;
   margin-left: -27%;
 }
@@ -1761,7 +1679,6 @@ label {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  /* border: solid red 2px; */
   height: 40px;
   margin: 0;
   padding: 0;
@@ -1778,7 +1695,6 @@ label {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  /* border: solid red 2px; */
   align-items: center;
 }
 
@@ -1969,7 +1885,6 @@ label {
     font-size: 0.7rem;
     margin: 0;
     padding: 0;
-    /* border: solid red 3px; */
     /* max-width: 899px; */
     width: 100%;
   }
@@ -1989,7 +1904,6 @@ label {
 }
 
 .mobileAppointmentButton {
-  /* border: solid red 2px; */
   width: 50%;
   /* margin-top: 10px; */
   margin-bottom: 50px;
@@ -2041,7 +1955,6 @@ label {
     flex-flow: wrap;
     justify-content: center;
     width: 70%;
-    /* border: solid red 2px; */
   }
 }
 
@@ -2133,7 +2046,6 @@ label {
   /* line-height: 1.5em; */
   font-family: Intro, Verdana, sans-serif;
   text-transform: uppercase;
-  /* border: solid red 2px; */
 }
 
 .vetNextHeader {
@@ -2153,7 +2065,6 @@ label {
   /* line-height: 1.5em; */
   font-family: Intro, Verdana, sans-serif;
   text-transform: uppercase;
-  /* border: solid red 2px; */
 }
 
 .vetContainer {
@@ -2162,7 +2073,6 @@ label {
 
 .vetText {
   color: white;
-  /* border: solid red 2px; */
   font-weight: 600;
   font-size: 24px;
   margin-left: 7px;
@@ -2171,7 +2081,6 @@ label {
 .vetSubText {
   color: white;
   font-size: 14px;
-  /* border: solid red 2px; */
   font-weight: 300;
   text-align: left;
   margin-left: 7px;
@@ -2265,7 +2174,6 @@ margin-top: 0;
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* border: solid red 2px; */
   margin-bottom: 5rem;
 }
 
@@ -2413,7 +2321,6 @@ p {
   flex-direction: column;
   display: flex;
   flex: 2;
-  /* border: solid red 2px; */
   align-items: flex-end;
   justify-content: flex-end;
   margin-bottom: -20px;
@@ -2464,13 +2371,11 @@ p {
 }
 
 .reviewSubmitButtonContainer {
-  /* border: solid red 2px; */
   display: flex;
   justify-content: center;
 }
 
 .reviewSubmitButtonInnerDiv {
-  /* border: solid red 2px; */
   display: flex;
   width: 60%;
   justify-content: center;
@@ -2619,23 +2524,17 @@ reviewSubmitButton:active {
   width: 90%;
   /* padding-left: 10px; */
   /* padding-right: 10px; */
-  /* border: solid red 2px; */
 }
 
-.servicesBodyContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  
-  /* border: solid red 2px; */
+
+
+.finePrintMargin {
+  font-size: 8px;
+  margin-top: -20px;
 }
 
-.servicesBodyBox {
-  width: 80%;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  /* border: solid green 3px; */
+.finePrint {
+font-size: 8px;
 }
 
 /* .aboutUsContainer {
@@ -2672,6 +2571,16 @@ reviewSubmitButton:active {
   text-decoration: none;
   font-weight: bold;
 }
+
+.servicesBody {
+  margin-top: 20px;
+  margin-left: 60px;
+  width: 100%;
+
+}
+
+
+
 
 
 .aboutButtons:hover {

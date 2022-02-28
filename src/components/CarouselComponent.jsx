@@ -148,7 +148,7 @@ const CarouselComponent = () => {
                   that is honored at more than 14,000 locations nationwide -
                   more than any other automotive repair brand.
                 </p>
-                <form action="https://www.napaautocare.com/warranty.aspx" target="_blank">
+                <form action="https://www.napaonline.com/en/auto-care?cid=PAIDSEARCH_Brand_Financing-Warranties_Exact_NAPAAutoCareWarranty_Google_napanationwidewarranty_Exact_Desktop" target="_blank">
                   <button
                     className="carouselButton"
                     value="Go to NAPA Warranty Page"

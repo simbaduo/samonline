@@ -3,7 +3,7 @@ import React from 'react'
 const AffiliatesComponent = () => {
   return (
     <div className="affiliateContainer"><div className="affiliateLogos">
-      <a target="_blank" href="https://www.napaautocare.com/warranty.aspx">
+      <a target="_blank" href="https://www.napaonline.com/en/auto-care?cid=PAIDSEARCH_Brand_Financing-Warranties_Exact_NAPAAutoCareWarranty_Google_napanationwidewarranty_Exact_Desktop">
         <img
           alt="Napa Auto Care Logo"
           height="80px"

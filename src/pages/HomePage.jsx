@@ -267,7 +267,10 @@ const HomePage = () => {
                     <h1 className="homepageSpecialsTitle">
                       <span className="redText">SYNTHETIC OIL CHANGE</span>
                     </h1>
-                    <h3>$49.99</h3>
+                    <h2>$59.99*</h2>
+
+                    <div class="finePrintMargin">*Most Vehicles</div>
+                    <div class="finePrint">*Plus Tax / Fees</div>
 
                     <p className="homepageSpecialsText">
                       Swander's Auto uses full synthetic NAPA-Grade oil which

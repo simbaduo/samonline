@@ -125,13 +125,12 @@ const NavBar = () => {
                   ABOUT US
                 </a>
                 <div className="dropdownNavContent">
-                  <a href="/SeniorsPage">SENIORS 2020</a>
                   <a href="/ResumePage">CAREERS</a>
                   <a href="/ContactUsPage">CONTACT US</a>
                   <a href="https://www.google.com/search?ei=bhsyXru7MOGkggekx6r4Cg&q=Swander%27s+Auto&oq=Swander%27s+Auto&gs_l=psy-ab.3..0i22i10i30l2.4282.4282..4449...0.0..0.124.323.1j2......0....1..gws-wiz.5JVmtRo0oDo&ved=0ahUKEwi7qt2YgarnAhVhkuAKHaSjCq8Q4dUDCAs&uact=5">
                     GOOGLE +
                   </a>
-                  <a href="/VeteransPage">VETERANS</a>
+                  <a href="/BlogPage">BLOG</a>
                 </div>
               </div>
               <NavLink

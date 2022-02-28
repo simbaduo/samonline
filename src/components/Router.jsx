@@ -30,6 +30,7 @@ import ContactUsPage from '../pages/ContactUsPage'
 import NotFoundPage from '../pages/NotFoundPage'
 import AdminPage from '../pages/AdminPage'
 import SubmitReviewPage from '../pages/SubmitReviewPage'
+import BlogPage from '../pages/BlogPage'
 
 const Router = () => {
   return (
@@ -120,6 +121,11 @@ const Router = () => {
         ></Route>
         <Route exact path="/VeteransPage" component={VeteransPage}></Route>
         <Route exact path="/SeniorsPage" component={SeniorsPage}></Route>
+        <Route
+          exact
+          path="/BlogPage"
+          component={BlogPage}
+        ></Route>
         <Route path="*" component={NotFoundPage}></Route>
       
       </Switch>

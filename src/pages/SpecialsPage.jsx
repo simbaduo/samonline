@@ -24,16 +24,15 @@ const SpecialsPage = () => {
       <div className="specialsContainer">
         <div className="specialsBox">
           <h2 className="redText underline">Full Brake Package</h2>
-          <h3>$199.99</h3>
+          {/* <h3>$199.99</h3> */}
           <p>
-            Are your brakes stuttering or squealing? $199.99* includes: Quality
-            upgraded brake pads New rotors Installation *per axle on most cars,
-            plus tax and surcharge
+            Expired
           </p>
           <FormActions>
-            <a href="/AppointmentPage" className="reviewSubmitButton">
-              Redeem Now
-            </a></FormActions>
+            <a href="/" className="reviewSubmitButton">
+              Expired
+            </a> 
+            </FormActions>
             <div className="specialsActions"><h6>Exp. 6/1/2020</h6>
             <p>Print Coupon</p></div>
             
